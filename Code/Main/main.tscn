@@ -17,7 +17,6 @@ position = Vector2(833, 624)
 [node name="Inventory" parent="." instance=ExtResource("3_yf4vq")]
 
 [node name="TransitionAnimations" parent="." instance=ExtResource("5_e30m5")]
-visible = false
 
 [node name="LostTrail" parent="." instance=ExtResource("3_t8ado")]
 
