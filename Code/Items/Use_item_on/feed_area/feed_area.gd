@@ -13,12 +13,14 @@ func feed(item:InventoryItem):
 			dm.show_dialogue_balloon(load("res://Resources/Dialogue/Cutscenes/feed_options.dialogue"), "feed_default", [self])
 	else:
 		dm.show_dialogue_balloon(load("res://Resources/Dialogue/eye.dialogue"), "feed_after_fed")
-	if GlobalVariables.current_day == 4:
-		GlobalSignals.start_ending.emit()
+	#if GlobalVariables.current_day == 4:
+		#GlobalSignals.start_ending.emit()
 
 func feeding():
+	print_debug("feeding")
 	dm.show_dialogue_balloon(load("res://Resources/Dialogue/Cutscenes/day_"+str(GlobalVariables.current_day)+".dialogue"), "lower_offering", [self])
 	await dm.dialogue_ended
+	print_debug("feeding now")
 	match(item_fed.category):
 		1:
 			dm.show_dialogue_balloon(load("res://Resources/Dialogue/Cutscenes/day_"+str(GlobalVariables.current_day)+".dialogue"), "feed_safe", [self])
@@ -45,3 +47,6 @@ func defect():
 
 func binding():
 	dm.show_dialogue_balloon(load("res://Resources/Dialogue/Cutscenes/day_"+str(GlobalVariables.current_day)+".dialogue"), "bind_the_rim", [self])
+
+func c_print(v):
+	print_debug(v)

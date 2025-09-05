@@ -124,6 +124,7 @@ do AudioManager.current_speaker = null
 => after_feeding
 
 ~ after_feeding
+do c_print("after feeding"):
 do AudioManager.current_speaker = AudioManager.eye
 ???: I learned so well. Let me show you.
 do AudioManager.current_speaker = AudioManager.cultist
