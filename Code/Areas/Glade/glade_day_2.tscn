@@ -8,14 +8,14 @@
 [node name="Glade" type="Node2D"]
 y_sort_enabled = true
 
-[node name="pickupable_item_prototype" parent="." instance=ExtResource("2_hugi3")]
-position = Vector2(3217, 324)
-item = ExtResource("3_3qyts")
-
 [node name="LittleOfferingsGlade" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(2586, 540)
 texture = ExtResource("3_hugi3")
+
+[node name="pickupable_item_prototype" parent="." instance=ExtResource("2_hugi3")]
+position = Vector2(3217, 324)
+item = ExtResource("3_3qyts")
 
 [node name="Scene_switcher_lost_trail2" parent="." instance=ExtResource("1_3qyts")]
 position = Vector2(1637, 232)

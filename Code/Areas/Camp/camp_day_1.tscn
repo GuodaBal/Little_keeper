@@ -22,7 +22,7 @@ scale = Vector2(1.265, 1.195)
 next_area = "Crater"
 
 [node name="pickupable_item_prototype" parent="." instance=ExtResource("2_57ren")]
-position = Vector2(773, 76)
+position = Vector2(405, 202)
 item = ExtResource("3_3j2tg")
 
 [node name="EndTheDay" parent="." instance=ExtResource("4_74ccb")]

@@ -10,14 +10,14 @@
 y_sort_enabled = true
 script = ExtResource("1_pf23w")
 
-[node name="pickupable_item_prototype" parent="." instance=ExtResource("3_wlpck")]
-position = Vector2(459, 193)
-item = ExtResource("4_pf23w")
-
 [node name="LittleOfferingsLostTrail" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(960, 540)
 texture = ExtResource("4_xdls2")
+
+[node name="pickupable_item_prototype" parent="." instance=ExtResource("3_wlpck")]
+position = Vector2(459, 193)
+item = ExtResource("4_pf23w")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(960, 540)
