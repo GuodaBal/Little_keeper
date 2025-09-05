@@ -163,7 +163,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_back_plain",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -177,7 +177,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_back_robed",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -191,7 +191,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_forward_plain",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -205,7 +205,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_forward_robed",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -228,7 +228,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run_back_plain",
-"speed": 7.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -251,7 +251,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run_back_robed",
-"speed": 7.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -274,7 +274,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run_forward_plain",
-"speed": 7.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -297,7 +297,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run_forward_robed",
-"speed": 7.0
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nlxgn"]
@@ -310,6 +310,7 @@ height = 170.0
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 y_sort_enabled = true
+motion_mode = 1
 script = ExtResource("1_olx7d")
 inventory = ExtResource("2_nlxgn")
 
@@ -317,7 +318,6 @@ inventory = ExtResource("2_nlxgn")
 scale = Vector2(0.62, 0.62)
 sprite_frames = SubResource("SpriteFrames_lo3cl")
 animation = &"run_forward_robed"
-frame_progress = 0.165007
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -4)

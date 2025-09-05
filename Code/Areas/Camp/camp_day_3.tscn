@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://b8fn0qavagg1x"]
+[gd_scene load_steps=11 format=3 uid="uid://b8fn0qavagg1x"]
 
 [ext_resource type="Texture2D" uid="uid://c0nln8udhlube" path="res://Assets/Sprites/Areas/Little_Offerings_Camp.png" id="1_wamox"]
 [ext_resource type="PackedScene" uid="uid://bmj7xjel53ir8" path="res://Code/Misc/Scene_switch_trigger/scene_switcher.tscn" id="1_wcw3u"]
 [ext_resource type="PackedScene" uid="uid://ch4mx0saqfgys" path="res://Code/Items/Pickupable_items/Prototype/pickupable_item_prototype.tscn" id="2_ygau7"]
-[ext_resource type="Resource" uid="uid://u55hau6gcwka" path="res://Resources/Inventory_items/Day_1/baby_tooth.tres" id="4_6ukkf"]
+[ext_resource type="Resource" uid="uid://cxabvwj5g2hga" path="res://Resources/Inventory_items/Day_3/brain_specimen_jar.tres" id="4_6ukkf"]
 [ext_resource type="PackedScene" uid="uid://b5gshex5b2wxj" path="res://Code/Misc/End_the_day/end_the_day.tscn" id="4_wamox"]
 [ext_resource type="PackedScene" uid="uid://cj24n4getos1c" path="res://Code/Items/Interactable_items/Prototype/interactable_item_prototype.tscn" id="6_ce4wa"]
 [ext_resource type="PackedScene" uid="uid://bbuyft1ceiiro" path="res://Code/Characters/Cultist/cultist.tscn" id="7_n7cvt"]
+[ext_resource type="PackedScene" uid="uid://bqmgujxwlgj3b" path="res://Code/Characters/Dog/dog.tscn" id="8_6ukkf"]
 
 [sub_resource type="Gradient" id="Gradient_wamox"]
 
@@ -83,3 +84,7 @@ facing_left = false
 position = Vector2(1216, 837)
 char_name = "Vellum"
 facing_left = false
+
+[node name="Dog" parent="." instance=ExtResource("8_6ukkf")]
+position = Vector2(143, 67)
+in_orig_pos = false

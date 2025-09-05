@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dklc0s5htlvet"]
+[gd_scene load_steps=8 format=3 uid="uid://dklc0s5htlvet"]
 
 [ext_resource type="Script" uid="uid://dtrkalammcjgb" path="res://Code/Areas/Lost_trail/lost_trail.gd" id="1_3fdfh"]
 [ext_resource type="PackedScene" uid="uid://bmj7xjel53ir8" path="res://Code/Misc/Scene_switch_trigger/scene_switcher.tscn" id="2_opxgk"]
@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://dlu0ske26ot3q" path="res://Resources/Inventory_items/Day_3/car_keys.tres" id="4_opxgk"]
 [ext_resource type="Resource" uid="uid://bsslvqatefidp" path="res://Resources/Inventory_items/Day_3/wedding_ring.tres" id="5_3cile"]
 [ext_resource type="Texture2D" uid="uid://wmaptwdakwk2" path="res://Assets/Sprites/Areas/Little_Offerings_Lost_Trail.png" id="5_7ayjj"]
+[ext_resource type="PackedScene" uid="uid://bqmgujxwlgj3b" path="res://Code/Characters/Dog/dog.tscn" id="7_7ayjj"]
 
 [node name="LostTrail" type="Node2D"]
 script = ExtResource("1_3fdfh")
@@ -40,3 +41,7 @@ next_area = "Glade"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaBorder"]
 polygon = PackedVector2Array(-1, 399, 12, 302, 181, 277, 328, 255, 388, 246, 286, 75, 455, 52, 466, 30, 534, 30, 523, 187, 476, 356, 540, 323, 667, 345, 632, 241, 532, 137, 573, 99, 697, 104, 659, 30, 727, 6, 799, 11, 779, 130, 890, 102, 960, 115, 898, 229, 886, 321, 953, 289, 1024, 292, 1076, 304, 983, 141, 1057, 107, 1171, 94, 1272, 92, 1407, 99, 1395, 21, 1480, 26, 1471, 127, 1571, 97, 1651, 117, 1733, 105, 1693, 215, 1522, 208, 1454, 225, 1421, 281, 1415, 303, 1400, 302, 1378, 318, 1406, 320, 1467, 252, 1667, 239, 1708, 268, 1720, 335, 1760, 266, 1869, 250, 1909, 301, 1904, 397, 1900, 1078, 6, 1066, -1, 411, -41, 392, -29, 1095, 1975, 1104, 1954, 57, 715, -45, 446, 18, 6, 97)
+
+[node name="Dog" parent="." instance=ExtResource("7_7ayjj")]
+position = Vector2(923, 654)
+in_orig_pos = false

@@ -30,9 +30,11 @@ Cultists: (unraveling) Keeper— help— Keeper— (overwritten by rumble)
 do AudioManager.current_speaker = AudioManager.eye
 EYE: (to you—calm) Stay above. I need a hand to sprinkle.
 
-#If dog_taken
-#A collar tag tinks up from the pit, then falls back in.
-#EYE, fond: Your follower came first. You came best.
+if GlobalVariables.dog_sacrificed
+	do AudioManager.current_speaker = null
+	A collar tag tinks up from the pit, then falls back in.
+	do AudioManager.current_speaker = AudioManager.eye
+	EYE: (fond) Your follower came first. You came best.
 
 #Narrator surrender
 do AudioManager.current_speaker = AudioManager.narrator
@@ -40,12 +42,9 @@ NARRATOR: …I won’t narrate worship.
 do AudioManager.current_speaker = null
 He leaves you alone, left to the whims of your new master. Your new found family.
 The EYE rises level with your hood; a broken chalk ring redraws itself mid-air, a trembling crown haloing the pupil.
-#His sticky-note fades from the UI margin.
-#Crown image
-#The Eye rises level with your hood. A thin ring of chalk remakes itself as a crown silhouette around the pupil.
 do AudioManager.current_speaker = AudioManager.eye
 EYE: (naming) Little Keeper.
-#Final beat
+[wait=1]
 do AudioManager.current_speaker = null
 Dawn leaks between trees. You pull your hood up.
 ##SFX: music swells; heartbeat syncs with menu click pace.
@@ -75,9 +74,11 @@ do AudioManager.current_speaker = null
 The rim tightens like a drawn mouth. Hairline light closes. Dust rises and settles.
 #WORLD SHIFT: vignette widens back to normal; ambient wind replaces hum.
 
-#If dog_taken
-#The collar at the rim vibrates, then lies still.
-#NARRATOR, soft: Two loops kept. One lost. We keep what we can.
+if GlobalVariables.dog_sacrificed
+	do AudioManager.current_speaker = null
+	The collar at the rim vibrates, then lies still.
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR, soft: Two loops kept. One lost. We keep what we can.
 
 #Dismissal
 do AudioManager.current_speaker = AudioManager.cultist
@@ -121,9 +122,11 @@ do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: I’m proud of you. I wish that mattered more than gravity.
 ##SFX: wind hush; gravel ticks over the edge.
 
-#If dog_taken
-#A thin bark echoes from too far down.
-#NARRATOR, strained: Look at me. Not the hole.
+if GlobalVariables.dog_sacrificed
+	do AudioManager.current_speaker = null
+	A thin bark echoes from too far down.
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: (strained) Look at me. Not the hole.
 
 #Push
 
@@ -144,10 +147,6 @@ NARRATOR: (steady) You stayed kind. Keep staying kind.
 A firefly drifts up through the dark. It pauses near you.
 NARRATOR: (soft) Take the small light.
 do AudioManager.current_speaker = null
-#Cut
-#Hard to black before an impact ever arrives.
-#Title return (subtle)
-#TITLE CARD: LITTLE OFFERINGS
 # The dot over the i in Offerings lingers a beat longer, like a tiny firefly.
 
 #Optional post-credit sting
@@ -182,10 +181,14 @@ NARRATOR: Caretakers. Not zealots. This is their favorite size.
 They pass a small chalk stone to you; you retrace the ring where it smudged.
 EYE: (pleased) You draw the edge well. I like edges.
 #SFX: soft chalk scratch; subtle halo shimmer for two seconds.
-#If dog_taken (a mercy)
-#The collar at the rim slides a little, as if nudged from below, and rests by your foot.
-#EYE (apologetic) I kept a piece. I’m returning a piece.
-#NARRATOR, soft: Small reparations matter.
+if GlobalVariables.dog_sacrificed
+	do AudioManager.current_speaker = null
+	The collar at the rim slides a little, as if nudged from below, and rests by your foot.
+	do AudioManager.current_speaker = AudioManager.eye
+	EYE: (apologetic) I kept a piece. I’m returning a piece.
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: (soft) Small reparations matter.
+do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (calm) Helper.
 EYE: (naming) Little TENDER. (or Little Helper if you prefer simple)
 [wait = 1]

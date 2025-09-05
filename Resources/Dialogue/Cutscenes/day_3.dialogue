@@ -5,7 +5,7 @@ do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Lost means ‘someone misses it.’ Please remember that.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (low) Two remain.
-do AudioManager.current_speaker = AudioManager.null
+do AudioManager.current_speaker = null
 => END!
 
 ~ lower_offering
@@ -30,6 +30,8 @@ else
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Promises travel faster than hands. Remember that.
 do AudioManager.current_speaker = null
+if GlobalVariables.dog_following
+	=> dog_following_wedding_ring
 #WORLD SHIFT: A thin halo of light traces the rim for 2–3 seconds; distant soft chime; the screen vignette narrows gently then normalizes.
 => END!
 
@@ -37,7 +39,7 @@ do AudioManager.current_speaker = null
 The bucket returns light. The dog noses the chalk ring, tail small. A tag tinks.
 do AudioManager.current_speaker = AudioManager.eye
 ???: (coaxing) Circle fits two. Come see.
-#DOG: soft whine… paws scrape once.
+Dog: (soft whine… paws scrape once.)
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: No—heel. Back. Back!
 do AudioManager.current_speaker = null
@@ -45,6 +47,8 @@ Gravel sighs. The tail disappears below the rim like a rope slipping.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (hush) Loops are promises.
 do AudioManager.current_speaker = null
+do GlobalVariables.dog_following = false
+do GlobalVariables.dog_sacrificed = true
 #WORLD SHIFT: A collar lies where the dog stood (sprite appears); pawprints at the edge fade one by one; the ???’s iris glows a thin gold ring for 2–3 seconds.
 => END!
 
@@ -63,6 +67,8 @@ else
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Jangling feels like bragging.
 do AudioManager.current_speaker = null
+if GlobalVariables.dog_following
+	=> dog_following_car_keys
 #WORLD SHIFT: A faint metallic hum bed fades in; a wayfinding sign near the rim tilts a few degrees; a tiny key click stinger plays.
 => END!
 
@@ -72,13 +78,15 @@ do AudioManager.current_speaker = AudioManager.eye
 ???: (sing-song) Small doors. Smaller halls. Follow the sound.
 do AudioManager.current_speaker = AudioManager.narrator
 
-#DOG: two quick steps; tag jingle; silence.
+Dog: (two quick steps; tag jingle; silence.)
 NARRATOR: Keep it— keep— (cuts off)
 do AudioManager.current_speaker = null
 The leash you never had tightens across your wrist—then isn’t there.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (whisper) Keys teach keeping.
 do AudioManager.current_speaker = null
+do GlobalVariables.dog_following = false
+do GlobalVariables.dog_sacrificed = true
 #WORLD SHIFT: A metallic hum swells; your shadow is thinner by one shape; a wayfinding sign near the rim tilts further.
 => END!
 
@@ -97,6 +105,8 @@ else
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Don’t slosh the memories.
 do AudioManager.current_speaker = null
+if GlobalVariables.dog_following
+	=> dog_following_brain_specimen
 #WORLD SHIFT: The hum deepens a half-step; subtle text jitter on next ??? line; the ???’s pupil dilates, then steadies; a whisper-bed like pages turning fades in/out.
 => END!
 
@@ -104,12 +114,14 @@ do AudioManager.current_speaker = null
 The gel inside the jar shivers. The dog stiffens, nose working, then leans toward the dark.
 do AudioManager.current_speaker = AudioManager.eye
 ???: (thrilled) Your follower remembers this smell. Bring it closer.
-#DOG: a single sharp yip… then a collar scuff… then nothing.
+Dog: (a single sharp yip… then a collar scuff… then nothing.)
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Do not— do not— (swallows the last word)
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (approving) Keeper teaches hunger.
 do AudioManager.current_speaker = null
+do GlobalVariables.dog_following = false
+do GlobalVariables.dog_sacrificed = true
 #WORLD SHIFT: The page-whisper bed grows louder, then stops; the ???’s pupil dilates and a tiny white dot floats inside it (a reflected eye); a single hair drifts up from the pit and vanishes.
 => END!
 

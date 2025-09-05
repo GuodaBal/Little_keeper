@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhgeohs8c1uqo"]
+[gd_scene load_steps=4 format=3 uid="uid://bhgeohs8c1uqo"]
 
 [ext_resource type="Texture2D" uid="uid://dbna1b6ded3ia" path="res://Assets/Sprites/Areas/Little_Offerings_Glade.png" id="1_jnxpw"]
 [ext_resource type="PackedScene" uid="uid://bmj7xjel53ir8" path="res://Code/Misc/Scene_switch_trigger/scene_switcher.tscn" id="1_w46pd"]
+[ext_resource type="PackedScene" uid="uid://bqmgujxwlgj3b" path="res://Code/Characters/Dog/dog.tscn" id="3_w46pd"]
 
 [node name="Glade" type="Node2D"]
 
@@ -28,3 +29,6 @@ polygon = PackedVector2Array(3104, 725, 3168, 587, 3266, 725)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(2585, 540)
+
+[node name="Dog" parent="." instance=ExtResource("3_w46pd")]
+position = Vector2(3314, 160)

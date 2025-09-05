@@ -20,7 +20,4 @@ position = Vector2(890, 655)
 
 [node name="LostTrail" parent="." instance=ExtResource("3_t8ado")]
 
-[node name="Camera2D" parent="LostTrail" index="2"]
-position = Vector2(960, 540)
-
 [editable path="LostTrail"]

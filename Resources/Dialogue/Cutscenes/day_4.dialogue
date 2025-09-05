@@ -62,11 +62,14 @@ if lowering_gently
 else
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: You keep choosing speed when gentleness would do.
-do AudioManager.current_speaker = null
+
 #WORLD SHIFT: A hairline star of light traces the rim; screen vignette segments into faint facets, then smooths; a tiny glass tick stinger.
-#If dog_taken
-#???, offhand: The follower’s eyes made this taste easier.
-#NARRATOR: Don’t repeat it.
+if GlobalVariables.dog_sacrificed
+	do AudioManager.current_speaker = AudioManager.eye
+	???, offhand: The follower’s eyes made this taste easier.
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Don’t repeat it.
+do AudioManager.current_speaker = null
 => after_feeding
 
 ~ feed_strange
@@ -86,9 +89,11 @@ else
 	NARRATOR: Unwrapping would have been worse. Thank you for not trying.
 #WORLD SHIFT: A subtle creak SFX like settling wood; rope knots on the bucket appear tighter; the ??? sprouts a faint ring-ridge overlay for 2–3 seconds.
 
-#If dog_taken
-#???: The follower made this lesson easy. It bent first.
-#The eye begins to bark like the dog you let go.
+if GlobalVariables.dog_sacrificed
+	do AudioManager.current_speaker = AudioManager.eye
+	???: The follower made this lesson easy. It bent first.
+	do AudioManager.current_speaker = null
+	The eye begins to bark like the dog you let go.
 
 do AudioManager.current_speaker = null
 => after_feeding
@@ -110,9 +115,10 @@ else
 do AudioManager.current_speaker = null
 #WORLD SHIFT: A heartbeat bed fades in under the mix; the ???’s pupil dilates, then a faint pulse ripples the rim; lantern flames lean inward and hold.
 
-#If dog_taken
-#???: Your follower was the first small drum. This is louder.
-
+if GlobalVariables.dog_sacrificed
+	do AudioManager.current_speaker = AudioManager.eye
+	???: Your follower was the first small drum. This is louder.
+do AudioManager.current_speaker = null
 #(Optional micro-sting if this is second wild overall)
 #NARRATOR, low: There it is. Crown coming.
 => after_feeding

@@ -81,13 +81,15 @@ A little trail choosing you.
 
 ~ interact_with_dog
 A scruffy shape in the grass. Tail makes a question mark.
-PET:
+- Pet
+- Don't pet => END!
 It leans into your hand like you’re furniture it needed.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: It chose you. It can still choose again.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultist: (soft) Featherless friend has chosen you.
 do AudioManager.current_speaker = null
+do GlobalVariables.dog_following = true
 => END!
 
 ~ look_at_rim
