@@ -3,20 +3,35 @@
 [ext_resource type="PackedScene" uid="uid://bmj7xjel53ir8" path="res://Code/Misc/Scene_switch_trigger/scene_switcher.tscn" id="1_evu70"]
 [ext_resource type="PackedScene" uid="uid://ch4mx0saqfgys" path="res://Code/Items/Pickupable_items/Prototype/pickupable_item_prototype.tscn" id="2_ljk0o"]
 [ext_resource type="Resource" uid="uid://cp08hafn2k2q0" path="res://Resources/Inventory_items/Day_1/lollipop.tres" id="3_hetog"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2ts5q"]
-size = Vector2(2, 1)
+[ext_resource type="Texture2D" uid="uid://dbna1b6ded3ia" path="res://Assets/Sprites/Areas/Little_Offerings_Glade.png" id="4_8e611"]
 
 [node name="Glade" type="Node2D"]
+y_sort_enabled = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(393, 116)
-scale = Vector2(43.24, 27.76)
-texture = SubResource("PlaceholderTexture2D_2ts5q")
+[node name="LittleOfferingsGlade" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(2586, 540)
+texture = ExtResource("4_8e611")
 
 [node name="Scene_switcher_lost_trail" parent="." instance=ExtResource("1_evu70")]
+position = Vector2(1637, 232)
+scale = Vector2(1, 4.64)
 next_area = "Lost_trail"
 
 [node name="pickupable_item_prototype" parent="." instance=ExtResource("2_ljk0o")]
-position = Vector2(954, 173)
+position = Vector2(2472, 534)
 item = ExtResource("3_hetog")
+
+[node name="AreaBorder" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaBorder"]
+polygon = PackedVector2Array(1659, 239, 1729, 236, 1840, 230, 1849, 181, 1946, 163, 1934, 224, 1993, 203, 2075, 195, 2134, 210, 2206, 209, 2245, 206, 2308, 214, 2364, 225, 2430, 227, 2479, 217, 2541, 219, 2600, 199, 2491, 39, 2722, 43, 2696, 173, 2771, 148, 2851, 153, 2900, 160, 2829, 29, 2935, 24, 3008, 36, 3067, 26, 3011, 135, 3011, 210, 3098, 187, 3166, 194, 3191, 180, 3154, 107, 3089, 24, 3515, 13, 3533, 461, 3474, 429, 3440, 326, 3372, 233, 3307, 360, 3294, 441, 3361, 435, 3444, 424, 3496, 456, 3524, 501, 3533, 1062, 3055, 1078, 2930, 896, 2866, 1012, 2754, 841, 2684, 995, 2607, 899, 2544, 1019, 2430, 851, 2355, 1033, 2247, 896, 2172, 1028, 2059, 850, 1989, 1007, 1866, 858, 1805, 989, 1785, 1006, 1678, 866, 1624, 993, 1621, 180, 1586, 176, 1593, 1045, 3574, 1111, 3550, -20, 1588, 69, 1621, 161, 1621, 161)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="AreaBorder"]
+polygon = PackedVector2Array(2724, 601, 2794, 439, 2891, 585)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="AreaBorder"]
+polygon = PackedVector2Array(3104, 725, 3168, 587, 3266, 725)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(2585, 540)

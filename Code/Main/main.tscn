@@ -3,18 +3,24 @@
 [ext_resource type="Script" uid="uid://brgr7qwmck7a4" path="res://Code/Main/main.gd" id="1_n2sav"]
 [ext_resource type="PackedScene" uid="uid://d0rosgvt1h5lk" path="res://Code/Characters/Player/player.tscn" id="2_apgyh"]
 [ext_resource type="PackedScene" uid="uid://fybldneq467q" path="res://Code/Areas/Lost_trail/lost_trail_day_1.tscn" id="3_t8ado"]
-[ext_resource type="PackedScene" uid="uid://pamxg4qclg04" path="res://Code/Inventory/inventory_ui.tscn" id="3_yf4vq"]
+[ext_resource type="PackedScene" uid="uid://pamxg4qclg04" path="res://Code/UI/Inventory/inventory_ui.tscn" id="3_yf4vq"]
 [ext_resource type="PackedScene" uid="uid://bjfki51t7vn5r" path="res://Code/Misc/Transition_animations/transition_animations.tscn" id="5_e30m5"]
 
 [node name="main" type="Node2D" node_paths=PackedStringArray("current_scene")]
+y_sort_enabled = true
 script = ExtResource("1_n2sav")
 current_scene = NodePath("LostTrail")
 
-[node name="LostTrail" parent="." instance=ExtResource("3_t8ado")]
-
 [node name="Player" parent="." instance=ExtResource("2_apgyh")]
-position = Vector2(570, 335)
+position = Vector2(890, 655)
 
 [node name="Inventory" parent="." instance=ExtResource("3_yf4vq")]
 
 [node name="TransitionAnimations" parent="." instance=ExtResource("5_e30m5")]
+
+[node name="LostTrail" parent="." instance=ExtResource("3_t8ado")]
+
+[node name="Camera2D" parent="LostTrail" index="2"]
+position = Vector2(960, 540)
+
+[editable path="LostTrail"]

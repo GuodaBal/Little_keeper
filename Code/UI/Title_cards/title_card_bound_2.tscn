@@ -79,35 +79,34 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
-layout_mode = 0
-offset_right = 1175.0
-offset_bottom = 659.0
+offset_right = 1941.0
+offset_bottom = 1091.0
 color = Color(0, 0, 0, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
-layout_mode = 0
-offset_top = 185.0
-offset_right = 1153.0
-offset_bottom = 296.0
+offset_left = 2.0
+offset_top = 299.0
+offset_right = 1921.0
+offset_bottom = 518.0
 bbcode_enabled = true
-text = "[i][font_size=80][center]LITTLE OFFERINGS"
+text = "[i][font_size=150][center]LITTLE OFFERINGS"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Control"]
-layout_mode = 0
-offset_top = 293.0
-offset_right = 1153.0
-offset_bottom = 404.0
+offset_left = 2.0
+offset_top = 519.0
+offset_right = 1924.0
+offset_bottom = 630.0
 bbcode_enabled = true
-text = "[i][font_size=40][center]“just a little guy, doing your part.”"
+text = "[i][font_size=50][center]“just a little guy, doing your part.”"
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="Control"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 2.0
-offset_top = 410.0
-offset_right = 1155.0
-offset_bottom = 521.0
+offset_left = -1.0
+offset_top = 686.0
+offset_right = 1921.0
+offset_bottom = 797.0
 bbcode_enabled = true
-text = "[i][font_size=40][center]Bound ending 2"
+text = "[i][font_size=60][center]Bound ending 2"
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

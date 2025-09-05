@@ -28,6 +28,9 @@ runtime/balloon_path="res://Resources/Dialogue_balloon/balloon.tscn"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
 window/size/borderless=true
 window/stretch/mode="canvas_items"
 
@@ -43,6 +46,7 @@ Interactable_item="Must have method \"Interact\""
 Pickupable_item="Must have method \"Pick_up\""
 Use_item_on="Must contain method \"Use_item(item_name)"
 Eye="For detecting eye for feeding"
+Dialogue=""
 
 [input]
 

@@ -1,0 +1,83 @@
+[gd_scene load_steps=11 format=3 uid="uid://bbuyft1ceiiro"]
+
+[ext_resource type="Script" uid="uid://c4kde5le8knh3" path="res://Code/Characters/Cultist/cultist.gd" id="1_u4mcx"]
+[ext_resource type="Texture2D" uid="uid://dy6txgdyjihtk" path="res://Assets/Sprites/Cultists/cult_member_frames.png" id="2_mtmob"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mtmob"]
+radius = 48.0
+height = 192.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_noej2"]
+atlas = ExtResource("2_mtmob")
+region = Rect2(0, 512, 256, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4ex5"]
+atlas = ExtResource("2_mtmob")
+region = Rect2(256, 512, 256, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qb1a"]
+atlas = ExtResource("2_mtmob")
+region = Rect2(512, 512, 256, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cu24"]
+atlas = ExtResource("2_mtmob")
+region = Rect2(0, 0, 256, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aomce"]
+atlas = ExtResource("2_mtmob")
+region = Rect2(256, 0, 256, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwfs0"]
+atlas = ExtResource("2_mtmob")
+region = Rect2(512, 0, 256, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ep2bg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_noej2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4ex5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qb1a")
+}],
+"loop": true,
+"name": &"back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cu24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aomce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwfs0")
+}],
+"loop": true,
+"name": &"forward",
+"speed": 5.0
+}]
+
+[node name="Cultist" type="CharacterBody2D" groups=["Character"]]
+y_sort_enabled = true
+collision_layer = 2
+script = ExtResource("1_u4mcx")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
+scale = Vector2(1.405, 1.405)
+color = Color(0.74558, 0.74558, 0.74558, 1)
+polygon = PackedVector2Array(-20, 10, -21, -27, -2, -15, 19, -28, 20, 8, 0, 23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("CapsuleShape2D_mtmob")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.375, 0.375)
+sprite_frames = SubResource("SpriteFrames_ep2bg")
+animation = &"forward"

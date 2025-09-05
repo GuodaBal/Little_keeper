@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://debg60qbdkbvw"
+path="res://.godot/imported/Join Us Fade In.mp3-419833de44a47c30c6362a9e07939dc2.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/BG_music/Join Us Fade In.mp3"
+dest_files=["res://.godot/imported/Join Us Fade In.mp3-419833de44a47c30c6362a9e07939dc2.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

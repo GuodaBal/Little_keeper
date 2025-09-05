@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://dueivk82c1uvp"]
+[gd_scene load_steps=8 format=3 uid="uid://dueivk82c1uvp"]
 
 [ext_resource type="Script" uid="uid://ccrahmrcik6gm" path="res://Code/Globals/audio_manager.gd" id="1_kpx4d"]
 [ext_resource type="AudioStream" uid="uid://cis6mg2khlflp" path="res://Assets/Audio/Character_voices/little-robot-sound-84657.mp3" id="2_a8bt5"]
 [ext_resource type="AudioStream" uid="uid://quvjcoc8q6hr" path="res://Assets/Audio/Character_voices/video-game-text-330163.mp3" id="3_simw2"]
 [ext_resource type="AudioStream" uid="uid://dogi30xy30oho" path="res://Assets/Audio/Character_voices/medium-text-blip-14855.mp3" id="4_2bn8j"]
+[ext_resource type="AudioStream" uid="uid://debg60qbdkbvw" path="res://Assets/Audio/BG_music/Join Us Fade In.mp3" id="5_x6yam"]
+[ext_resource type="AudioStream" uid="uid://dusx5ln4qht5q" path="res://Assets/Audio/BG_music/Little Offerings Fade In.mp3" id="6_lqpst"]
+[ext_resource type="AudioStream" uid="uid://cdld3d5bfjkcx" path="res://Assets/Audio/BG_music/The Crater Of God Fade In.mp3" id="7_osqjh"]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_kpx4d")
@@ -23,3 +26,17 @@ bus = &"Dialogue"
 [node name="Cultist" type="AudioStreamPlayer" parent="Dialogue"]
 stream = ExtResource("4_2bn8j")
 bus = &"Dialogue"
+
+[node name="Music" type="Node" parent="."]
+
+[node name="JoinUs" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("5_x6yam")
+bus = &"Music"
+
+[node name="LittleOfferings" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("6_lqpst")
+bus = &"Music"
+
+[node name="TheCraterOfGod" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("7_osqjh")
+bus = &"Music"

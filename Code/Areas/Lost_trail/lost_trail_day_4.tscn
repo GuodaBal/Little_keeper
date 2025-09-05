@@ -1,74 +1,37 @@
-[gd_scene load_steps=10 format=3 uid="uid://bnrcxeqrj8pda"]
+[gd_scene load_steps=6 format=3 uid="uid://bnrcxeqrj8pda"]
 
 [ext_resource type="Script" uid="uid://dtrkalammcjgb" path="res://Code/Areas/Lost_trail/lost_trail.gd" id="1_7v8be"]
 [ext_resource type="PackedScene" uid="uid://bmj7xjel53ir8" path="res://Code/Misc/Scene_switch_trigger/scene_switcher.tscn" id="2_htkuu"]
 [ext_resource type="PackedScene" uid="uid://ch4mx0saqfgys" path="res://Code/Items/Pickupable_items/Prototype/pickupable_item_prototype.tscn" id="3_xssts"]
 [ext_resource type="Resource" uid="uid://s8w0xxxokd6p" path="res://Resources/Inventory_items/Day_4/cracked_mirror.tres" id="4_7v8be"]
-
-[sub_resource type="Animation" id="Animation_cdnb1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(576, 325)]
-}
-
-[sub_resource type="Animation" id="Animation_xl6dp"]
-resource_name = "camera_move_up"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(576, 325), Vector2(576, 312)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_5pdex"]
-_data = {
-&"RESET": SubResource("Animation_cdnb1"),
-&"camera_move_up": SubResource("Animation_xl6dp")
-}
-
-[sub_resource type="Gradient" id="Gradient_xl6dp"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_cdnb1"]
-gradient = SubResource("Gradient_xl6dp")
+[ext_resource type="Texture2D" uid="uid://wmaptwdakwk2" path="res://Assets/Sprites/Areas/Little_Offerings_Lost_Trail.png" id="4_htkuu"]
 
 [node name="LostTrail" type="Node2D"]
 script = ExtResource("1_7v8be")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_5pdex")
-}
+[node name="pickupable_item_prototype" parent="." instance=ExtResource("3_xssts")]
+position = Vector2(1756, 430)
+item = ExtResource("4_7v8be")
+
+[node name="LittleOfferingsLostTrail" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(960, 540)
+texture = ExtResource("4_htkuu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 325)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1035, 79)
-texture = SubResource("GradientTexture2D_cdnb1")
+position = Vector2(960, 540)
 
 [node name="Scene_switcher_crater" parent="." instance=ExtResource("2_htkuu")]
+position = Vector2(40, 362)
+scale = Vector2(1, 4.52)
 next_area = "Crater"
 
 [node name="Scene_switcher_glade" parent="." instance=ExtResource("2_htkuu")]
-position = Vector2(1151, 9)
+position = Vector2(1864, 360)
+scale = Vector2(1, 4.44)
 next_area = "Glade"
 
-[node name="pickupable_item_prototype" parent="." instance=ExtResource("3_xssts")]
-position = Vector2(369, 308)
-item = ExtResource("4_7v8be")
+[node name="AreaBorder" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaBorder"]
+polygon = PackedVector2Array(-1, 399, 12, 302, 181, 277, 328, 255, 388, 246, 286, 75, 455, 52, 466, 30, 534, 30, 523, 187, 476, 356, 540, 323, 667, 345, 632, 241, 532, 137, 573, 99, 697, 104, 659, 30, 727, 6, 799, 11, 779, 130, 890, 102, 960, 115, 898, 229, 886, 321, 953, 289, 1024, 292, 1076, 304, 983, 141, 1057, 107, 1171, 94, 1272, 92, 1407, 99, 1395, 21, 1480, 26, 1471, 127, 1571, 97, 1651, 117, 1733, 105, 1693, 215, 1522, 208, 1454, 225, 1421, 281, 1415, 303, 1400, 302, 1378, 318, 1406, 320, 1467, 252, 1667, 239, 1708, 268, 1720, 335, 1760, 266, 1869, 250, 1909, 301, 1904, 397, 1900, 1078, 6, 1066, -1, 411, -41, 392, -29, 1095, 1975, 1104, 1954, 57, 715, -45, 446, 18, 6, 97)

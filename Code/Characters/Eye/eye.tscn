@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjnxfyycti67q"]
+[gd_scene load_steps=6 format=3 uid="uid://bjnxfyycti67q"]
 
 [ext_resource type="Script" uid="uid://d4ea3sbdpkpjt" path="res://Code/Characters/Eye/eye.gd" id="1_kc857"]
+[ext_resource type="Texture2D" uid="uid://ce3dd18yyi0r6" path="res://Assets/Sprites/Eye/eye_pupil_placeholder.png" id="2_th1kq"]
+[ext_resource type="Texture2D" uid="uid://0tn1midilq4e" path="res://Assets/Sprites/Eye/eye_bottom_placeholder.png" id="3_2g0il"]
+[ext_resource type="Texture2D" uid="uid://d14v7cwfdey1v" path="res://Assets/Sprites/Eye/eye_top_placeholder.png" id="4_nr0xi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t5ork"]
-radius = 41.9762
+radius = 159.154
 
 [node name="Eye" type="StaticBody2D" groups=["Eye", "Interactable_item"]]
 script = ExtResource("1_kc857")
@@ -22,3 +25,15 @@ uv = PackedVector2Array(0, -42, -30, -35, -49, -10, -43, 4, -1, 16, 29, -3, 23, 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-5, -1)
 shape = SubResource("CircleShape2D_t5ork")
+
+[node name="EyePupilPlaceholder" type="Sprite2D" parent="."]
+position = Vector2(-2, -3)
+texture = ExtResource("2_th1kq")
+
+[node name="EyeBottomPlaceholder" type="Sprite2D" parent="."]
+position = Vector2(-3, 27)
+texture = ExtResource("3_2g0il")
+
+[node name="EyeTopPlaceholder" type="Sprite2D" parent="."]
+position = Vector2(-2, -31)
+texture = ExtResource("4_nr0xi")

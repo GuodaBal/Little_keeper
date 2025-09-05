@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cj24n4getos1c" path="res://Code/Items/Interactable_items/Prototype/interactable_item_prototype.tscn" id="2_lrayo"]
 [ext_resource type="PackedScene" uid="uid://ch4mx0saqfgys" path="res://Code/Items/Pickupable_items/Prototype/pickupable_item_prototype.tscn" id="3_51ta1"]
 [ext_resource type="Resource" uid="uid://77k4q8avo2lu" path="res://Resources/Inventory_items/placeholder2.tres" id="4_yf6xd"]
-[ext_resource type="PackedScene" uid="uid://bbuyft1ceiiro" path="res://Code/Characters/Test/test_character.tscn" id="5_jewod"]
+[ext_resource type="PackedScene" uid="uid://bbuyft1ceiiro" path="res://Code/Characters/Cultist/cultist.tscn" id="5_jewod"]
 [ext_resource type="PackedScene" uid="uid://bjnxfyycti67q" path="res://Code/Characters/Eye/eye.tscn" id="6_pripy"]
 [ext_resource type="Resource" uid="uid://cwhvhscuofmil" path="res://Resources/Inventory_items/placeholder3.tres" id="7_dv7hs"]
 

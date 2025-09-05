@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuw8xk3qjx2x8"]
+
+[ext_resource type="Script" uid="uid://bvbtkma2vbtsk" path="res://Code/Items/Use_item_on/feed_area/feed_area.gd" id="1_82nt7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m12lc"]
+size = Vector2(93, 86)
+
+[node name="FeedArea" type="StaticBody2D" groups=["Use_item_on"]]
+collision_layer = 2
+script = ExtResource("1_82nt7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(36.5, 33)
+shape = SubResource("RectangleShape2D_m12lc")

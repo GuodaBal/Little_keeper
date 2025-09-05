@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://dc16uxn7hntw2"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dc16uxn7hntw2"]
 
 [ext_resource type="Texture2D" uid="uid://dowqov75ko01n" path="res://Assets/SAMSARA_PACK_GUI/GUI_Global/SVG/Asset 21.svg" id="1_mthtv"]
 [ext_resource type="Texture2D" uid="uid://cty2hihfve3ch" path="res://Assets/SAMSARA_PACK_GUI/GUI_Global/SVG/Asset 26.svg" id="1_yhq42"]
@@ -9,9 +9,9 @@ texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
 texture_margin_bottom = 5.0
-expand_margin_left = 10.0
+expand_margin_left = 80.0
 expand_margin_top = 10.0
-expand_margin_right = 10.0
+expand_margin_right = 80.0
 expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mthtv"]
@@ -20,11 +20,23 @@ texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
 texture_margin_bottom = 5.0
-expand_margin_left = 10.0
+expand_margin_left = 80.0
 expand_margin_top = 10.0
-expand_margin_right = 10.0
+expand_margin_right = 80.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u56c0"]
+texture = ExtResource("1_mthtv")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+expand_margin_left = 80.0
+expand_margin_top = 10.0
+expand_margin_right = 80.0
 expand_margin_bottom = 10.0
 
 [resource]
 Button/styles/hover = SubResource("StyleBoxTexture_7kx7u")
 Button/styles/normal = SubResource("StyleBoxTexture_mthtv")
+Button/styles/pressed = SubResource("StyleBoxTexture_u56c0")

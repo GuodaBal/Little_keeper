@@ -19,7 +19,7 @@ Pick up?
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Broken doesn’t mean useless.
 	do AudioManager.current_speaker = AudioManager.eye
-	Eye: (pleased) I can be many at once.
+	???: (pleased) I can be many at once.
 	do AudioManager.current_speaker = null
 	=> END!
 - No
@@ -46,7 +46,7 @@ Pick up?
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Inside sticks.
 	do AudioManager.current_speaker = AudioManager.eye
-	Eye: (curious) I like how it learned to fail.
+	???: (curious) I like how it learned to fail.
 	do AudioManager.current_speaker = null
 	=> END!
 - No
@@ -61,7 +61,7 @@ Pick up?
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: If you drop that in, I’m leaving.
 	do AudioManager.current_speaker = AudioManager.eye
-	Eye: (hushed) The drummer. For me?
+	???: (hushed) The drummer. For me?
 	do AudioManager.current_speaker = null
 	=> END!
 - No
@@ -87,7 +87,7 @@ do AudioManager.current_speaker = null
 ~ rim_idle
 #If you idle at the rim >5s:
 do AudioManager.current_speaker = AudioManager.eye
-Eye: (coaxing) One more small brave.
+???: (coaxing) One more small brave.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Brave isn’t always down.
 do AudioManager.current_speaker = null

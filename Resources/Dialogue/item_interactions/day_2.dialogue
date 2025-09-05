@@ -19,7 +19,7 @@ Pick up?
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Yes. Idea of hop. Perfect.
 	do AudioManager.current_speaker = AudioManager.eye
-	Eye: (delighted) Hop that learned to wait.
+	???: (delighted) Hop that learned to wait.
 	do AudioManager.current_speaker = null
 	=> END!
 - No
@@ -46,7 +46,7 @@ Pick up?
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Hop, reduced to homework.
 	do AudioManager.current_speaker = AudioManager.eye
-	Eye: (curious) Hops that stopped, but kept the shape.
+	???: (curious) Hops that stopped, but kept the shape.
 	do AudioManager.current_speaker = null
 	=> END!
 - No
@@ -65,7 +65,7 @@ Yours goes up. Something else’s goes sideways.
 => END!
 
 ~ pick_up_snared_rabbit
-A small gray body, leg caught in a wire. Eyes like marbles.
+A small gray body, leg caught in a wire. ???s like marbles.
 Pick up?
 - Yes
 	do pick_up()
@@ -73,7 +73,7 @@ Pick up?
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: We could not do this.
 	do AudioManager.current_speaker = AudioManager.eye
-	Eye: (hushed) It hops for both of us.
+	???: (hushed) It hops for both of us.
 	do AudioManager.current_speaker = null
 	=> END!
 - No

@@ -19,7 +19,7 @@ Pick up?
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Someone will touch their hand and feel air.
 	do AudioManager.current_speaker = AudioManager.eye
-	Eye: (pleased) A loop! Loops taste like promises.
+	???: (pleased) A loop! Loops taste like promises.
 	do AudioManager.current_speaker = null
 	=> END!
 - No
@@ -34,7 +34,7 @@ Pick up?
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: We are thieves now. Congratulations.
 	do AudioManager.current_speaker = AudioManager.eye
-	Eye: (curious) Keys make doors smaller. I like small.
+	???: (curious) Keys make doors smaller. I like small.
 	do AudioManager.current_speaker = null
 	=> END!
 - No
@@ -61,7 +61,7 @@ Pick up?
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Absolutely not. Put it back in the story it left.
 	do AudioManager.current_speaker = AudioManager.eye
-	Eye: (hushed) It remembers for me. Thank you.
+	???: (hushed) It remembers for me. Thank you.
 	do AudioManager.current_speaker = null
 	=> END!
 - No

@@ -1,6 +1,6 @@
 ~ start_day
 do AudioManager.current_speaker = AudioManager.eye
-Eye: (bright and too eager) Bring me something broken.
+???: (bright and too eager) Bring me something broken.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Last chance to be small and kind.
 do AudioManager.current_speaker = AudioManager.cultist
@@ -24,7 +24,7 @@ NARRATOR: Yes. Make the circle remember itself.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (uneasy hiss) Rules are for doors.
 do AudioManager.current_speaker = AudioManager.eye
-Eye: (wary) Tight is not the same as close.
+???: (wary) Tight is not the same as close.
 do AudioManager.current_speaker = null
 do GlobalSignals.start_ending.emit()
 => END!
@@ -36,7 +36,7 @@ NARRATOR: Good little guy.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (cold) Four. No more. Then go.
 do AudioManager.current_speaker = AudioManager.eye
-Eye: (small) You could stay.
+???: (small) You could stay.
 do AudioManager.current_speaker = null
 do GlobalSignals.start_ending.emit()
 => END!
@@ -50,29 +50,29 @@ else
 
 ~ feed_safe
 do AudioManager.current_speaker = AudioManager.eye
-Eye: A face that knows more than one way to be.
-Eye: (softer) Break me into better shapes.
+???: A face that knows more than one way to be.
+???: (softer) Break me into better shapes.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Broken carried carefully is still care.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (murmur) Some pieces remember the whole.
 if lowering_gently
 	do AudioManager.current_speaker = AudioManager.eye
-	Eye: You showed me first. Thank you.
+	???: You showed me first. Thank you.
 else
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: You keep choosing speed when gentleness would do.
 do AudioManager.current_speaker = null
 #WORLD SHIFT: A hairline star of light traces the rim; screen vignette segments into faint facets, then smooths; a tiny glass tick stinger.
 #If dog_taken
-#Eye, offhand: The follower’s eyes made this taste easier.
+#???, offhand: The follower’s eyes made this taste easier.
 #NARRATOR: Don’t repeat it.
 => after_feeding
 
 ~ feed_strange
 do AudioManager.current_speaker = AudioManager.eye
-Eye: Inside sticks. They snap and sing.
-Eye: (tasting) Salt. Cloth. Kept on purpose.
+???: Inside sticks. They snap and sing.
+???: (tasting) Salt. Cloth. Kept on purpose.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: We are curators of bad ideas now.
 do AudioManager.current_speaker = AudioManager.cultist
@@ -80,14 +80,14 @@ Cultists: (whisper) Bones teach binding.
 
 if lowering_gently
 	do AudioManager.current_speaker = AudioManager.eye
-	Eye: You kept the wrap on. Polite.
+	???: You kept the wrap on. Polite.
 else
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Unwrapping would have been worse. Thank you for not trying.
-#WORLD SHIFT: A subtle creak SFX like settling wood; rope knots on the bucket appear tighter; the Eye sprouts a faint ring-ridge overlay for 2–3 seconds.
+#WORLD SHIFT: A subtle creak SFX like settling wood; rope knots on the bucket appear tighter; the ??? sprouts a faint ring-ridge overlay for 2–3 seconds.
 
 #If dog_taken
-#Eye: The follower made this lesson easy. It bent first.
+#???: The follower made this lesson easy. It bent first.
 #The eye begins to bark like the dog you let go.
 
 do AudioManager.current_speaker = null
@@ -95,23 +95,23 @@ do AudioManager.current_speaker = null
 
 ~ feed_wild
 do AudioManager.current_speaker = AudioManager.eye
-Eye: Warm drummer.
-Eye: (thrilled) Beat for me. Beat as me.
+???: Warm drummer.
+???: (thrilled) Beat for me. Beat as me.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: …All right. I’m done helping.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (rising) Knees.
 if lowering_gently
 	do AudioManager.current_speaker = AudioManager.eye
-	Eye: You lowered the beat like a lullaby. Mine now.
+	???: You lowered the beat like a lullaby. Mine now.
 else
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Dropping a heart is a confession.
 do AudioManager.current_speaker = null
-#WORLD SHIFT: A heartbeat bed fades in under the mix; the Eye’s pupil dilates, then a faint pulse ripples the rim; lantern flames lean inward and hold.
+#WORLD SHIFT: A heartbeat bed fades in under the mix; the ???’s pupil dilates, then a faint pulse ripples the rim; lantern flames lean inward and hold.
 
 #If dog_taken
-#Eye: Your follower was the first small drum. This is louder.
+#???: Your follower was the first small drum. This is louder.
 
 #(Optional micro-sting if this is second wild overall)
 #NARRATOR, low: There it is. Crown coming.
@@ -119,7 +119,7 @@ do AudioManager.current_speaker = null
 
 ~ after_feeding
 do AudioManager.current_speaker = AudioManager.eye
-Eye: I learned so well. Let me show you.
+???: I learned so well. Let me show you.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: Knees. Knees.
 do AudioManager.current_speaker = AudioManager.narrator

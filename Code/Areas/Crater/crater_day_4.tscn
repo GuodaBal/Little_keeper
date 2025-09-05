@@ -1,28 +1,95 @@
-[gd_scene load_steps=5 format=3 uid="uid://46dcirwa6we0"]
+[gd_scene load_steps=9 format=3 uid="uid://46dcirwa6we0"]
 
 [ext_resource type="Script" uid="uid://krwv2nuyrc2c" path="res://Code/Areas/Crater/crater_day_4.gd" id="1_2vw5w"]
 [ext_resource type="PackedScene" uid="uid://bmj7xjel53ir8" path="res://Code/Misc/Scene_switch_trigger/scene_switcher.tscn" id="2_2lp3g"]
+[ext_resource type="Texture2D" uid="uid://bpp01ofb50kb3" path="res://Assets/Sprites/Areas/Little_Offerings_Crater.png" id="2_mw2pw"]
 [ext_resource type="PackedScene" uid="uid://bjnxfyycti67q" path="res://Code/Characters/Eye/eye.tscn" id="3_d2p4o"]
+[ext_resource type="PackedScene" uid="uid://bbuyft1ceiiro" path="res://Code/Characters/Cultist/cultist.tscn" id="5_34i2c"]
+[ext_resource type="PackedScene" uid="uid://cuw8xk3qjx2x8" path="res://Code/Items/Use_item_on/feed_area/feed_area.tscn" id="6_j4s1n"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kfjt0"]
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_uk1ah"]
 size = Vector2(80, 80)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ktv0k"]
+radius = 72.0
+height = 458.0
 
 [node name="Crater" type="Node2D"]
 script = ExtResource("1_2vw5w")
 
+[node name="LittleOfferingsCrater" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-676, 539)
+rotation = 3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("2_mw2pw")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(793, 193)
 scale = Vector2(0.973764, 1.27273)
-texture = SubResource("PlaceholderTexture2D_kfjt0")
+texture = SubResource("PlaceholderTexture2D_uk1ah")
 
 [node name="Scene_switcher_camp" parent="." instance=ExtResource("2_2lp3g")]
-position = Vector2(174, 29)
+position = Vector2(-1.99998, 200)
 scale = Vector2(10.835, 1)
 next_area = "Camp"
 
 [node name="Scene_switcher_lost_trail" parent="." instance=ExtResource("2_2lp3g")]
-position = Vector2(1144, 328)
+position = Vector2(220, 237)
+scale = Vector2(1, 4.96)
 next_area = "Lost_trail"
 
 [node name="Eye" parent="." instance=ExtResource("3_d2p4o")]
-position = Vector2(519, 520)
+position = Vector2(-642, 678)
+collision_layer = 2
+
+[node name="CollisionShape2D" parent="Eye" index="2"]
+position = Vector2(52, -16)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ktv0k")
+
+[node name="TestCharacter2" parent="." instance=ExtResource("5_34i2c")]
+position = Vector2(-454, 818)
+char_name = "Stitch_Splint"
+facing_forward = false
+facing_left = false
+
+[node name="TestCharacter3" parent="." instance=ExtResource("5_34i2c")]
+position = Vector2(-1562, 405)
+char_name = "Kettle"
+facing_forward = false
+
+[node name="TestCharacter4" parent="." instance=ExtResource("5_34i2c")]
+position = Vector2(67, 495)
+char_name = "Vellum"
+
+[node name="TestCharacter5" parent="." instance=ExtResource("5_34i2c")]
+position = Vector2(-70, 486)
+char_name = "Cinder"
+facing_left = false
+
+[node name="PrologueCutscenePosition" type="Node2D" parent="."]
+position = Vector2(-239, 664)
+
+[node name="FeedArea" parent="." instance=ExtResource("6_j4s1n")]
+position = Vector2(-633, 426)
+scale = Vector2(2.03, 2.03)
+
+[node name="AreaBorder" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaBorder"]
+polygon = PackedVector2Array(19, 210, -21, 208, -77, 207, -202, 211, -246, 168, -297, 167, -276, 268, -457, 262, -414, 127, -568, 118, -550, 263, -720, 234, -784, 211, -821, 244, -973, 239, -1163, 243, -1151.37, 213.143, -1126, 148, -1242, 166, -1226, 278, -1384, 246, -1398.04, 211.983, -1410, 183, -1500, 174, -1469, 296, -1637, 291, -1629, 612, -1633, 968, -1568, 870, -1487, 1006, -1403, 930, -1319, 1007, -1239, 907, -1410, 805, -1519, 733, -1547, 601, -1544, 550, -1487, 483, -1392, 435, -1183, 424, -707, 423, -559, 480, -479, 555, -458, 651, -453, 763, -528, 872, -559, 924, -498, 1021, -406, 895, -332, 1016, -236, 913, -177, 1018, -77, 914, -25, 1010, 21, 1011, 73, 951, 112, 1014, 164, 1010, 251, 893, 276, 895, 286, 1017, -1688, 1019, -1649, 226, -1531, 113, -610, 27, -237, 109, 302, 192, 307, 913, 272, 876, 255, 239, 126, 222)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-676, 539)
+
+[node name="Cultist4" parent="." instance=ExtResource("5_34i2c")]
+position = Vector2(-135, 818)
+char_name = "Bramble_Net"
+facing_forward = false
+
+[node name="TestCharacter6" parent="." instance=ExtResource("5_34i2c")]
+position = Vector2(-532, 365)
+char_name = "Vellum"
+
+[editable path="Eye"]

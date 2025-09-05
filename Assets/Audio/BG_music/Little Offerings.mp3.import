@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5dhuiwhx56m7"
+path="res://.godot/imported/Little Offerings.mp3-9891d80928dfd857b62a59414ddb557e.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/BG_music/Little Offerings.mp3"
+dest_files=["res://.godot/imported/Little Offerings.mp3-9891d80928dfd857b62a59414ddb557e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

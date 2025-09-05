@@ -15,56 +15,55 @@ script = ExtResource("1_yedqo")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1157.0
-offset_bottom = 660.0
-color = Color(0.298039, 0.298039, 0.298039, 1)
+offset_right = 1958.0
+offset_bottom = 1098.0
+color = Color(0.144063, 0.144063, 0.144063, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = -16.0
 offset_top = 48.0
-offset_right = 1157.0
-offset_bottom = 149.0
+offset_right = 1999.0
+offset_bottom = 228.0
 color = Color(0, 0, 0, 1)
 
 [node name="Asset20" type="Sprite2D" parent="."]
-modulate = Color(0.458912, 0.395914, 0.338288, 1)
-position = Vector2(560, 372)
-scale = Vector2(0.56279, 0.390758)
+modulate = Color(0, 0, 0, 1)
+position = Vector2(946.863, 604.88)
+scale = Vector2(1.32128, 0.621593)
 texture = ExtResource("2_xesgj")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_top = 51.5
-offset_right = 1150.0
-offset_bottom = 135.5
+offset_top = 52.0
+offset_right = 1920.0
+offset_bottom = 240.0
 bbcode_enabled = true
-text = "[font_size=60][center]CONTROLS"
+text = "[font_size=110][center]CONTROLS"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 293.0
-offset_top = 190.0
-offset_right = 820.0
-offset_bottom = 542.0
+offset_top = 300.0
+offset_right = 1745.0
+offset_bottom = 893.0
 bbcode_enabled = true
-text = "[font_size=30]Walk up: w
+text = "[font_size=60]Walk up: w
 Walk down: s
 Walk left: a
 Walk right: d
 Interact: e
-Feed: q
 Move left in inventory: left arrow 
 Move right in inventory: right arrow"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 589.0
-offset_right = 152.0
-offset_bottom = 648.0
+offset_left = 83.0
+offset_top = 986.0
+offset_right = 232.0
+offset_bottom = 1079.0
 theme = ExtResource("3_n7g3p")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 60
 text = "Back"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

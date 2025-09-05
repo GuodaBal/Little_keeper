@@ -1,6 +1,6 @@
 ~ start_day
 do AudioManager.current_speaker = AudioManager.eye
-Eye: (cheerful) Start easy. Bring me something sweet.
+???: (cheerful) Start easy. Bring me something sweet.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Harmless would be nice. Be boring for me, just once.
 do AudioManager.current_speaker = AudioManager.cultist
@@ -23,15 +23,15 @@ do AudioManager.current_speaker = null
 
 ~ feed_safe
 do AudioManager.current_speaker = AudioManager.eye
-Eye: Bright sugar! It crackles on my tongue.
-Eye: (softer) You are good at finding suns.
+???: Bright sugar! It crackles on my tongue.
+???: (softer) You are good at finding suns.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Thank you. That was mercy with a stick.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (hum) Sweet for sweet.
 if lowered_gently
 	do AudioManager.current_speaker = AudioManager.eye
-	Eye: You lowered it kindly. I can taste the careful.
+	???: You lowered it kindly. I can taste the careful.
 else
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Speed is how mistakes like to dress.
@@ -41,8 +41,8 @@ do AudioManager.current_speaker = null
 
 ~ feed_strange
 do AudioManager.current_speaker = AudioManager.eye
-Eye: Thick night. It tugs my teeth.
-Eye: (delighted) Sweet that remembers bark.
+???: Thick night. It tugs my teeth.
+???: (delighted) Sweet that remembers bark.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: This is where ‘technically’ becomes a sin.
 do AudioManager.current_speaker = AudioManager.cultist
@@ -51,7 +51,7 @@ do AudioManager.current_speaker = null
 
 if lowering_gently
 	do AudioManager.current_speaker = AudioManager.eye
-	Eye: You held it steady. It didn’t spill its moon.
+	???: You held it steady. It didn’t spill its moon.
 else
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: We’re rushing dessert now? Fine. Fine.
@@ -61,17 +61,17 @@ do AudioManager.current_speaker = null
 
 ~ feed_wild
 do AudioManager.current_speaker = AudioManager.eye
-Eye: Oh. A small scream.
-Eye: (thrilled) Sweet with story.
+???: Oh. A small scream.
+???: (thrilled) Sweet with story.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Put. It. Back.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (approving) The little one feeds willing.
 do AudioManager.current_speaker = null
-#WORLD SHIFT: A soft chime like dental tools far away; the Eye’s iris tightens briefly; one lantern near the rim tilts toward the pit.
+#WORLD SHIFT: A soft chime like dental tools far away; the ???’s iris tightens briefly; one lantern near the rim tilts toward the pit.
 if lowering_gently
 	do AudioManager.current_speaker = AudioManager.eye
-	Eye: You cradled it. The cradle is mine now.
+	???: You cradled it. The cradle is mine now.
 else
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Tossing teeth into holes. Bold hobby.
@@ -80,7 +80,7 @@ do AudioManager.current_speaker = null
 
 ~ after_feeding
 do AudioManager.current_speaker = AudioManager.eye
-Eye: More soon?
+???: More soon?
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: You can still walk away. You won’t, but you can.
 do AudioManager.current_speaker = AudioManager.cultist
