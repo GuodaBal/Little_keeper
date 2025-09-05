@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://ddgshxcfdyr3r"]
+
+[ext_resource type="Script" uid="uid://5nwhfs515abu" path="res://Code/Inventory/inventory_item.gd" id="1_sp0dj"]
+
+[resource]
+script = ExtResource("1_sp0dj")
+item_name = "human_heart"
+category = 3
+metadata/_custom_type_script = "uid://5nwhfs515abu"

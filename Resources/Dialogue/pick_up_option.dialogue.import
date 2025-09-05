@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://scvftuav3frh"
+path="res://.godot/imported/pick_up_option.dialogue-16437604630c91a43e3ed2a9519f6b4e.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/pick_up_option.dialogue"
+dest_files=["res://.godot/imported/pick_up_option.dialogue-16437604630c91a43e3ed2a9519f6b4e.tres"]
+
+[params]
+
+defaults=true

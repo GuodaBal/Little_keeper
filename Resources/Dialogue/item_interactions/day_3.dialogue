@@ -1,0 +1,115 @@
+~ look_at_car_door
+A mouth that forgot how to close.
+=> END!
+
+~ look_at_windshield_crack
+A lightning bolt that took too long.
+=> END!
+
+~ look_at_floor_mats
+Sand keeps the ticket stubs company.
+=> END!
+
+~ pick_up_wedding_ring
+A thin band wedged between seat and console, nicked but bright.
+Pick up?
+- Yes
+	do pick_up()
+	It circles your finger without asking. You pocket it instead.
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Someone will touch their hand and feel air.
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: (pleased) A loop! Loops taste like promises.
+	do AudioManager.current_speaker = null
+	=> END!
+- No
+	=> END!
+
+~ pick_up_car_keys
+A fob with a worn button. Tag - SPARE. It isn’t.
+Pick up?
+- Yes
+	do pick_up()
+	Metal jingles like a small alarm that already failed.
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: We are thieves now. Congratulations.
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: (curious) Keys make doors smaller. I like small.
+	do AudioManager.current_speaker = null
+	=> END!
+- No
+	=> END!
+
+~ look_at_clipboard
+Boxes to tick. One box ticks back.
+=> END!
+
+~ look_at_label_roll
+SPECIMEN, in tidy letters. Comforting font.
+=> END!
+
+~ look_at_drain_grate
+Water remembers the way out.
+=> END!
+
+~ pick_up_brain_specimen_jar
+A jar in pink-gray gel. Label - Specimen—Anatomy, Retained.
+Pick up?
+- Yes
+	do pick_up()
+	The gel wobbles. Your reflection does, too.
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Absolutely not. Put it back in the story it left.
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: (hushed) It remembers for me. Thank you.
+	do AudioManager.current_speaker = null
+	=> END!
+- No
+	=> END!
+
+~ look_at_low_brush
+Something practiced being small here.
+=> END!
+
+~ look_at_dropped_scarf
+Smells like running.
+=> END!
+
+~ look_at_paw_prints
+A little trail choosing you.
+=> END!
+
+~ interact_with_dog
+A scruffy shape in the grass. Tail makes a question mark.
+PET:
+It leans into your hand like you’re furniture it needed.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: It chose you. It can still choose again.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultist: (soft) Featherless friend has chosen you.
+do AudioManager.current_speaker = null
+=> END!
+
+~ look_at_rim
+Tiny scratches in a ring, as if something practiced climbing.
+=> END!
+
+~ look_at_car_after_keys
+The keyhole looks surprised.
+=> END!
+
+~ look_at_car_after_ring
+Indent where a hand waited.
+=> END!
+
+~ dog_linger
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: This could have been avoided if you’d only not joined.
+do AudioManager.current_speaker = null
+=> END!
+
+~ crossing_cultist
+do AudioManager.current_speaker = AudioManager.cultist
+Cultist: (hush) Stand taller.
+do AudioManager.current_speaker = null
+=> END!

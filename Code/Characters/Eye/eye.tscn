@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjnxfyycti67q"]
+
+[ext_resource type="Script" uid="uid://d4ea3sbdpkpjt" path="res://Code/Characters/Eye/eye.gd" id="1_kc857"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t5ork"]
+radius = 41.9762
+
+[node name="Eye" type="StaticBody2D" groups=["Eye", "Interactable_item"]]
+script = ExtResource("1_kc857")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(0, 4)
+color = Color(0.800491, 0.800491, 0.800491, 1)
+polygon = PackedVector2Array(1, -39, -10, -38, -20, -35, -33, -28, -36, -20, -37, -13, -38, 1, -33, 15, -20, 24, -7, 27, 11, 24, 23, 18, 26, 9, 27, -2, 26, -13, 23, -25, 15, -35)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2(0, 4)
+color = Color(0.194349, 0.194349, 0.194349, 1)
+polygon = PackedVector2Array(2, -24, -18, -19, -32, -6, -25, 12, -3, 20, 19, 7, 16, -13)
+uv = PackedVector2Array(0, -42, -30, -35, -49, -10, -43, 4, -1, 16, 29, -3, 23, -30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, -1)
+shape = SubResource("CircleShape2D_t5ork")

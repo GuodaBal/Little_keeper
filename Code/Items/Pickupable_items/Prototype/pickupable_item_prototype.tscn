@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch4mx0saqfgys"]
+
+[ext_resource type="Script" uid="uid://gw88xte6jg0s" path="res://Code/Items/Pickupable_items/Prototype/pickupable_item_prototype.gd" id="1_nmsmy"]
+[ext_resource type="Resource" uid="uid://ybch8tvxwvd5" path="res://Resources/Inventory_items/placeholder.tres" id="2_qs81v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mke3s"]
+radius = 30.8058
+
+[node name="pickupable_item_prototype" type="StaticBody2D" groups=["Pickupable_item"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_nmsmy")
+item = ExtResource("2_qs81v")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.16474, 0.402955, 0.620316, 1)
+polygon = PackedVector2Array(2, -25, -22, -7, -17, 21, 21, 22, 28, -5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -2)
+shape = SubResource("CircleShape2D_mke3s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

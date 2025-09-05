@@ -1,0 +1,81 @@
+~ look_at_fallen_sign
+NO RUNNING, it says, halfway convinced.
+=> END!
+
+~ look_at_loop_of_rope
+A jump rope, retired.
+=> END!
+
+~ look_at_stump_rings
+Count the years like little jumps.
+=> END!
+
+~ pick_up_broken_pogostick
+Spring’s there. Handle’s crooked. Still remembers bounce.
+Pick up?
+- Yes
+	do pick_up()
+	You test it. The spring answers with a hopeful boing?
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Yes. Idea of hop. Perfect.
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: (delighted) Hop that learned to wait.
+	do AudioManager.current_speaker = null
+	=> END!
+- No
+	=> END!
+
+~ look_at_metal_tray
+Shiny. Clean enough to reflect a frown.
+=> END!
+
+~ look_at_label_roll
+‘Specimen’ in tidy letters. For what, exactly.
+=> END!
+
+~ look_at_jar_shelf
+Numbers without stories.
+=> END!
+
+~ pick_up_dissected_frog
+Limbs arranged like paper clips. Tag - Anura.
+Pick up?
+- Yes
+	do pick_up()
+	Glass is cold. Something taps from the inside—just settling, you tell yourself.
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Hop, reduced to homework.
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: (curious) Hops that stopped, but kept the shape.
+	do AudioManager.current_speaker = null
+	=> END!
+- No
+	=> END!
+
+~ look_at_snare_flag
+A red scrap blinks between roots.
+=> END!
+
+~ look_at_scuffed_dirt
+Something tried to be elsewhere.
+=> END!
+
+~ look_at_breath_in_the_cold
+Yours goes up. Something else’s goes sideways.
+=> END!
+
+~ pick_up_snared_rabbit
+A small gray body, leg caught in a wire. Eyes like marbles.
+Pick up?
+- Yes
+	do pick_up()
+	It thumps once in the bucket. Then twice.
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: We could not do this.
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: (hushed) It hops for both of us.
+	do AudioManager.current_speaker = null
+	=> END!
+- No
+	=> END!
+

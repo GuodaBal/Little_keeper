@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cjhhoghbe2q1t"
+path="res://.godot/imported/eye.dialogue-a0e4dd61d400dcd7f28fc87e49b386a1.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/eye.dialogue"
+dest_files=["res://.godot/imported/eye.dialogue-a0e4dd61d400dcd7f28fc87e49b386a1.tres"]
+
+[params]
+
+defaults=true

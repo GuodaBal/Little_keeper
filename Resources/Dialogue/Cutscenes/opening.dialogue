@@ -1,0 +1,86 @@
+~ line_1
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: This is our little guy.
+NARRATOR: And he is lost.
+NARRATOR: Not the scream-and-run kind. The quiet kind, where the trees agree with you.
+=> END!
+
+~ line_2
+NARRATOR: Left goes somewhere. Right goes somewhere else. Back goes back.
+NARRATOR: Forward goes to a story I do not recommend.
+- Go left
+	=> go_left
+- Go right
+	=> go_right
+- Go back
+	=> go_back
+- Stand still
+	=> stand_still_1
+- Follow a firefly
+	=> follow_firefly
+=> END!
+
+~ line_3
+NARRATOR: Left goes somewhere. Right goes somewhere else. Back goes back.
+NARRATOR: Forward goes to a story I do not recommend.
+- Go left
+	=> go_left
+- Go right
+	=> go_right
+- Go back
+	=> go_back
+- Stand still
+	=> stand_still_2
+- Follow a firefly
+	=> follow_firefly
+=> END!
+
+~ line_4
+NARRATOR: Left goes somewhere. Right goes somewhere else. Back goes back.
+NARRATOR: Forward goes to a story I do not recommend.
+- Go left
+	=> go_left
+- Go right
+	=> go_right
+- Go back
+	=> go_back
+- Stand still
+	=> loop_thrice
+- Follow a firefly
+	=> follow_firefly
+=> END!
+
+~ go_left
+NARRATOR: Left is the traditional direction for mistakes.
+=> gate_to_clearing
+
+~ go_right
+NARRATOR: Right feels right, until it doesn’t.
+=> gate_to_clearing
+
+~ go_back
+NARRATOR: Back is wonderful… when permitted.
+=> gate_to_clearing
+
+~ stand_still_1
+NARRATOR: I love stillness. The forest does, too. It keeps you.
+=> line_3
+
+~ stand_still_2
+NARRATOR: I love stillness. The forest does, too. It keeps you.
+=> line_4
+
+~ follow_firefly
+NARRATOR: Following tiny lights is how we decorate bad ideas.
+=> gate_to_clearing
+
+~ loop_thrice
+NARRATOR: You’re hoping the forest will invent a door. It will. I’ve seen the draft.
+=> gate_to_clearing
+
+~ gate_to_clearing
+do get_parent().transition_animations.play_fade_out()
+[next=2]
+NARRATOR: Ah. Here we are. The part with the hole.
+do AudioManager.current_speaker = null
+=> END!

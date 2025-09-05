@@ -1,0 +1,99 @@
+~ start_day
+do AudioManager.current_speaker = AudioManager.eye
+Eye: (playful) Bring me something that hops.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Please say pogo stick out loud. Manifest it.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (low) Three remain.
+do AudioManager.current_speaker = null
+=> END
+
+~ lower_offering
+if lowering_gently
+	The rope slides warm through your palms. The bucket rocks like a cradle.
+else
+	You pay out the line fast. The rim chuckles gravel into the dark.
+=> END!
+
+~ feed_safe
+do AudioManager.current_speaker = AudioManager.eye
+Eye: Spring-song! I can hear the boing.
+Eye: (softer) You keep the hop safe in your head.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Thank you. Mercy with a squeak.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (faint) Two notes make a warning.
+if lowering_gently
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: You held the bounce so it wouldn’t spill.
+else
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Every shortcut leaves a splinter.
+do AudioManager.current_speaker = null
+#WORLD SHIFT: A soft spring twang SFX echoes once; a dandelion clock near the rim shivers; vignette lightens a notch.
+=> END!
+
+~ feed_strange
+do AudioManager.current_speaker = AudioManager.eye
+Eye: Hop arranged. Pretty.
+Eye: (tasting) Wet glass memory.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: You brought a diagram of life.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (whisper) Jar frog sings quieter.
+if lowering_gently
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: You didn’t shake it. Good.
+else
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Try not to slosh the lesson.
+do AudioManager.current_speaker = null
+#WORLD SHIFT: Drip SFX under the mix; tiny water ripples draw themselves inward across the crater; a gnat skates the rim shadow.
+=> END!
+
+~ feed_wild
+do AudioManager.current_speaker = AudioManager.eye
+Eye: Alive-hop. Bright-hop.
+Eye: (thrilled) It teaches me hurry.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Put it back on the earth that still wants it.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (approving) The little one feeds willing.
+if lowering_gently
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: You lowered it softly. Soft is still down.
+else
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Nothing deserves a drop.
+do AudioManager.current_speaker = null
+#WORLD SHIFT: Low rumble bed swells; the Eye’s pupil tightens then widens; grass at the rim bends toward the pit and holds.
+
+#(Optional micro-sting if this is the player’s first wild choice)
+#NARRATOR, very low: …okay. That’s a line you crossed.
+=> END!
+
+~ after_feeding
+do AudioManager.current_speaker = AudioManager.eye
+Eye: More, please.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: We are now officially not friends.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: Two remain.
+do AudioManager.current_speaker = null
+=> END!
+
+~ look_at_lanterns
+The flame leans farther now.
+=> END!
+
+~ player_lingers
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: It’s learning your timing. Change your timing.
+do AudioManager.current_speaker = null
+=> END!
+
+~ pass_cultist
+do AudioManager.current_speaker = AudioManager.cultist
+Cultist: (murmur) Keeper teaches hunger.
+do AudioManager.current_speaker = null
+=> END!

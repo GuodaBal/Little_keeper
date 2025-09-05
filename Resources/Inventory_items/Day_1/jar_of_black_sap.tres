@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://t1eouupg4xfd"]
+
+[ext_resource type="Script" uid="uid://5nwhfs515abu" path="res://Code/Inventory/inventory_item.gd" id="1_504r2"]
+
+[resource]
+script = ExtResource("1_504r2")
+item_name = "jar_of_black_sap"
+category = 2
+metadata/_custom_type_script = "uid://5nwhfs515abu"

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cffcnlc0jv28"
+path="res://.godot/imported/scene_switching.dialogue-adc68c0d5a303c2e9d22a75731855526.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/scene_switching.dialogue"
+dest_files=["res://.godot/imported/scene_switching.dialogue-adc68c0d5a303c2e9d22a75731855526.tres"]
+
+[params]
+
+defaults=true

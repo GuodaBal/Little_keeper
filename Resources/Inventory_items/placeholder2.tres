@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=4 format=3 uid="uid://77k4q8avo2lu"]
+
+[ext_resource type="Script" uid="uid://5nwhfs515abu" path="res://Code/Inventory/inventory_item.gd" id="1_jvaa5"]
+[ext_resource type="Texture2D" uid="uid://ceca1swba72do" path="res://icon.svg" id="2_6p35b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64fh5"]
+atlas = ExtResource("2_6p35b")
+region = Rect2(17.9079, 24.4605, 91.8553, 81.079)
+
+[resource]
+script = ExtResource("1_jvaa5")
+item_name = "placeholder2"
+sprite = SubResource("AtlasTexture_64fh5")
+category = 2
+metadata/_custom_type_script = "uid://5nwhfs515abu"

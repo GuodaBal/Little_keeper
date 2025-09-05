@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dueivk82c1uvp"]
+
+[ext_resource type="Script" uid="uid://ccrahmrcik6gm" path="res://Code/Globals/audio_manager.gd" id="1_kpx4d"]
+[ext_resource type="AudioStream" uid="uid://cis6mg2khlflp" path="res://Assets/Audio/Character_voices/little-robot-sound-84657.mp3" id="2_a8bt5"]
+[ext_resource type="AudioStream" uid="uid://quvjcoc8q6hr" path="res://Assets/Audio/Character_voices/video-game-text-330163.mp3" id="3_simw2"]
+[ext_resource type="AudioStream" uid="uid://dogi30xy30oho" path="res://Assets/Audio/Character_voices/medium-text-blip-14855.mp3" id="4_2bn8j"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_kpx4d")
+
+[node name="Dialogue" type="Node" parent="."]
+
+[node name="Eye" type="AudioStreamPlayer" parent="Dialogue"]
+stream = ExtResource("2_a8bt5")
+volume_db = -2.811
+bus = &"Dialogue"
+
+[node name="Narrator" type="AudioStreamPlayer" parent="Dialogue"]
+stream = ExtResource("3_simw2")
+volume_db = -10.306
+bus = &"Dialogue"
+
+[node name="Cultist" type="AudioStreamPlayer" parent="Dialogue"]
+stream = ExtResource("4_2bn8j")
+bus = &"Dialogue"

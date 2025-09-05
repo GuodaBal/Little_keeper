@@ -1,0 +1,7 @@
+~ start
+Pick up item?
+- Yes
+	do Pick_up()
+- No
+	=> END
+=> END

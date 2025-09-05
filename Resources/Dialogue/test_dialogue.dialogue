@@ -1,0 +1,7 @@
+~ gave_item
+Nathan: What would you like?
+- This one [if GlobalVariables.current_day == 1]
+    Nathan: Ah, so you want this one?
+- Another one [if GlobalVariables.current_day == 2]
+- Nothing => END
+=> END!

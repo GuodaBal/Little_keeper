@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://co2mvx42l3ket"
+path="res://.godot/imported/feed_options.dialogue-7e128e2740f22041b0dea89305141b09.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Cutscenes/feed_options.dialogue"
+dest_files=["res://.godot/imported/feed_options.dialogue-7e128e2740f22041b0dea89305141b09.tres"]
+
+[params]
+
+defaults=true

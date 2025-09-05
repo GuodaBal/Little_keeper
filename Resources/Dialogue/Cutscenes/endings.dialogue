@@ -1,0 +1,150 @@
+#CROWNED — (trigger: wild_count ≥ 2 and not refused_final and not bound_attempt)
+~ crowned_ending
+The chalk ring quivers. The ground lifts like a slow breath.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (rising) Knees.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: You taught it appetite. It learned ceremony.
+#Ascend
+#The EYE swells, iris pulsing the last two accent colors. A ring of little mouthlets opens around it—smiles without faces.
+#SFX: low choir pad + steady heartbeat; lantern flames lean inward and hold.
+do AudioManager.current_speaker = AudioManager.eye
+EYE: (delighted) Little keeper. You fed me shapes. I fit them.
+#Spare
+#Tall hoods bow. One by one, silhouettes fold into the dark, offscreen.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (soft) Keeper teaches hunger. Hunger keeps us.
+do AudioManager.current_speaker = AudioManager.eye
+EYE: (to you) Stay above. I need a hand to sprinkle.
+
+#If dog_taken
+#A collar tag tinks up from the pit, then falls back in.
+#EYE, fond: Your follower came first. You came best.
+
+#Narrator surrender
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: …I won’t narrate worship.
+#His sticky-note fades from the UI margin.
+#Crown image
+#The Eye rises level with your hood. A thin ring of chalk remakes itself as a crown silhouette around the pupil.
+do AudioManager.current_speaker = AudioManager.eye
+EYE: (naming) Little Keeper.
+#Final beat
+do AudioManager.current_speaker = null
+Dawn leaks between trees. You pull your hood up.
+#SFX: music swells; heartbeat syncs with menu click pace.
+#Title return (distorted)
+#TITLE CARD: LITTLE OFFERINGS
+# The O in OFFERINGS blinks; inside it, a tiny mouth opens once.
+
+#Optional post-credit sting
+#SFX: quiet tap like a bucket set down.
+#EYE: (off) Breakfast?
+=> END!
+
+~ bound_ending
+#BOUND — (trigger: bound_attempt == true and wild_count ≤ 1)
+#Opening beats
+You loop rope round the chalk marks. Left over right. Twice. Thrice.
+#SFX: rope creak, knots tighten; heartbeat bed fades.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Yes. Make the circle remember itself.
+#Resistance
+do AudioManager.current_speaker = AudioManager.eye
+EYE: (wary) Tight is not the same as close.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (uneasy) Rules are for doors.
+#Seal
+do AudioManager.current_speaker = null
+The rim tightens like a drawn mouth. Hairline light closes. Dust rises and settles.
+#WORLD SHIFT: vignette widens back to normal; ambient wind replaces hum.
+
+#If dog_taken
+#The collar at the rim vibrates, then lies still.
+#NARRATOR, soft: Two loops kept. One lost. We keep what we can.
+
+#Dismissal
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (quiet) No meal. No mass.
+do AudioManager.current_speaker = null
+One lantern snuffs. Hoods turn away. Footfalls disperse like leaves.
+#Eye’s last word
+do AudioManager.current_speaker = AudioManager.eye
+EYE: (smaller) I can be patient another night.
+#Alone
+do AudioManager.current_speaker = null
+The clearing empties. You’re the last shape.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: You stayed little. That’s larger than it sounds.
+#Final beat
+do AudioManager.current_speaker = null
+You coil the rope. It stays tied around the rim—a rough halo.
+#Title return (quiet)
+#TITLE CARD: LITTLE OFFERINGS
+# A faint rope circle is sketched behind the title; it doesn’t quite close.
+
+#Optional post-credit sting
+#SFX: a single drip below, then nothing.
+=> END!
+
+~ defected_ending 
+#3) DEFECTED — (trigger: refused_final == true and wild_count == 0)
+#Opening beats
+You set the bucket down. Step back.
+do AudioManager.current_speaker = AudioManager.eye
+EYE: (small) You could still—
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: No.
+#Cult response
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (cold) Four. No more. Then go.
+do AudioManager.current_speaker = null
+Two tall hoods flank you, gentle hands that don’t ask.
+#Edge
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: I’m proud of you. I wish that mattered more than gravity.
+#SFX: wind hush; gravel ticks over the edge.
+
+#If dog_taken
+#A thin bark echoes from too far down.
+#NARRATOR, strained: Look at me. Not the hole.
+
+#Push
+do AudioManager.current_speaker = null
+A nudge like a decision you didn’t make. Your toes lose the rim.
+do AudioManager.current_speaker = AudioManager.eye
+EYE: (urgent) Stay! I can learn softer—
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (flat) Out.
+#Fall (non-graphic)
+#The trees stretch into lines. The Eye becomes a bright coin, then a drawn O, then a dot.
+#SFX: all sound drops out except your breath; a distant bell tolls once.
+#Narrator hold
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: (steady) You stayed kind. Keep staying kind.
+A firefly drifts up through the dark. It pauses near you.
+NARRATOR: (soft) Take the small light.
+do AudioManager.current_speaker = null
+#Cut
+#Hard to black before an impact ever arrives.
+#Title return (subtle)
+#TITLE CARD: LITTLE OFFERINGS
+# The dot over the i in Offerings lingers a beat longer, like a tiny firefly.
+
+#Optional post-credit sting
+#EYE, very faint: Hello, little— (cut)
+=> END!
+
+~ bound_ending_2
+#Optional harsher BOUND variant (if you allowed 2 wild but still chose Bind)
+#(use only if you want the bind to barely work and feel costly)
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: This will hold. It will also remember.
+do AudioManager.current_speaker = AudioManager.eye
+EYE: (resentful) Small hands tied large hunger. I won’t forget your knots.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: Rules taste like ash.
+do AudioManager.current_speaker = null
+The rope smokes a line into the rim.
+#WORLD SHIFT: a faint hum remains under the wind.
+=> END!

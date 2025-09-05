@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdnbonal2qw02"]
+
+[ext_resource type="Script" uid="uid://dn105yrw4ujct" path="res://Code/UI/Controls/controls.gd" id="1_yedqo"]
+[ext_resource type="Texture2D" uid="uid://cjnvvh7w05ayf" path="res://Assets/SAMSARA_PACK_GUI/GUI_Global/SVG/Asset 20.svg" id="2_xesgj"]
+[ext_resource type="Theme" uid="uid://dc16uxn7hntw2" path="res://Assets/Themes/black_button.tres" id="3_n7g3p"]
+
+[node name="Controls" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yedqo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1157.0
+offset_bottom = 660.0
+color = Color(0.298039, 0.298039, 0.298039, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 48.0
+offset_right = 1157.0
+offset_bottom = 149.0
+color = Color(0, 0, 0, 1)
+
+[node name="Asset20" type="Sprite2D" parent="."]
+modulate = Color(0.458912, 0.395914, 0.338288, 1)
+position = Vector2(560, 372)
+scale = Vector2(0.56279, 0.390758)
+texture = ExtResource("2_xesgj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_top = 51.5
+offset_right = 1150.0
+offset_bottom = 135.5
+bbcode_enabled = true
+text = "[font_size=60][center]CONTROLS"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 293.0
+offset_top = 190.0
+offset_right = 820.0
+offset_bottom = 542.0
+bbcode_enabled = true
+text = "[font_size=30]Walk up: w
+Walk down: s
+Walk left: a
+Walk right: d
+Interact: e
+Feed: q
+Move left in inventory: left arrow 
+Move right in inventory: right arrow"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 589.0
+offset_right = 152.0
+offset_bottom = 648.0
+theme = ExtResource("3_n7g3p")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

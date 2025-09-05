@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqmgujxwlgj3b"]
+
+[ext_resource type="Script" uid="uid://c8hk3rrlkb67s" path="res://Code/Characters/Dog/dog.gd" id="1_qb0r7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fn00f"]
+radius = 65.0308
+
+[node name="Dog" type="CharacterBody2D"]
+script = ExtResource("1_qb0r7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.399662, 0.302019, 0.174326, 1)
+polygon = PackedVector2Array(-1, -52, -46, -51, -55, -18, -63, 28, -16, 49, 14, 51, 64, 25, 65, -23, 33, -48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fn00f")
+
+[node name="StopTimer" type="Timer" parent="."]
+one_shot = true

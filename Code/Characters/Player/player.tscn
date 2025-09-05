@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0rosgvt1h5lk"]
+
+[ext_resource type="Texture2D" uid="uid://ceca1swba72do" path="res://icon.svg" id="1_3pjqs"]
+[ext_resource type="Script" uid="uid://cupytawsbbwxf" path="res://Code/Characters/Player/player.gd" id="1_olx7d"]
+[ext_resource type="Resource" uid="uid://djg2pjlkwuut0" path="res://Resources/inventory_placeholder.tres" id="2_nlxgn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olx7d"]
+atlas = ExtResource("1_3pjqs")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lo3cl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olx7d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nlxgn"]
+radius = 50.9902
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_olx7d"]
+radius = 62.2013
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_olx7d")
+inventory = ExtResource("2_nlxgn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_lo3cl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -23)
+shape = SubResource("CircleShape2D_nlxgn")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.618092, 0.52731, 0.915885, 1)
+polygon = PackedVector2Array(-30, -57, 1, -33, 32, -62, 40, 9, 0, 24, -39, 10)
+
+[node name="ItemDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemDetector"]
+position = Vector2(-1, -24)
+shape = SubResource("CircleShape2D_olx7d")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="body_entered" from="ItemDetector" to="." method="_on_item_detector_body_entered"]
+[connection signal="body_exited" from="ItemDetector" to="." method="_on_item_detector_body_exited"]

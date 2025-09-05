@@ -1,0 +1,15 @@
+~ dont_have_item
+You need to use an item
+=> END!
+
+~ have_wrong_item
+Can't use this item
+=> END!
+
+~ have_correct_item
+You used the correct item!
+=> END!
+
+~ done
+You already gave the correct item!
+=> END!

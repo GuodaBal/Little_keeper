@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=4 format=3 uid="uid://cwhvhscuofmil"]
+
+[ext_resource type="Script" uid="uid://5nwhfs515abu" path="res://Code/Inventory/inventory_item.gd" id="1_c70rs"]
+
+[sub_resource type="Gradient" id="Gradient_m04oi"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_31w7u"]
+gradient = SubResource("Gradient_m04oi")
+
+[resource]
+script = ExtResource("1_c70rs")
+item_name = "placeholder3"
+sprite = SubResource("GradientTexture2D_31w7u")
+category = 3
+metadata/_custom_type_script = "uid://5nwhfs515abu"

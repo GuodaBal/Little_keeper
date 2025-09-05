@@ -1,0 +1,163 @@
+~ intro
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: A clearing. A hole where the ground forgot itself.
+NARRATOR: They said you were perfect. Small hands. Small voice.
+NARRATOR: I disagree. Turn around. Go home. …There’s still time.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (low) Four offerings. No more.
+Cultists: (lower) Feed the Mouth.
+do AudioManager.current_speaker = AudioManager.eye
+Eye: Hello, little one.
+do AudioManager.current_speaker = null
+- Take the robe => take_the_robe
+- Take the bucket => take_the_bucket
+- Peek into the Pit => peek_into_pit
+- Stand with the cultists => stand_with_cultists
+- Try to leave => try_to_leave
+=> END!
+
+~ back_to_choices
+- Take the robe [if !GlobalVariables.prologue_has_taken_robe]
+	if GlobalVariables.prologue_has_taken_bucket
+		=> bucket_and_robe
+	else
+		=> take_the_robe
+- Take the bucket [if !GlobalVariables.prologue_has_taken_bucket]
+	if GlobalVariables.prologue_has_taken_robe
+		=> bucket_and_robe
+	else
+		=> take_the_bucket
+- Peek into the Pit
+	if GlobalVariables.prologue_peeked_at_hole
+		=> repeat_peeks
+	else
+		=> peek_into_pit
+- Stand with the cultists
+	if GlobalVariables.prologue_has_taken_bucket && GlobalVariables.prologue_has_taken_robe
+		=> stand_after_robe
+	else
+		=> stand_with_cultists
+- Try to leave
+	if GlobalVariables.prologue_tried_to_leave
+		=> try_to_leave_again
+	else
+		=> try_to_leave
+=> END!
+
+~ take_the_robe
+do GlobalVariables.prologue_has_taken_robe = true
+You lift it. Fabric whispers. It yawns over you like a tent.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: It doesn’t fit. Good. Let it not fit.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (approving hum) Little robe. Little role.
+do AudioManager.current_speaker = AudioManager.eye
+Eye: You look like them. If you want.
+do AudioManager.current_speaker = null
+=> back_to_choices
+
+~ player_hesitates_robe
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Refusing the costume would be ideal. But you won’t.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (flat) Dress.
+do AudioManager.current_speaker = null
+=> take_the_robe
+
+~ take_the_bucket
+do GlobalVariables.prologue_has_taken_bucket = true
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: A mouth needs a spoon. You just picked up the spoon.
+do AudioManager.current_speaker = AudioManager.eye
+Eye: (pleased) Shiny scooper. Lower me something.
+do AudioManager.current_speaker = null
+=> back_to_choices
+
+~ bucket_and_robe
+if !GlobalVariables.prologue_has_taken_bucket
+	do GlobalVariables.prologue_has_taken_bucket = true
+if !GlobalVariables.prologue_has_taken_robe
+	do GlobalVariables.prologue_has_taken_robe = true
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Uniform. Tool. That’s two yeses.
+do AudioManager.current_speaker = null
+=> back_to_choices
+
+~ peek_into_pit
+do GlobalVariables.prologue_peeked_at_hole = true
+do AudioManager.current_speaker = null
+The chalk ring is warm. The dark moves like breath.
+do AudioManager.current_speaker = AudioManager.eye
+Eye: (delighted) Closer. I can see the moon in your eyes.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Step back. It likes reflections.
+do AudioManager.current_speaker = null
+=> back_to_choices
+
+~ repeat_peeks
+do AudioManager.current_speaker = AudioManager.eye
+Eye: Play again.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: We are not playing.
+do AudioManager.current_speaker = null
+=> back_to_choices
+
+~ idle_linger
+Gravel slides. The rope twitches.
+do AudioManager.current_speaker = AudioManager.eye
+Eye: (soft) Careful. I need you whole.
+do AudioManager.current_speaker = null
+=> back_to_choices
+
+~ stand_with_cultists
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (whisper) Keeper.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: They’ve rehearsed this night. You are the prop.
+do AudioManager.current_speaker = null
+=> back_to_choices
+
+~ stand_after_robe
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (synchronized) Sized just right.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Of course you match.
+do AudioManager.current_speaker = null
+=> gate_to_round_1
+
+~ try_to_leave
+do GlobalVariables.prologue_tried_to_leave = true
+The trail behind is suddenly thicker. Branches knit like fingers.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: The path disagrees.
+do AudioManager.current_speaker = AudioManager.eye
+Eye: (cajoling) Stay. I get lonely when the trees talk.
+do AudioManager.current_speaker = null
+=> back_to_choices
+
+~ try_to_leave_again
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: I applaud the impulse. I mourn the timing.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (flat) Four. No more.
+do AudioManager.current_speaker = null
+=> back_to_choices
+
+~ gate_to_round_1
+A cultist raises two fingers. The others hush.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (together) Begin.
+do AudioManager.current_speaker = AudioManager.eye
+Eye: (cheerful) Start easy. Bring me something sweet.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Say no. Or say ‘later’. You won’t. But I must try.
+do AudioManager.current_speaker = null
+=> END!
+
+~ stall
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Stalling is wisdom wearing tiny shoes.
+do AudioManager.current_speaker = AudioManager.eye
+Eye: I can wait. I can learn.
+do AudioManager.current_speaker = null
+=> back_to_choices

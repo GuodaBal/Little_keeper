@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://c4syshkck0k0n"]
+
+[ext_resource type="PackedScene" uid="uid://bmj7xjel53ir8" path="res://Code/Misc/Scene_switch_trigger/scene_switcher.tscn" id="1_1bf46"]
+[ext_resource type="PackedScene" uid="uid://ch4mx0saqfgys" path="res://Code/Items/Pickupable_items/Prototype/pickupable_item_prototype.tscn" id="2_ks3o5"]
+[ext_resource type="Resource" uid="uid://6d1b5cohw36o" path="res://Resources/Inventory_items/Day_2/dissected_frog.tres" id="3_1bf46"]
+[ext_resource type="PackedScene" uid="uid://b5gshex5b2wxj" path="res://Code/Misc/End_the_day/end_the_day.tscn" id="4_ur6ts"]
+
+[sub_resource type="Gradient" id="Gradient_sxx65"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uubh5"]
+gradient = SubResource("Gradient_sxx65")
+fill_from = Vector2(0.683486, 0.0688073)
+
+[node name="Camp" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(793, 193)
+scale = Vector2(0.973764, 1.27273)
+texture = SubResource("GradientTexture2D_uubh5")
+
+[node name="Scene_switcher_crater" parent="." instance=ExtResource("1_1bf46")]
+position = Vector2(230, 630)
+scale = Vector2(12.145, 0.095)
+next_area = "Crater"
+
+[node name="pickupable_item_prototype" parent="." instance=ExtResource("2_ks3o5")]
+position = Vector2(393, 333)
+item = ExtResource("3_1bf46")
+
+[node name="EndTheDay" parent="." instance=ExtResource("4_ur6ts")]
+position = Vector2(123, 83)

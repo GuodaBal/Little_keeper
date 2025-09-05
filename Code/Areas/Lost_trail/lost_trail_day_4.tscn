@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://bnrcxeqrj8pda"]
+
+[ext_resource type="Script" uid="uid://dtrkalammcjgb" path="res://Code/Areas/Lost_trail/lost_trail.gd" id="1_7v8be"]
+[ext_resource type="PackedScene" uid="uid://bmj7xjel53ir8" path="res://Code/Misc/Scene_switch_trigger/scene_switcher.tscn" id="2_htkuu"]
+[ext_resource type="PackedScene" uid="uid://ch4mx0saqfgys" path="res://Code/Items/Pickupable_items/Prototype/pickupable_item_prototype.tscn" id="3_xssts"]
+[ext_resource type="Resource" uid="uid://s8w0xxxokd6p" path="res://Resources/Inventory_items/Day_4/cracked_mirror.tres" id="4_7v8be"]
+
+[sub_resource type="Animation" id="Animation_cdnb1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 325)]
+}
+
+[sub_resource type="Animation" id="Animation_xl6dp"]
+resource_name = "camera_move_up"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(576, 325), Vector2(576, 312)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5pdex"]
+_data = {
+&"RESET": SubResource("Animation_cdnb1"),
+&"camera_move_up": SubResource("Animation_xl6dp")
+}
+
+[sub_resource type="Gradient" id="Gradient_xl6dp"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cdnb1"]
+gradient = SubResource("Gradient_xl6dp")
+
+[node name="LostTrail" type="Node2D"]
+script = ExtResource("1_7v8be")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5pdex")
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 325)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1035, 79)
+texture = SubResource("GradientTexture2D_cdnb1")
+
+[node name="Scene_switcher_crater" parent="." instance=ExtResource("2_htkuu")]
+next_area = "Crater"
+
+[node name="Scene_switcher_glade" parent="." instance=ExtResource("2_htkuu")]
+position = Vector2(1151, 9)
+next_area = "Glade"
+
+[node name="pickupable_item_prototype" parent="." instance=ExtResource("3_xssts")]
+position = Vector2(369, 308)
+item = ExtResource("4_7v8be")

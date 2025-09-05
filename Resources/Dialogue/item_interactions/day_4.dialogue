@@ -1,0 +1,94 @@
+~ look_at_sun_visor
+A hinge that forgot gentle.
+=> END!
+
+~ look_at_vanity_light
+Flickers like a nervous thought.
+=> END!
+
+~ look_at_rearview
+A square that only looks back.
+=> END!
+
+~ pick_up_cracked_mirror
+A visor mirror with a hairline starburst; corner taped.
+Pick up?
+- Yes
+	do pick_up()
+	Tape peels with a whisper. Your face fractures politely.
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Broken doesn’t mean useless.
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: (pleased) I can be many at once.
+	do AudioManager.current_speaker = null
+	=> END!
+- No
+	=> END!
+
+~ look_at_gauze_roll
+Promises to hold things together.
+=> END!
+
+~ look_at_label_strip
+‘Retained.’ A tidy word for kept.
+=> END!
+
+~ look_at_cooler_lid
+It sighs like a drawer of sleep.
+=> END!
+
+~ pick_up_broken_bone
+Brown paper parcel. Stamp - Specimen—Fracture.
+Pick up?
+- Yes
+	do pick_up()
+	It has the weight of a word you don’t say.
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Inside sticks.
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: (curious) I like how it learned to fail.
+	do AudioManager.current_speaker = null
+	=> END!
+- No
+	=> END!
+
+~ pick_up_human_heart
+Sealed pouch with tubing. Tag - Organ—Handle Cold.
+Pick up?
+- Yes
+	do pick_up()
+	Fluid slides. The pouch taps your wrist once. Reflex, you decide.
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: If you drop that in, I’m leaving.
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: (hushed) The drummer. For me?
+	do AudioManager.current_speaker = null
+	=> END!
+- No
+	=> END!
+
+#If you examine the rope before choosing:
+~ look_at_rope
+It remembers every load. Your hands do, too.
+=> END!
+
+#If you examine the collar sprite (when dog_taken true):
+~ look_at_collar
+The tag spells your shape in teeth marks.
+=> END!
+
+~ approach_cultist_wild_2
+#If wild_count ≥ 2 and you approach any cultist:
+do AudioManager.current_speaker = AudioManager.cultist
+Cultist: (breath) Stand smaller.
+do AudioManager.current_speaker = null
+=> END!
+
+~ rim_idle
+#If you idle at the rim >5s:
+do AudioManager.current_speaker = AudioManager.eye
+Eye: (coaxing) One more small brave.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Brave isn’t always down.
+do AudioManager.current_speaker = null
+=> END!

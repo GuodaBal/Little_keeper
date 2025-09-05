@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bxi88nbiqwo16"
+path="res://.godot/imported/end_day_option.dialogue-2ba08cf4a1d6d0e29051084e68ca31c0.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/end_day_option.dialogue"
+dest_files=["res://.godot/imported/end_day_option.dialogue-2ba08cf4a1d6d0e29051084e68ca31c0.tres"]
+
+[params]
+
+defaults=true

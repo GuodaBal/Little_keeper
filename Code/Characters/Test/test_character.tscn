@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbuyft1ceiiro"]
+
+[ext_resource type="Script" uid="uid://c4kde5le8knh3" path="res://Code/Characters/Test/test_character.gd" id="1_u4mcx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hut4n"]
+radius = 35.0571
+
+[node name="TestCharacter" type="CharacterBody2D" groups=["Character"]]
+script = ExtResource("1_u4mcx")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+scale = Vector2(1.405, 1.405)
+color = Color(0.74558, 0.74558, 0.74558, 1)
+polygon = PackedVector2Array(-20, 10, -21, -27, -2, -15, 19, -28, 20, 8, 0, 23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_hut4n")

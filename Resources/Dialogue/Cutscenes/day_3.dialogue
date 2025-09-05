@@ -1,0 +1,124 @@
+~ start_day
+do AudioManager.current_speaker = AudioManager.eye
+Eye: (bright) Bring me something lost.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Lost means ‘someone misses it.’ Please remember that.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (low) Two remain.
+do AudioManager.current_speaker = AudioManager.null
+=> END!
+
+~ lower_offering
+if lowering_gently
+	You test the knot twice. The bucket rocks like a yes.
+else
+	Rope whispers through your hands. Gravel answers.
+=> END!
+
+~ feed_safe
+do AudioManager.current_speaker = AudioManager.eye
+Eye: A circle. It keeps going even when it stops.
+Eye: (softer) It fits the hole in my mouth.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Someone wants that back. We are borrowing hope.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (murmur) Loops are promises.
+if lowering_gently
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: You didn’t let it roll. Kind.
+else
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Promises travel faster than hands. Remember that.
+do AudioManager.current_speaker = null
+#WORLD SHIFT: A thin halo of light traces the rim for 2–3 seconds; distant soft chime; the screen vignette narrows gently then normalizes.
+=> END!
+
+~ dog_following_wedding_ring
+The bucket returns light. The dog noses the chalk ring, tail small. A tag tinks.
+do AudioManager.current_speaker = AudioManager.eye
+Eye: (coaxing) Circle fits two. Come see.
+#DOG: soft whine… paws scrape once.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: No—heel. Back. Back!
+do AudioManager.current_speaker = null
+Gravel sighs. The tail disappears below the rim like a rope slipping.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (hush) Loops are promises.
+do AudioManager.current_speaker = null
+#WORLD SHIFT: A collar lies where the dog stood (sprite appears); pawprints at the edge fade one by one; the Eye’s iris glows a thin gold ring for 2–3 seconds.
+=> END!
+
+~ feed_strange
+do AudioManager.current_speaker = AudioManager.eye
+Eye: Small doors. Smaller halls. I can fit everywhere.
+Eye: (tasting) Cold metal memory. It hums numbers.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Locks think they’re choices. They aren’t.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (whisper) Keys teach keeping.
+if lowering_gently
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: You kept them quiet. Good.
+else
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Jangling feels like bragging.
+do AudioManager.current_speaker = null
+#WORLD SHIFT: A faint metallic hum bed fades in; a wayfinding sign near the rim tilts a few degrees; a tiny key click stinger plays.
+=> END!
+
+~ dog_following_car_keys
+The keys in your pocket jingle once on their own. The dog’s head tilts, ears up.
+do AudioManager.current_speaker = AudioManager.eye
+Eye: (sing-song) Small doors. Smaller halls. Follow the sound.
+do AudioManager.current_speaker = AudioManager.narrator
+
+#DOG: two quick steps; tag jingle; silence.
+NARRATOR: Keep it— keep— (cuts off)
+do AudioManager.current_speaker = null
+The leash you never had tightens across your wrist—then isn’t there.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (whisper) Keys teach keeping.
+do AudioManager.current_speaker = null
+#WORLD SHIFT: A metallic hum swells; your shadow is thinner by one shape; a wayfinding sign near the rim tilts further.
+=> END!
+
+~ feed_wild
+do AudioManager.current_speaker = AudioManager.eye
+Eye: Ah. A thinking food.
+Eye: (thrilled) It remembers for me. Let me keep yours.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: No. No. No.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (approving) Keeper teaches hunger.
+if lowering_gently
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: You held the jar like a head. Kind hands.
+else
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Don’t slosh the memories.
+do AudioManager.current_speaker = null
+#WORLD SHIFT: The hum deepens a half-step; subtle text jitter on next Eye line; the Eye’s pupil dilates, then steadies; a whisper-bed like pages turning fades in/out.
+=> END!
+
+~ dog_following_brain_specimen
+The gel inside the jar shivers. The dog stiffens, nose working, then leans toward the dark.
+do AudioManager.current_speaker = AudioManager.eye
+Eye: (thrilled) Your follower remembers this smell. Bring it closer.
+#DOG: a single sharp yip… then a collar scuff… then nothing.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Do not— do not— (swallows the last word)
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (approving) Keeper teaches hunger.
+do AudioManager.current_speaker = null
+#WORLD SHIFT: The page-whisper bed grows louder, then stops; the Eye’s pupil dilates and a tiny white dot floats inside it (a reflected eye); a single hair drifts up from the pit and vanishes.
+=> END!
+
+~ after_feeding
+do AudioManager.current_speaker = AudioManager.eye
+Eye: One more. Then I’ll show you something.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: This is the cliff edge. Please invent wings.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: One remains.
+do AudioManager.current_speaker = null
+=> END!

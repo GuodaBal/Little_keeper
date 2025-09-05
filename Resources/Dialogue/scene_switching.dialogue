@@ -1,0 +1,6 @@
+~ start
+Go to {{next_area.replace("_", " ").to_lower()}} ?
+- Yes
+	do switch()
+- No => END
+=> END

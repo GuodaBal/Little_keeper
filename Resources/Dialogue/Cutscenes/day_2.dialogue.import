@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://eyfxfrdve5kg"
+path="res://.godot/imported/day_2.dialogue-c695cb869ff8b926940992511c091b5b.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Cutscenes/day_2.dialogue"
+dest_files=["res://.godot/imported/day_2.dialogue-c695cb869ff8b926940992511c091b5b.tres"]
+
+[params]
+
+defaults=true

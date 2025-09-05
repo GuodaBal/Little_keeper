@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://46dcirwa6we0"]
+
+[ext_resource type="Script" uid="uid://krwv2nuyrc2c" path="res://Code/Areas/Crater/crater_day_4.gd" id="1_2vw5w"]
+[ext_resource type="PackedScene" uid="uid://bmj7xjel53ir8" path="res://Code/Misc/Scene_switch_trigger/scene_switcher.tscn" id="2_2lp3g"]
+[ext_resource type="PackedScene" uid="uid://bjnxfyycti67q" path="res://Code/Characters/Eye/eye.tscn" id="3_d2p4o"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kfjt0"]
+size = Vector2(80, 80)
+
+[node name="Crater" type="Node2D"]
+script = ExtResource("1_2vw5w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(793, 193)
+scale = Vector2(0.973764, 1.27273)
+texture = SubResource("PlaceholderTexture2D_kfjt0")
+
+[node name="Scene_switcher_camp" parent="." instance=ExtResource("2_2lp3g")]
+position = Vector2(174, 29)
+scale = Vector2(10.835, 1)
+next_area = "Camp"
+
+[node name="Scene_switcher_lost_trail" parent="." instance=ExtResource("2_2lp3g")]
+position = Vector2(1144, 328)
+next_area = "Lost_trail"
+
+[node name="Eye" parent="." instance=ExtResource("3_d2p4o")]
+position = Vector2(519, 520)

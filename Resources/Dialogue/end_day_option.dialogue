@@ -1,0 +1,11 @@
+~ start
+End day?
+- Yes
+	if !GlobalVariables.eye_is_fed
+		The eye has not yet been fed.
+		=> END!
+	else
+		do end_day()
+- Not yet
+	=> END!
+=> END!

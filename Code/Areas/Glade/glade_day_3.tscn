@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhgeohs8c1uqo"]
+
+[ext_resource type="PackedScene" uid="uid://bmj7xjel53ir8" path="res://Code/Misc/Scene_switch_trigger/scene_switcher.tscn" id="1_w46pd"]
+[ext_resource type="PackedScene" uid="uid://ch4mx0saqfgys" path="res://Code/Items/Pickupable_items/Prototype/pickupable_item_prototype.tscn" id="2_klssb"]
+[ext_resource type="Resource" uid="uid://cp08hafn2k2q0" path="res://Resources/Inventory_items/Day_1/lollipop.tres" id="3_cvtqb"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2ts5q"]
+size = Vector2(2, 1)
+
+[node name="Glade" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(393, 116)
+scale = Vector2(43.24, 27.76)
+texture = SubResource("PlaceholderTexture2D_2ts5q")
+
+[node name="Scene_switcher_lost_trail" parent="." instance=ExtResource("1_w46pd")]
+next_area = "Lost_trail"
+
+[node name="pickupable_item_prototype" parent="." instance=ExtResource("2_klssb")]
+position = Vector2(954, 173)
+item = ExtResource("3_cvtqb")

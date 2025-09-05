@@ -1,0 +1,184 @@
+~ Ash_Pitch
+% Smoke goes where it’s called.
+% Don’t cough. It remembers coughs.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 1] Sugar keeps the sparks down.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 3] See? It likes heat.
+% [if GlobalVariables.current_day == 4] Ash last, or ash first. The pile is the same.
+=> END!
+
+~ Sister_Moth
+% Your hood sits like wings.
+% Lanterns lean toward polite mouths.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 1] You fed it light. It will follow.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 3] Careful. Flames love a crowd.
+=> END!
+
+~ Wick_Lantern
+% Hold your bucket like a bell.
+% Knots tighter on the way back.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 2] Sticky gifts teach patience.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 3] Hot gifts teach hurry.
+=> END!
+
+~ Bramble_Net
+% Got you. (tugs your robe hem)
+% Snags mean the path is paying attention.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 1] Sweet is slippery.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 3] Bleeding edges catch best.
+=> END!
+
+~ Chalk_Ring
+% Do not step the line.
+% Double lines mean double promises.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 1] Smudges buff out.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 3] Some marks sink.
+=> END!
+
+~ Stitch_Splint
+% Stitch: Mend. Splint: Then move.
+% Stitch: Keep. Splint: Or keep out.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 2] Stitch: Odd. Splint: Useful.
+% [if GlobalVariables.current_day == 4] Stitch: Break. Splint: Bind.
+=> END!
+
+~ Kettle
+% Slow simmer, little one.
+% Steam hides teeth.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 1] Sweeten the boil.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 3] Rolling now.
+=> END!
+
+~ Vellum
+% I write nothing down.
+% Blank pages bruise less.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 2] Sap stains. Pretty.
+round3 (‘lost’): Everything misfiled ends up here.
+=> END!
+
+~ Cinder
+% Crackle crackle.
+% You hear it too, right? In the dirt?
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 3] More crackle!
+% [if GlobalVariables.current_day == 4] Hearts are logs. Some still wet.
+=> END!
+
+~ Gravel
+% Foot down. Stone up.
+% If you slide, slide pretty.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 1] Sweet sticks to teeth.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 3] Teeth stick to sweet.
+=> END!
+
+~ Vireo
+% Two notes make a warning.
+% Three make a song.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 2] Jar frog sings quieter.
+dog_following: Featherless friend has chosen you.
+=> END!
+
+~ Lapwing
+% Blink slower. It counts blinks.
+% Don’t name it. Names make stairs.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 1] Good. Good. Smaller steps.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 3] Too fast. Too deep.
+=> END!
+
+~ Thorn
+% Prick means proof.
+% You aren’t afraid of little red, are you?
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 2] Glass is honest.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 3] Now we’re telling the truth.
+=> END!
+
+~ Husk
+% I used to be taller.
+% I am mostly robe now.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 1] Candy rattles nice.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 3] Hearts rattle nicer.
+=> END!
+
+~ Nettle
+% Brush past. See?
+% No rash if you mean it.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 2] Sap and sting are cousins.
+% [if GlobalVariables.current_day == 4] Broken things ask the loudest.
+=> END!
+
+~ Burl
+% Grew wrong. Grew strong.
+% You can train wood, not root.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 1] Sugar coats rings.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 3] Axes speak fast.
+=> END!
+
+~ Vane
+% Wind points down tonight.
+% The trees vote yes.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 2] Air thickened when you chose.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 3] Storm’s inside the hole now.
+=> END!
+
+~ Lint
+% Brush your sleeve.
+% You’re shedding.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 1] Crumbs feed shadows too.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 3] Bigger crumbs make bigger shadows.
+=> END!
+
+~ Quiet_Fin
+% Shh. The ground is listening.
+% It likes ripples.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 2] Jar frog remembers water.
+% [if GlobalVariables.current_day == 4] Mirrors are puddles that stare.
+=> END!
+
+~ Knot
+% Left over right, always.
+% When you tie it, say ‘stay.’ Even in your head.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 1] Loops are promises.
+% [if GlobalVariables.eye_is_fed && GlobalVariables.given_item_types.back() == 3] Cuts are faster.
+=> END!
+
+
+#Extra conditional one-liners (sprinkle anywhere)
+~ After_safe_offering
+Small mercy.
+Little sugar for a big ache.
+Kindness keeps the dirt asleep.
+=> END!
+
+~ After_strange_offering
+We like clever.
+Odd is obedient.
+Bent fits better.
+=> END!
+
+~ After_first_wild_offering
+The little one feeds willing.
+Now it’s listening with teeth.
+Hush. Let it learn.
+=> END!
+
+~ After_2_wild_offerings
+Knees. (they kneel)
+Keeper teaches hunger.
+Stand smaller.
+=> END!
+
+~ Round_4_ambient
+Break what breaks you.
+Some pieces remember the shape.
+Hold your breath on the count of none.
+=> END!
+
+~ player_lingers_at_rim
+Lean less.
+It leans back.
+You’ll trade noses.
+=> END!
+
+~ dog_following
+It chose you.
+Put bells on it.
+Teach it not to stare at the Eye.
+=> END!

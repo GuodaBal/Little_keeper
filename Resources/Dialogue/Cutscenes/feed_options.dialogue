@@ -1,0 +1,39 @@
+~ feed_default
+Before you sits a lowering device
+Put your item down?
+- Yes
+- Not yet => END!
+You place your item on the lowering device
+- Lower gently
+	do lowering_gently = true
+	do feeding()
+- Lower efficiently
+	do lowering_gently = false
+	do feeding()
+- Cancel => END!
+=> END
+
+~ feed_last
+Before you sits a lowering device
+Put your item down?
+- Yes
+- Not yet => END!
+- Refuse
+	do GlobalVariables.ending_choice = "defected"
+	do defect()
+	=> END!
+- Bind
+	do GlobalVariables.ending_choice = "bound"
+	do binding()
+	=> END!
+You place your item on the lowering device
+- Lower gently
+	do GlobalVariables.ending_choice = "crowned"
+	do lowering_gently = true
+	do feeding()
+- Lower efficiently
+	do GlobalVariables.ending_choice = "crowned"
+	do lowering_gently = false
+	do feeding()
+- Cancel => END!
+=> END

@@ -1,0 +1,89 @@
+~ start_day
+do AudioManager.current_speaker = AudioManager.eye
+Eye: (cheerful) Start easy. Bring me something sweet.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Harmless would be nice. Be boring for me, just once.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (low) Four offerings. No more.
+do AudioManager.current_speaker = null
+=> END!
+
+~ lower_offering
+if lowering_gently
+	You feed the rope hand over hand. The bucket kisses the dark
+else
+	You let the rope run. The bucket thumps once, then stills.
+=> END!
+
+~ give_nothing
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Refusal is a muscle. Keep using it.
+do AudioManager.current_speaker = null
+=> END!
+
+~ feed_safe
+do AudioManager.current_speaker = AudioManager.eye
+Eye: Bright sugar! It crackles on my tongue.
+Eye: (softer) You are good at finding suns.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Thank you. That was mercy with a stick.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (hum) Sweet for sweet.
+if lowered_gently
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: You lowered it kindly. I can taste the careful.
+else
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Speed is how mistakes like to dress.
+do AudioManager.current_speaker = null
+#WORLD SHIFT: Vignette warms a touch; faint sparkle dust drifts for 2–3 seconds. Ants appear near the rim, then vanish.
+=> END!
+
+~ feed_strange
+do AudioManager.current_speaker = AudioManager.eye
+Eye: Thick night. It tugs my teeth.
+Eye: (delighted) Sweet that remembers bark.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: This is where ‘technically’ becomes a sin.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (whisper) Sip.
+do AudioManager.current_speaker = null
+
+if lowering_gently
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: You held it steady. It didn’t spill its moon.
+else
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: We’re rushing dessert now? Fine. Fine.
+do AudioManager.current_speaker = null
+#WORLD SHIFT: A slow drip SFX begins and fades; subtle dark tint on screen corners; a fly buzzes once and stops.
+=> END!
+
+~ feed_wild
+do AudioManager.current_speaker = AudioManager.eye
+Eye: Oh. A small scream.
+Eye: (thrilled) Sweet with story.
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: Put. It. Back.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: (approving) The little one feeds willing.
+do AudioManager.current_speaker = null
+#WORLD SHIFT: A soft chime like dental tools far away; the Eye’s iris tightens briefly; one lantern near the rim tilts toward the pit.
+if lowering_gently
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: You cradled it. The cradle is mine now.
+else
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Tossing teeth into holes. Bold hobby.
+do AudioManager.current_speaker = null
+=> END!
+
+~ after_feeding
+do AudioManager.current_speaker = AudioManager.eye
+Eye: More soon?
+do AudioManager.current_speaker = AudioManager.narrator
+NARRATOR: You can still walk away. You won’t, but you can.
+do AudioManager.current_speaker = AudioManager.cultist
+Cultists: Three remain.
+do AudioManager.current_speaker = null
+=> END!

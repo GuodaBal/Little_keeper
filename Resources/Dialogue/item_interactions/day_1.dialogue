@@ -1,0 +1,88 @@
+~ look_at_ribbon_tree
+Paper stars tied with leftover kindness.
+=> END!
+
+~ look_at_ant_trail
+Scribbles that learned to move.
+=> END!
+
+~ look_at_stump
+Ringed like a target. Or a yearbook.
+=> END!
+
+~ pick_up_lollipop
+A flat circle of sugar. Rainbow, mostly gray now.
+Pick up?
+- Yes
+	do pick_up()
+	The wrapper sticks to your thumb.
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Yes. Candy. Predictable. I adore predictable.
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: (pleased) Sweet is small sunshine.
+	do AudioManager.current_speaker = null
+	=> END!
+- No
+	=> END!
+~ look_at_pegboard_of_tools
+Hooks shaped like questions.
+=> END!
+
+~ look_at_tin_labeled
+The lid smiles a little crooked.
+=> END!
+
+~ look_at_bedroll_stack
+Bodies used to be here. You hope they’re elsewhere.
+=> END!
+
+~ pick_up_baby_tooth
+A tiny white chip in a tin with a fairy sticker.
+Pick up?
+- Yes
+	do pick_up()
+	It rattles in the tin like a trapped seed.
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: That’s a person crumb.
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: (delighted) A sweet that used to bite.
+	do AudioManager.current_speaker = null
+	=> END!
+- No
+	=> END!
+
+~ look_at_signpost
+Arrows to nowhere, painted on confidence.
+=> END!
+
+~ look_at_tree_scar
+Sap bled and then thought better.
+=> END!
+
+~ look_at_abandoned_cup
+Someone drank the sky and left the glass.
+=> END!
+
+~ pick_up_jar_of_black_sap
+A thumb-size jar. Label - night syrup.
+Pick up?
+- Yes
+	do pick_up()
+	The lid squeaks like a tiny bat.
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Tree blood. Technically sweet. Spiritually not.
+	do AudioManager.current_speaker = AudioManager.eye
+	Eye: (curious) Sweet that learned to slow.
+	do AudioManager.current_speaker = null
+	=> END!
+- No
+	=> END!
+
+~ look_at_bucket_after_feeding
+Sugar dust maps your fingerprints.
+=> END!
+
+~ look_at_chalk_ring_after_feeding
+The line is thicker now, like it blushed.
+=> END!
+
