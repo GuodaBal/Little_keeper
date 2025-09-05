@@ -22,12 +22,13 @@ func _ready() -> void:
 		#add_child(instance)
 
 func play_prologue():
-	dm.show_dialogue_balloon(load("res://Resources/Dialogue/Cutscenes/prologue.dialogue"), "intro")
-	await dm.dialogue_ended
-	dm.show_dialogue_balloon(load("res://Resources/Dialogue/Cutscenes/day_1.dialogue"), "start_day")
-	await dm.dialogue_ended
-	GlobalSignals.player_can_move.emit(true)
-	GlobalSignals.inventory_visible.emit(true)
+	print_debug("prologue")
+	#dm.show_dialogue_balloon(load("res://Resources/Dialogue/Cutscenes/prologue.dialogue"), "intro")
+	#await dm.dialogue_ended
+	#dm.show_dialogue_balloon(load("res://Resources/Dialogue/Cutscenes/day_1.dialogue"), "start_day")
+	#await dm.dialogue_ended
+	#GlobalSignals.player_can_move.emit(true)
+	#GlobalSignals.inventory_visible.emit(true)
 	GlobalVariables.mission_given = true
 
 func c_print(a):

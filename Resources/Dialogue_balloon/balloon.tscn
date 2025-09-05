@@ -71,10 +71,8 @@ texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
 texture_margin_bottom = 5.0
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
+expand_margin_left = 50.0
+expand_margin_right = 50.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_txs6a"]
 texture = ExtResource("4_nya6y")
@@ -82,10 +80,8 @@ texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
 texture_margin_bottom = 5.0
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
+expand_margin_left = 50.0
+expand_margin_right = 50.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mthtv"]
 texture = ExtResource("5_nya6y")
@@ -93,8 +89,8 @@ texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
 texture_margin_bottom = 5.0
-expand_margin_left = 5.0
-expand_margin_right = 5.0
+expand_margin_left = 50.0
+expand_margin_right = 50.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f2mi6"]
 texture = ExtResource("4_nya6y")
@@ -102,10 +98,8 @@ texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
 texture_margin_bottom = 5.0
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
+expand_margin_left = 50.0
+expand_margin_right = 50.0
 
 [sub_resource type="Theme" id="Theme_f2mi6"]
 Button/colors/font_color = Color(0, 0, 0, 1)

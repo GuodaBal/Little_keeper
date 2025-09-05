@@ -48,7 +48,6 @@ position = Vector2(-349, -61)
 position = Vector2(-352, -184)
 
 [node name="GiantEye" parent="Eye" index="3"]
-visible = false
 position = Vector2(-92, -5)
 
 [node name="GiantStalk" parent="Eye/GiantEye" index="0"]
@@ -94,7 +93,7 @@ char_name = "Bramble_Net"
 facing_forward = false
 
 [node name="TestCharacter6" parent="." instance=ExtResource("5_34i2c")]
-position = Vector2(-545, 230)
+position = Vector2(-267, 139)
 char_name = "Vellum"
 
 [editable path="Eye"]

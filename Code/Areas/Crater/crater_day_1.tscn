@@ -48,7 +48,6 @@ position = Vector2(-349, -61)
 position = Vector2(-352, -184)
 
 [node name="GiantEye" parent="Eye" index="3"]
-visible = false
 position = Vector2(-92, -5)
 
 [node name="GiantStalk" parent="Eye/GiantEye" index="0"]

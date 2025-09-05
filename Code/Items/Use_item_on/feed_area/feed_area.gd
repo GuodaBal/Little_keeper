@@ -28,6 +28,16 @@ func feeding():
 			dm.show_dialogue_balloon(load("res://Resources/Dialogue/Cutscenes/day_"+str(GlobalVariables.current_day)+".dialogue"), "feed_wild", [self])
 	GlobalVariables.eye_is_fed = true
 	GlobalSignals.item_fed.emit(item_fed)
+	await DialogueManager.dialogue_ended
+	end_day()
+
+func end_day():
+	GlobalVariables.current_day += 1
+	GlobalSignals.day_end.emit()
+	GlobalVariables.eye_is_fed = false
+	GlobalVariables.mission_given = false
+	GlobalSignals.clear_inventory.emit()
+	GlobalSignals.switch_area.emit("Crater", 1.0)
 
 func defect():
 	dm.show_dialogue_balloon(load("res://Resources/Dialogue/Cutscenes/day_"+str(GlobalVariables.current_day)+".dialogue"), "refuse", [self])

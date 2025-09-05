@@ -10,6 +10,7 @@ var player
 func _ready() -> void:
 	GlobalSignals.switch_area.connect(switch_area)
 	transition_animations.play_fade_in()
+	print_debug("waiting")
 	await transition_animations.animation_finished
 	current_scene.start_intro_cutscene()
 
@@ -28,6 +29,8 @@ func _input(event: InputEvent) -> void:
 			GlobalSignals.player_can_move.emit(true)
 
 func switch_area(name, speed = 3.0):
+	print_debug("called")
+	print_debug(name)
 	GlobalSignals.player_can_move.emit(false)
 	if !transition_animations.is_screen_black:
 		transition_animations.play_fade_out(speed)

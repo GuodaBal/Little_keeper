@@ -1,12 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bu0cc5p4b2m7k"]
+[gd_scene load_steps=7 format=3 uid="uid://bu0cc5p4b2m7k"]
 
 [ext_resource type="PackedScene" uid="uid://bmj7xjel53ir8" path="res://Code/Misc/Scene_switch_trigger/scene_switcher.tscn" id="1_awvbp"]
 [ext_resource type="Texture2D" uid="uid://c0nln8udhlube" path="res://Assets/Sprites/Areas/Little_Offerings_Camp.png" id="1_ilxtf"]
 [ext_resource type="PackedScene" uid="uid://ch4mx0saqfgys" path="res://Code/Items/Pickupable_items/Prototype/pickupable_item_prototype.tscn" id="2_qxx62"]
 [ext_resource type="Resource" uid="uid://cvrv5538brlws" path="res://Resources/Inventory_items/Day_4/broken_bone.tres" id="4_c0488"]
-[ext_resource type="PackedScene" uid="uid://b5gshex5b2wxj" path="res://Code/Misc/End_the_day/end_the_day.tscn" id="4_ilxtf"]
 [ext_resource type="Resource" uid="uid://ddgshxcfdyr3r" path="res://Resources/Inventory_items/Day_4/human_heart.tres" id="5_74s2h"]
-[ext_resource type="PackedScene" uid="uid://cj24n4getos1c" path="res://Code/Items/Interactable_items/Prototype/interactable_item_prototype.tscn" id="6_74s2h"]
 [ext_resource type="PackedScene" uid="uid://bbuyft1ceiiro" path="res://Code/Characters/Cultist/cultist.tscn" id="7_352ua"]
 
 [node name="Camp" type="Node2D"]
@@ -23,28 +21,12 @@ scale = Vector2(1.265, 1.195)
 next_area = "Crater"
 
 [node name="pickupable_item_prototype" parent="." instance=ExtResource("2_qxx62")]
-position = Vector2(708, -186)
+position = Vector2(661, -60)
 item = ExtResource("4_c0488")
 
 [node name="pickupable_item_prototype2" parent="." instance=ExtResource("2_qxx62")]
-position = Vector2(1644, -167)
+position = Vector2(1628, -135)
 item = ExtResource("5_74s2h")
-
-[node name="EndTheDay" parent="." instance=ExtResource("4_ilxtf")]
-position = Vector2(947, -17)
-scale = Vector2(0.75, 1.28)
-
-[node name="EndTheDay2" parent="." instance=ExtResource("4_ilxtf")]
-position = Vector2(1362, -100)
-scale = Vector2(0.75, 1.28)
-
-[node name="EndTheDay3" parent="." instance=ExtResource("4_ilxtf")]
-position = Vector2(1669, 68)
-scale = Vector2(0.75, 1.28)
-
-[node name="interactable_item_prototype" parent="." instance=ExtResource("6_74s2h")]
-position = Vector2(965, -302)
-item_name = "ribbon_tree"
 
 [node name="AreaBorder" type="StaticBody2D" parent="."]
 position = Vector2(-79, -363)

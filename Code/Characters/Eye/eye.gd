@@ -27,7 +27,7 @@ func _ready() -> void:
 		4:
 			giant_eye.visible = true
 			small_eye.visible = false
-			large_eye.visible = true
+			large_eye.visible = false
 			for child in giant_eye.get_children():
 				child.play("idle")
 

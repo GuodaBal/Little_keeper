@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 13000
+@export var speed = 15000
 @export var stop_range = 100
 @export var in_orig_pos = true
 
@@ -23,7 +23,8 @@ func _ready() -> void:
 		queue_free()
 
 func interact():
-	DialogueManager.show_dialogue_balloon(load("res://Resources/Dialogue/item_interactions/day_3.dialogue"), "interact_with_dog")
+	if !GlobalVariables.dog_following:
+		DialogueManager.show_dialogue_balloon(load("res://Resources/Dialogue/item_interactions/day_3.dialogue"), "interact_with_dog")
 
 func _process(delta: float) -> void:
 	if GlobalVariables.dog_sacrificed:

@@ -455,6 +455,7 @@ sprite_frames = SubResource("SpriteFrames_5byg2")
 animation = &"talking"
 
 [node name="GiantEye" type="Node2D" parent="."]
+visible = false
 
 [node name="GiantStalk" type="AnimatedSprite2D" parent="GiantEye"]
 position = Vector2(6, -111)

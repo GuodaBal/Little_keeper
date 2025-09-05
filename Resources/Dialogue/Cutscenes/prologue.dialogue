@@ -78,6 +78,7 @@ do AudioManager.current_speaker = null
 if !GlobalVariables.prologue_has_taken_bucket
 	do GlobalVariables.prologue_has_taken_bucket = true
 if !GlobalVariables.prologue_has_taken_robe
+	do GlobalSignals.put_robe_on.emit()
 	do GlobalVariables.prologue_has_taken_robe = true
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Uniform. Tool. That’s two yeses.

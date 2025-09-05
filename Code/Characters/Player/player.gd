@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 15000
+var speed = 17000
 @onready var interactable_detection = $ItemDetector
 @onready var animation := $AnimatedSprite2D
 
@@ -30,6 +30,7 @@ func _ready() -> void:
 	set_can_interact(false)
 
 func _physics_process(delta: float) -> void:
+	#print_debug(GlobalVariables.current_day)
 	if !can_interact || get_tree().get_first_node_in_group("Dialogue") != null:
 		return
 	var wanted_velocity = Vector2(0, 0)
