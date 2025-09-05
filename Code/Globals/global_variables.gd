@@ -3,6 +3,7 @@ extends Node
 var given_item_types: Array[int]
 var current_day = 1
 var eye_is_fed = false
+var mission_given = false
 var lowering_gently = true
 
 var has_visited_crater = false
@@ -21,6 +22,7 @@ func set_to_default():
 	var given_item_types: Array[int]
 	var current_day = 1
 	var eye_is_fed = false
+	var mission_given = false
 	var lowering_gently = true
 
 	var has_visited_crater = false

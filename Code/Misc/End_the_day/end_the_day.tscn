@@ -5,16 +5,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fnrh3"]
 size = Vector2(258, 183)
 
-[node name="EndTheDay" type="Area2D"]
+[node name="StaticBody2D" type="StaticBody2D" groups=["Interactable_item"]]
+collision_layer = 2
 script = ExtResource("1_hqrxi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(5, 10.5)
 shape = SubResource("RectangleShape2D_fnrh3")
-
-[node name="Polygon2D" type="Polygon2D" parent="."]
-visible = false
-color = Color(0.621504, 0.420726, 0.0671087, 1)
-polygon = PackedVector2Array(-119, -81, 134, -81, 131, 99, -123, 103)
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]

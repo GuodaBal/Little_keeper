@@ -174,4 +174,4 @@ position = Vector2(7.28, -32.0375)
 scale = Vector2(0.635, 0.635)
 sprite_frames = SubResource("SpriteFrames_ci8ng")
 animation = &"walk_front"
-frame_progress = 0.935262
+frame_progress = 0.235441

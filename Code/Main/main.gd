@@ -41,7 +41,7 @@ func switch_area(name, speed = 3.0):
 		if child.is_in_group("Pickupable_item"):
 			if !player:
 				player = get_tree().get_first_node_in_group("Player")
-			if player.inventory.items.has(child.item) || GlobalVariables.eye_is_fed:
+			if player.inventory.items.has(child.item) || GlobalVariables.eye_is_fed || !GlobalVariables.mission_given:
 				current_scene.call_deferred("remove_child", child)
 	
 	

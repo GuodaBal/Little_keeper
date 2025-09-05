@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bqmgujxwlgj3b" path="res://Code/Characters/Dog/dog.tscn" id="3_w46pd"]
 
 [node name="Glade" type="Node2D"]
+y_sort_enabled = true
 
 [node name="LittleOfferingsGlade" type="Sprite2D" parent="."]
 z_index = -1

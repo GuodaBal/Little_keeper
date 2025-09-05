@@ -29,6 +29,7 @@ do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (unraveling) Keeper— help— Keeper— (overwritten by rumble)
 do AudioManager.current_speaker = AudioManager.eye
 EYE: (to you—calm) Stay above. I need a hand to sprinkle.
+do GlobalSignals.put_robe_up.emit()
 
 if GlobalVariables.dog_sacrificed
 	do AudioManager.current_speaker = null
@@ -44,7 +45,6 @@ He leaves you alone, left to the whims of your new master. Your new found family
 The EYE rises level with your hood; a broken chalk ring redraws itself mid-air, a trembling crown haloing the pupil.
 do AudioManager.current_speaker = AudioManager.eye
 EYE: (naming) Little Keeper.
-[wait=1]
 do AudioManager.current_speaker = null
 Dawn leaks between trees. You pull your hood up.
 ##SFX: music swells; heartbeat syncs with menu click pace.
@@ -175,6 +175,7 @@ The EYE brightens but does not swell; a thin, tidy glow traces the inner rim.
 #SFX: a calm breath of air; distant forest hush returns under the bed.
 EYE: (warm) Little hands. Little answers. I can be little, too.
 A tall hood steps forward and pulls up your hood.
+do GlobalSignals.put_robe_up.emit()
 Cultists: (gentle) Sized just right.
 Cultists: (approving) Small care. Small keeper.
 NARRATOR: Caretakers. Not zealots. This is their favorite size.
@@ -190,8 +191,7 @@ if GlobalVariables.dog_sacrificed
 	NARRATOR: (soft) Small reparations matter.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (calm) Helper.
-EYE: (naming) Little TENDER. (or Little Helper if you prefer simple)
-[wait = 1]
+EYE: (naming) Little TENDER.
 Dawn threads between trees. The lanterns stay lit but low. The Eye blinks once, content.
 NARRATOR: You kept a god small. That is a kind of crown.
 #SFX: the music thins into a warm cadence; heartbeat bed does not return.

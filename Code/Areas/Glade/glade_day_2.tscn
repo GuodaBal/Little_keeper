@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dbna1b6ded3ia" path="res://Assets/Sprites/Areas/Little_Offerings_Glade.png" id="3_hugi3"]
 
 [node name="Glade" type="Node2D"]
+y_sort_enabled = true
 
 [node name="pickupable_item_prototype" parent="." instance=ExtResource("2_hugi3")]
 position = Vector2(3217, 324)

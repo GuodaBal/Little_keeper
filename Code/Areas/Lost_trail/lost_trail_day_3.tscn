@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bqmgujxwlgj3b" path="res://Code/Characters/Dog/dog.tscn" id="7_7ayjj"]
 
 [node name="LostTrail" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_3fdfh")
 
 [node name="pickupable_item_prototype" parent="." instance=ExtResource("3_3cile")]

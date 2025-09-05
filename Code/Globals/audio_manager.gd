@@ -47,8 +47,20 @@ func change_music_for_day():
 		fade_out = little_offerings
 		await fade_out_done
 		join_us.play()
-	if GlobalVariables.current_day == 4:
+	if GlobalVariables.current_day == 4 && !the_crater_of_god.playing:
 		fade_out = join_us
 		await fade_out_done
 		the_crater_of_god.play()
-		
+
+func change_to_crater():
+	fade_out = join_us
+	await fade_out_done
+	the_crater_of_god.play()
+
+func set_to_default():
+	join_us.volume_db = 0
+	little_offerings.volume_db = 0
+	the_crater_of_god.volume_db = 0
+	join_us.stop()
+	little_offerings.play()
+	the_crater_of_god.stop()

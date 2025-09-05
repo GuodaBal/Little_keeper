@@ -7,13 +7,18 @@ var speed = 15000
 @export var inventory: Inventory
 
 var can_interact = true
+
 var sprite_scale
 var facing_forward = true
+var robed_status = "plain"
 
 func _ready() -> void:
 	GlobalSignals.feed_item.connect(give_feed_options)
 	GlobalSignals.item_fed.connect(remove_item)
 	GlobalSignals.player_can_move.connect(set_can_interact)
+	GlobalSignals.start_ending.connect(go_to_idle)
+	GlobalSignals.put_robe_up.connect(put_robe_up)
+	GlobalSignals.put_robe_on.connect(put_robe_on)
 	#DialogueManager.dialogue_started.connect(func(_arg):
 		#set_can_interact(false)
 	#)
@@ -42,16 +47,16 @@ func _physics_process(delta: float) -> void:
 		facing_forward = false
 	if wanted_velocity.length() == 0:
 		if facing_forward:
-			animation.play("idle_forward_plain")
+			animation.play("idle_forward_"+robed_status)
 		else:
-			animation.play("idle_back_plain")
+			animation.play("idle_back_"+robed_status)
 		velocity.x = move_toward(velocity.x, 0, speed * delta)
 		velocity.y = move_toward(velocity.y, 0, speed * delta)
 	else:
 		if facing_forward:
-			animation.play("run_forward_plain")
+			animation.play("run_forward_"+robed_status)
 		else:
-			animation.play("run_back_plain")
+			animation.play("run_back_"+robed_status)
 		velocity = wanted_velocity.normalized() * speed * delta
 	move_and_slide()
 
@@ -112,3 +117,14 @@ func give_feed_options():
 func remove_item(inv_item):
 	inventory.remove_item(inv_item)
 	GlobalVariables.given_item_types.append(inv_item.category)
+
+func go_to_idle():
+	animation.play("idle_forward_"+robed_status)
+
+func put_robe_up():
+	animation.play("ending_robe")
+
+func put_robe_on():
+	print_debug("robed")
+	robed_status = "robed"
+	animation.play("idle_forward_"+robed_status)

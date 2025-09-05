@@ -1,7 +1,7 @@
 extends Control
 
 func _ready() -> void:
-	AudioManager.little_offerings.play()
+	AudioManager.set_to_default()
 	GlobalVariables.set_to_default()
 
 func _on_play_pressed() -> void:

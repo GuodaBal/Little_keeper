@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bbuyft1ceiiro" path="res://Code/Characters/Cultist/cultist.tscn" id="7_5d4qb"]
 
 [node name="Camp" type="Node2D"]
+y_sort_enabled = true
 
 [node name="LittleOfferingsCamp" type="Sprite2D" parent="."]
 z_index = -1
@@ -45,6 +46,15 @@ position = Vector2(-345, -123)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaBorder"]
 polygon = PackedVector2Array(122, 40, 267, 39, 295, 16, 329, 33, 534, 40, 595, 65, 743, 63, 748, 28, 836, 33, 826, 77, 1003, 63, 1097, 57, 1260, 52, 1452, 56, 1522, 41, 1680, 56, 1710, 44, 1775, 49, 1746, 105, 1915, 102, 1911, 240, 1906, 1070, 1419, 1070, 1298, 894, 1238, 1009, 1118, 841, 1050, 1004, 977, 908, 913, 1024, 800, 860, 721, 1058, 615, 905, 547, 1024, 428, 865, 351, 1006, 235, 865, 158, 1010, 46, 876, 1, 878, 0, 763, 5, 623, 36, 587, 26, 159, -49, 162, -52, 1124, 2007, 1132, 1995, 146, 1827, -37, 1340, -104, -73, -77, -75, 185, 36, 165, 40, 52)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="AreaBorder"]
+polygon = PackedVector2Array(943, 376, 977, 245, 1061, 340)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="AreaBorder"]
+polygon = PackedVector2Array(1365, 240, 1440, 141, 1496, 272)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="AreaBorder"]
+polygon = PackedVector2Array(1703, 408, 1796, 315, 1831, 436)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(608, 424)

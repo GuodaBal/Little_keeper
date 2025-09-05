@@ -15,6 +15,7 @@ radius = 72.0
 height = 458.0
 
 [node name="Crater" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_abm0d")
 
 [node name="LittleOfferingsCrater" type="Sprite2D" parent="."]

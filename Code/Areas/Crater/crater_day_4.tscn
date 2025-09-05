@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://46dcirwa6we0"]
+[gd_scene load_steps=8 format=3 uid="uid://46dcirwa6we0"]
 
 [ext_resource type="Script" uid="uid://krwv2nuyrc2c" path="res://Code/Areas/Crater/crater_day_4.gd" id="1_2vw5w"]
 [ext_resource type="PackedScene" uid="uid://bmj7xjel53ir8" path="res://Code/Misc/Scene_switch_trigger/scene_switcher.tscn" id="2_2lp3g"]
@@ -7,14 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://bbuyft1ceiiro" path="res://Code/Characters/Cultist/cultist.tscn" id="5_34i2c"]
 [ext_resource type="PackedScene" uid="uid://cuw8xk3qjx2x8" path="res://Code/Items/Use_item_on/feed_area/feed_area.tscn" id="6_j4s1n"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_uk1ah"]
-size = Vector2(80, 80)
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ktv0k"]
 radius = 72.0
 height = 458.0
 
 [node name="Crater" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_2vw5w")
 
 [node name="LittleOfferingsCrater" type="Sprite2D" parent="."]
@@ -23,11 +21,6 @@ position = Vector2(-676, 539)
 rotation = 3.14159
 scale = Vector2(1, -1)
 texture = ExtResource("2_mw2pw")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(793, 193)
-scale = Vector2(0.973764, 1.27273)
-texture = SubResource("PlaceholderTexture2D_uk1ah")
 
 [node name="Scene_switcher_camp" parent="." instance=ExtResource("2_2lp3g")]
 position = Vector2(-1.99998, 200)
@@ -55,7 +48,7 @@ facing_forward = false
 facing_left = false
 
 [node name="TestCharacter3" parent="." instance=ExtResource("5_34i2c")]
-position = Vector2(-1562, 405)
+position = Vector2(-333, 717)
 char_name = "Kettle"
 facing_forward = false
 

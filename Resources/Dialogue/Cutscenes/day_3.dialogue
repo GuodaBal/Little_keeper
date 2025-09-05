@@ -47,6 +47,7 @@ Gravel sighs. The tail disappears below the rim like a rope slipping.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (hush) Loops are promises.
 do AudioManager.current_speaker = null
+do AudioManager.change_to_crater()
 do GlobalVariables.dog_following = false
 do GlobalVariables.dog_sacrificed = true
 #WORLD SHIFT: A collar lies where the dog stood (sprite appears); pawprints at the edge fade one by one; the ???’s iris glows a thin gold ring for 2–3 seconds.
@@ -85,6 +86,7 @@ The leash you never had tightens across your wrist—then isn’t there.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (whisper) Keys teach keeping.
 do AudioManager.current_speaker = null
+do AudioManager.change_to_crater()
 do GlobalVariables.dog_following = false
 do GlobalVariables.dog_sacrificed = true
 #WORLD SHIFT: A metallic hum swells; your shadow is thinner by one shape; a wayfinding sign near the rim tilts further.
@@ -120,6 +122,7 @@ NARRATOR: Do not— do not— (swallows the last word)
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (approving) Keeper teaches hunger.
 do AudioManager.current_speaker = null
+do AudioManager.change_to_crater()
 do GlobalVariables.dog_following = false
 do GlobalVariables.dog_sacrificed = true
 #WORLD SHIFT: The page-whisper bed grows louder, then stops; the ???’s pupil dilates and a tiny white dot floats inside it (a reflected eye); a single hair drifts up from the pit and vanishes.

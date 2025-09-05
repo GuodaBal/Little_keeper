@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://wmaptwdakwk2" path="res://Assets/Sprites/Areas/Little_Offerings_Lost_Trail.png" id="4_xdls2"]
 
 [node name="LostTrail" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_pf23w")
 
 [node name="pickupable_item_prototype" parent="." instance=ExtResource("3_wlpck")]

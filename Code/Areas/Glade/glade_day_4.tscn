@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://cp08hafn2k2q0" path="res://Resources/Inventory_items/Day_1/lollipop.tres" id="3_lxe1y"]
 
 [node name="Glade" type="Node2D"]
+y_sort_enabled = true
 
 [node name="pickupable_item_prototype" parent="." instance=ExtResource("2_lfkl4")]
 position = Vector2(3005, 841)

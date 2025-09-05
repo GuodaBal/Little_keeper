@@ -2,6 +2,8 @@ extends Node2D
 
 func _ready() -> void:
 	GlobalSignals.start_ending.connect(start_ending)
+	if !GlobalVariables.mission_given:
+		DialogueManager.show_dialogue_balloon(load("res://Resources/Dialogue/Cutscenes/day_4.dialogue"), "start_day")
 	
 func start_ending():
 	if GlobalVariables.ending_choice == "crowned" && GlobalVariables.given_item_types.count(3) >= 3:
