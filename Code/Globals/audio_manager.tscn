@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dueivk82c1uvp"]
+[gd_scene load_steps=18 format=3 uid="uid://dueivk82c1uvp"]
 
 [ext_resource type="Script" uid="uid://ccrahmrcik6gm" path="res://Code/Globals/audio_manager.gd" id="1_kpx4d"]
 [ext_resource type="AudioStream" uid="uid://cis6mg2khlflp" path="res://Assets/Audio/Character_voices/little-robot-sound-84657.mp3" id="2_a8bt5"]
@@ -7,6 +7,16 @@
 [ext_resource type="AudioStream" uid="uid://debg60qbdkbvw" path="res://Assets/Audio/BG_music/Join Us Fade In.mp3" id="5_x6yam"]
 [ext_resource type="AudioStream" uid="uid://dusx5ln4qht5q" path="res://Assets/Audio/BG_music/Little Offerings Fade In.mp3" id="6_lqpst"]
 [ext_resource type="AudioStream" uid="uid://cdld3d5bfjkcx" path="res://Assets/Audio/BG_music/The Crater Of God Fade In.mp3" id="7_osqjh"]
+[ext_resource type="AudioStream" uid="uid://b1dgwv4fwn0x3" path="res://Assets/Audio/SFX/043623_hang-man39s-rope-74008.mp3" id="8_3f14c"]
+[ext_resource type="AudioStream" uid="uid://das618gvecjqt" path="res://Assets/Audio/SFX/dog-bark-effect-382711.mp3" id="9_yasvg"]
+[ext_resource type="AudioStream" uid="uid://2uxa5uthewpq" path="res://Assets/Audio/SFX/dog-bark-sound-effect-322989.mp3" id="10_oc14b"]
+[ext_resource type="AudioStream" uid="uid://g0at673k0ei1" path="res://Assets/Audio/SFX/dog-collar-69454.mp3" id="11_0ehbl"]
+[ext_resource type="AudioStream" uid="uid://1sh7oqnil4nn" path="res://Assets/Audio/SFX/gravel-93504.mp3" id="12_by57j"]
+[ext_resource type="AudioStream" uid="uid://dhcaggkputqd8" path="res://Assets/Audio/SFX/llaveskeys-338166.mp3" id="13_yls8n"]
+[ext_resource type="AudioStream" uid="uid://cwas2jwq5fhj3" path="res://Assets/Audio/SFX/monster-bite-44538.mp3" id="14_xg8vc"]
+[ext_resource type="AudioStream" uid="uid://c2b7uiljxspgu" path="res://Assets/Audio/SFX/murmur-27730.mp3" id="15_ndw68"]
+[ext_resource type="AudioStream" uid="uid://cpnhf2rmepg7o" path="res://Assets/Audio/SFX/plastic-bucket-drop-25688.mp3" id="16_06lpi"]
+[ext_resource type="AudioStream" uid="uid://bp07ft7jknvrx" path="res://Assets/Audio/SFX/whining-dog-6110.mp3" id="17_5d5qa"]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_kpx4d")
@@ -40,3 +50,35 @@ bus = &"Music"
 [node name="TheCraterOfGod" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("7_osqjh")
 bus = &"Music"
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="RopeCreak" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("8_3f14c")
+
+[node name="DogBark1" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("9_yasvg")
+
+[node name="DogBark2" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("10_oc14b")
+
+[node name="DogCollarTink" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("11_0ehbl")
+
+[node name="GravelSlide" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("12_by57j")
+
+[node name="Keys" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("13_yls8n")
+
+[node name="MonsterBite" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("14_xg8vc")
+
+[node name="Murmur" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("15_ndw68")
+
+[node name="BucketDrop" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("16_06lpi")
+
+[node name="WhiningDog" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("17_5d5qa")

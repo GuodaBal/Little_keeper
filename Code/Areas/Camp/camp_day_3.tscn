@@ -1,60 +1,49 @@
-[gd_scene load_steps=11 format=3 uid="uid://b8fn0qavagg1x"]
+[gd_scene load_steps=9 format=3 uid="uid://b8fn0qavagg1x"]
 
 [ext_resource type="Texture2D" uid="uid://c0nln8udhlube" path="res://Assets/Sprites/Areas/Little_Offerings_Camp.png" id="1_wamox"]
 [ext_resource type="PackedScene" uid="uid://bmj7xjel53ir8" path="res://Code/Misc/Scene_switch_trigger/scene_switcher.tscn" id="1_wcw3u"]
 [ext_resource type="PackedScene" uid="uid://ch4mx0saqfgys" path="res://Code/Items/Pickupable_items/Prototype/pickupable_item_prototype.tscn" id="2_ygau7"]
-[ext_resource type="Resource" uid="uid://cxabvwj5g2hga" path="res://Resources/Inventory_items/Day_3/brain_specimen_jar.tres" id="4_6ukkf"]
+[ext_resource type="Resource" uid="uid://u55hau6gcwka" path="res://Resources/Inventory_items/Day_1/baby_tooth.tres" id="4_6ukkf"]
 [ext_resource type="PackedScene" uid="uid://b5gshex5b2wxj" path="res://Code/Misc/End_the_day/end_the_day.tscn" id="4_wamox"]
 [ext_resource type="PackedScene" uid="uid://cj24n4getos1c" path="res://Code/Items/Interactable_items/Prototype/interactable_item_prototype.tscn" id="6_ce4wa"]
 [ext_resource type="PackedScene" uid="uid://bbuyft1ceiiro" path="res://Code/Characters/Cultist/cultist.tscn" id="7_n7cvt"]
 [ext_resource type="PackedScene" uid="uid://bqmgujxwlgj3b" path="res://Code/Characters/Dog/dog.tscn" id="8_6ukkf"]
-
-[sub_resource type="Gradient" id="Gradient_wamox"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_6ukkf"]
-gradient = SubResource("Gradient_wamox")
-fill_from = Vector2(0.683486, 0.0688073)
 
 [node name="Camp" type="Node2D"]
 y_sort_enabled = true
 
 [node name="LittleOfferingsCamp" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(608, 424)
+position = Vector2(874, 184)
 texture = ExtResource("1_wamox")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(448, 70)
-scale = Vector2(0.973764, 1.27273)
-texture = SubResource("GradientTexture2D_6ukkf")
-
 [node name="Scene_switcher_crater" parent="." instance=ExtResource("1_wcw3u")]
-position = Vector2(-312, 474)
+position = Vector2(-46, 234)
 scale = Vector2(1.265, 1.195)
 next_area = "Crater"
 
 [node name="pickupable_item_prototype" parent="." instance=ExtResource("2_ygau7")]
-position = Vector2(507, 316)
+position = Vector2(773, 76)
 item = ExtResource("4_6ukkf")
 
 [node name="EndTheDay" parent="." instance=ExtResource("4_wamox")]
-position = Vector2(681, 223)
+position = Vector2(947, -17)
 scale = Vector2(0.75, 1.28)
 
 [node name="EndTheDay2" parent="." instance=ExtResource("4_wamox")]
-position = Vector2(1096, 140)
+position = Vector2(1362, -100)
 scale = Vector2(0.75, 1.28)
 
 [node name="EndTheDay3" parent="." instance=ExtResource("4_wamox")]
-position = Vector2(1403, 308)
+position = Vector2(1669, 68)
 scale = Vector2(0.75, 1.28)
 
 [node name="interactable_item_prototype" parent="." instance=ExtResource("6_ce4wa")]
-position = Vector2(699, -62)
+position = Vector2(965, -302)
 item_name = "ribbon_tree"
 
 [node name="AreaBorder" type="StaticBody2D" parent="."]
-position = Vector2(-345, -123)
+position = Vector2(-79, -363)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaBorder"]
 polygon = PackedVector2Array(122, 40, 267, 39, 295, 16, 329, 33, 534, 40, 595, 65, 743, 63, 748, 28, 836, 33, 826, 77, 1003, 63, 1097, 57, 1260, 52, 1452, 56, 1522, 41, 1680, 56, 1710, 44, 1775, 49, 1746, 105, 1915, 102, 1911, 240, 1906, 1070, 1419, 1070, 1298, 894, 1238, 1009, 1118, 841, 1050, 1004, 977, 908, 913, 1024, 800, 860, 721, 1058, 615, 905, 547, 1024, 428, 865, 351, 1006, 235, 865, 158, 1010, 46, 876, 1, 878, 0, 763, 5, 623, 36, 587, 26, 159, -49, 162, -52, 1124, 2007, 1132, 1995, 146, 1827, -37, 1340, -104, -73, -77, -75, 185, 36, 165, 40, 52)
@@ -69,32 +58,32 @@ polygon = PackedVector2Array(1365, 240, 1440, 141, 1496, 272)
 polygon = PackedVector2Array(1703, 408, 1796, 315, 1831, 436)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(608, 424)
+position = Vector2(874, 184)
 
 [node name="Cultist" parent="." instance=ExtResource("7_n7cvt")]
-position = Vector2(402, 374)
+position = Vector2(532, 76)
 char_name = "Ash_Pitch"
 facing_left = false
 
 [node name="Cultist2" parent="." instance=ExtResource("7_n7cvt")]
-position = Vector2(1430, 489)
+position = Vector2(1560, 191)
 char_name = "Sister_Moth"
 
 [node name="Cultist3" parent="." instance=ExtResource("7_n7cvt")]
-position = Vector2(1300, 567)
+position = Vector2(1430, 269)
 char_name = "Wick_Lantern"
 facing_left = false
 
 [node name="Cultist4" parent="." instance=ExtResource("7_n7cvt")]
-position = Vector2(220, 423)
+position = Vector2(350, 125)
 char_name = "Bramble_Net"
 facing_left = false
 
 [node name="TestCharacter4" parent="." instance=ExtResource("7_n7cvt")]
-position = Vector2(1216, 837)
+position = Vector2(1346, 539)
 char_name = "Vellum"
 facing_left = false
 
 [node name="Dog" parent="." instance=ExtResource("8_6ukkf")]
-position = Vector2(143, 67)
+position = Vector2(120, 111)
 in_orig_pos = false

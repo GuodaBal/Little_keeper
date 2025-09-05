@@ -12,10 +12,6 @@ collision_mask = 0
 script = ExtResource("1_nmsmy")
 item = ExtResource("2_qs81v")
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color(0.16474, 0.402955, 0.620316, 1)
-polygon = PackedVector2Array(2, -25, -22, -7, -17, 21, 21, 22, 28, -5)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -2)
 shape = SubResource("CircleShape2D_mke3s")

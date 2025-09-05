@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://u55hau6gcwka"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://u55hau6gcwka"]
 
 [ext_resource type="Script" uid="uid://5nwhfs515abu" path="res://Code/Inventory/inventory_item.gd" id="1_na0ob"]
+[ext_resource type="Texture2D" uid="uid://b8so70e83rr6v" path="res://Assets/Sprites/Cropped_pickupable_items/tooth.png" id="2_tvdl5"]
 
 [resource]
 script = ExtResource("1_na0ob")
 item_name = "baby_tooth"
+sprite = ExtResource("2_tvdl5")
 category = 3
 metadata/_custom_type_script = "uid://5nwhfs515abu"

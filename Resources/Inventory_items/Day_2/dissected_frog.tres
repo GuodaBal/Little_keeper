@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://6d1b5cohw36o"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://6d1b5cohw36o"]
 
 [ext_resource type="Script" uid="uid://5nwhfs515abu" path="res://Code/Inventory/inventory_item.gd" id="1_khixu"]
+[ext_resource type="Texture2D" uid="uid://cr2rdlbcxswy4" path="res://Assets/Sprites/Cropped_pickupable_items/frog.png" id="2_uxppa"]
 
 [resource]
 script = ExtResource("1_khixu")
 item_name = "dissected_frog"
+sprite = ExtResource("2_uxppa")
 category = 2
 metadata/_custom_type_script = "uid://5nwhfs515abu"

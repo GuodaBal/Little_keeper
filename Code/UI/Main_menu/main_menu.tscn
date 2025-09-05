@@ -1,8 +1,81 @@
-[gd_scene load_steps=4 format=3 uid="uid://bb2ue08a413s0"]
+[gd_scene load_steps=12 format=3 uid="uid://bb2ue08a413s0"]
 
 [ext_resource type="Script" uid="uid://bwudmbdoxkyw6" path="res://Code/UI/Main_menu/main_menu.gd" id="1_px2ty"]
-[ext_resource type="Theme" uid="uid://dc16uxn7hntw2" path="res://Assets/Themes/black_button.tres" id="2_oljwp"]
-[ext_resource type="Texture2D" uid="uid://bsrefb4se6bdx" path="res://Assets/SAMSARA_PACK_GUI/GUI_Global/SVG/Asset 23.svg" id="3_juban"]
+[ext_resource type="Texture2D" uid="uid://cyq3ok3cgfoe3" path="res://Assets/Sprites/Logo/Little_Offerings_Logo2.png" id="2_juban"]
+[ext_resource type="Texture2D" uid="uid://dgmys850doadk" path="res://Assets/SAMSARA_PACK_GUI/GUI_Global/SVG/Asset 16.svg" id="3_uc837"]
+[ext_resource type="Texture2D" uid="uid://d3y0cqpcev0ui" path="res://Assets/SAMSARA_PACK_GUI/GUI_Global/SVG/Asset 9.svg" id="4_qk3c7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nya6y"]
+texture = ExtResource("3_uc837")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+expand_margin_left = 50.0
+expand_margin_right = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_txs6a"]
+texture = ExtResource("3_uc837")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+expand_margin_left = 50.0
+expand_margin_right = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mthtv"]
+texture = ExtResource("4_qk3c7")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+expand_margin_left = 50.0
+expand_margin_right = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f2mi6"]
+texture = ExtResource("3_uc837")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+expand_margin_left = 50.0
+expand_margin_right = 50.0
+
+[sub_resource type="Theme" id="Theme_ixwmf"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 16
+Button/styles/focus = SubResource("StyleBoxTexture_nya6y")
+Button/styles/hover = SubResource("StyleBoxTexture_txs6a")
+Button/styles/normal = SubResource("StyleBoxTexture_mthtv")
+Button/styles/pressed = SubResource("StyleBoxTexture_f2mi6")
+
+[sub_resource type="Theme" id="Theme_iqs8p"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 24
+Button/styles/focus = SubResource("StyleBoxTexture_nya6y")
+Button/styles/hover = SubResource("StyleBoxTexture_txs6a")
+Button/styles/normal = SubResource("StyleBoxTexture_mthtv")
+Button/styles/pressed = SubResource("StyleBoxTexture_f2mi6")
+
+[sub_resource type="Theme" id="Theme_as5xr"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 24
+Button/styles/focus = SubResource("StyleBoxTexture_nya6y")
+Button/styles/hover = SubResource("StyleBoxTexture_txs6a")
+Button/styles/normal = SubResource("StyleBoxTexture_mthtv")
+Button/styles/pressed = SubResource("StyleBoxTexture_f2mi6")
 
 [node name="Main_menu" type="Control"]
 layout_mode = 3
@@ -17,11 +90,16 @@ script = ExtResource("1_px2ty")
 layout_mode = 0
 offset_right = 1988.0
 offset_bottom = 1111.0
-color = Color(0.145098, 0.145098, 0.145098, 1)
+color = Color(0, 0, 0, 1)
+
+[node name="LittleOfferingsLogo2" type="Sprite2D" parent="."]
+position = Vector2(942, 355)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("2_juban")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 0
-offset_top = 379.0
+offset_top = 478.0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
@@ -32,35 +110,21 @@ theme_override_constants/separation = 20
 
 [node name="Play" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_oljwp")
-theme_override_font_sizes/font_size = 80
+theme = SubResource("Theme_ixwmf")
+theme_override_font_sizes/font_size = 60
 text = "Play"
 
 [node name="Controls" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_oljwp")
-theme_override_font_sizes/font_size = 80
+theme = SubResource("Theme_iqs8p")
+theme_override_font_sizes/font_size = 60
 text = "Controls"
 
 [node name="Exit" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_oljwp")
-theme_override_font_sizes/font_size = 80
+theme = SubResource("Theme_as5xr")
+theme_override_font_sizes/font_size = 60
 text = "Exit"
-
-[node name="Asset23" type="Sprite2D" parent="."]
-position = Vector2(970.263, 245.938)
-scale = Vector2(2.27146, 2.13471)
-texture = ExtResource("3_juban")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 23.0
-offset_top = 155.876
-offset_right = 1945.0
-offset_bottom = 372.876
-bbcode_enabled = true
-text = "[center][font_size=120]Little offerings"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Controls" to="." method="_on_controls_pressed"]

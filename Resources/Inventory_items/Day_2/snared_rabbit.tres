@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://boiodusftcspi"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://boiodusftcspi"]
 
 [ext_resource type="Script" uid="uid://5nwhfs515abu" path="res://Code/Inventory/inventory_item.gd" id="1_yjagq"]
+[ext_resource type="Texture2D" uid="uid://d0t13cb7kis1k" path="res://Assets/Sprites/Cropped_pickupable_items/rabbit.png" id="2_724kv"]
 
 [resource]
 script = ExtResource("1_yjagq")
 item_name = "snared_rabbit"
+sprite = ExtResource("2_724kv")
 category = 3
 metadata/_custom_type_script = "uid://5nwhfs515abu"

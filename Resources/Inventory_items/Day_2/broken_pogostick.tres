@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://dw274vx8mtb0j"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dw274vx8mtb0j"]
 
 [ext_resource type="Script" uid="uid://5nwhfs515abu" path="res://Code/Inventory/inventory_item.gd" id="1_hbbp2"]
+[ext_resource type="Texture2D" uid="uid://r1524vcccutb" path="res://Assets/Sprites/Cropped_pickupable_items/pogostick.png" id="2_yy8gf"]
 
 [resource]
 script = ExtResource("1_hbbp2")
 item_name = "broken_pogostick"
+sprite = ExtResource("2_yy8gf")
 category = 1
 metadata/_custom_type_script = "uid://5nwhfs515abu"

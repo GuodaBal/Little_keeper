@@ -11,6 +11,7 @@ Sand keeps the ticket stubs company.
 => END!
 
 ~ pick_up_wedding_ring
+A wedding ring
 A thin band wedged between seat and console, nicked but bright.
 Pick up?
 - Yes
@@ -26,6 +27,7 @@ Pick up?
 	=> END!
 
 ~ pick_up_car_keys
+Car keys
 A fob with a worn button. Tag - SPARE. It isn’t.
 Pick up?
 - Yes
@@ -53,6 +55,7 @@ Water remembers the way out.
 => END!
 
 ~ pick_up_brain_specimen_jar
+A jar of brains
 A jar in pink-gray gel. Label - Specimen—Anatomy, Retained.
 Pick up?
 - Yes

@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://s8w0xxxokd6p"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://s8w0xxxokd6p"]
 
 [ext_resource type="Script" uid="uid://5nwhfs515abu" path="res://Code/Inventory/inventory_item.gd" id="1_r0c18"]
+[ext_resource type="Texture2D" uid="uid://cchn88bit8qay" path="res://Assets/Sprites/Cropped_pickupable_items/cracked_mirror.png" id="2_pv81c"]
 
 [resource]
 script = ExtResource("1_r0c18")
 item_name = "cracked_mirror"
+sprite = ExtResource("2_pv81c")
 category = 1
 metadata/_custom_type_script = "uid://5nwhfs515abu"

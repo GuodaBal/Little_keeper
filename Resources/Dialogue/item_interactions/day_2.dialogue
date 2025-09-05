@@ -11,6 +11,7 @@ Count the years like little jumps.
 => END!
 
 ~ pick_up_broken_pogostick
+A broken pogostick
 Spring’s there. Handle’s crooked. Still remembers bounce.
 Pick up?
 - Yes
@@ -38,6 +39,7 @@ Numbers without stories.
 => END!
 
 ~ pick_up_dissected_frog
+A dissected frog
 Limbs arranged like paper clips. Tag - Anura.
 Pick up?
 - Yes
@@ -65,6 +67,7 @@ Yours goes up. Something else’s goes sideways.
 => END!
 
 ~ pick_up_snared_rabbit
+A snared rabbit
 A small gray body, leg caught in a wire. ???s like marbles.
 Pick up?
 - Yes

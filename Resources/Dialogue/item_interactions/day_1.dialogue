@@ -11,6 +11,7 @@ Ringed like a target. Or a yearbook.
 => END!
 
 ~ pick_up_lollipop
+A broken lollipop
 A flat circle of sugar. Rainbow, mostly gray now.
 Pick up?
 - Yes
@@ -37,6 +38,7 @@ Bodies used to be here. You hope they’re elsewhere.
 => END!
 
 ~ pick_up_baby_tooth
+A baby tooth
 A tiny white chip in a tin with a fairy sticker.
 Pick up?
 - Yes

@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://dlu0ske26ot3q"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dlu0ske26ot3q"]
 
 [ext_resource type="Script" uid="uid://5nwhfs515abu" path="res://Code/Inventory/inventory_item.gd" id="1_w44y5"]
+[ext_resource type="Texture2D" uid="uid://jdu8ukdb8tae" path="res://Assets/Sprites/Cropped_pickupable_items/keys.png" id="2_dv14b"]
 
 [resource]
 script = ExtResource("1_w44y5")
 item_name = "car_keys"
+sprite = ExtResource("2_dv14b")
 category = 2
 metadata/_custom_type_script = "uid://5nwhfs515abu"

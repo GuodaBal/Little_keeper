@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://cxabvwj5g2hga"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://cxabvwj5g2hga"]
 
 [ext_resource type="Script" uid="uid://5nwhfs515abu" path="res://Code/Inventory/inventory_item.gd" id="1_1k40r"]
+[ext_resource type="Texture2D" uid="uid://c5ca1y4ibychv" path="res://Assets/Sprites/Cropped_pickupable_items/brain_jar.png" id="2_rfh3q"]
 
 [resource]
 script = ExtResource("1_1k40r")
 item_name = "brain_specimen_jar"
+sprite = ExtResource("2_rfh3q")
 category = 3
 metadata/_custom_type_script = "uid://5nwhfs515abu"

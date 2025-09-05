@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://ddgshxcfdyr3r"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://ddgshxcfdyr3r"]
 
 [ext_resource type="Script" uid="uid://5nwhfs515abu" path="res://Code/Inventory/inventory_item.gd" id="1_sp0dj"]
+[ext_resource type="Texture2D" uid="uid://cp20pdcs3yduh" path="res://Assets/Sprites/Cropped_pickupable_items/heart.png" id="2_1tfde"]
 
 [resource]
 script = ExtResource("1_sp0dj")
 item_name = "human_heart"
+sprite = ExtResource("2_1tfde")
 category = 3
 metadata/_custom_type_script = "uid://5nwhfs515abu"

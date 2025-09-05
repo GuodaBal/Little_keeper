@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="LilGuyGJ"
-run/main_scene="uid://c7vriwvkjylte"
+run/main_scene="uid://bb2ue08a413s0"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="uid://cyq3ok3cgfoe3"
+config/icon="uid://coqwlrxih2ytr"
 
 [autoload]
 

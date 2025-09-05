@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://cvrv5538brlws"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://cvrv5538brlws"]
 
 [ext_resource type="Script" uid="uid://5nwhfs515abu" path="res://Code/Inventory/inventory_item.gd" id="1_qfni7"]
+[ext_resource type="Texture2D" uid="uid://cwcq3qu8q5n1v" path="res://Assets/Sprites/Cropped_pickupable_items/bone.png" id="2_c18h0"]
 
 [resource]
 script = ExtResource("1_qfni7")
 item_name = "broken_bone"
+sprite = ExtResource("2_c18h0")
 category = 2
 metadata/_custom_type_script = "uid://5nwhfs515abu"

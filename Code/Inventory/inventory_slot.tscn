@@ -17,19 +17,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-custom_minimum_size = Vector2(130, 130)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Panel" type="Panel" parent="CenterContainer"]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-
-[node name="ItemSprite" type="Sprite2D" parent="CenterContainer/Panel"]
-scale = Vector2(0.77, 0.77)
-
 [node name="Selection_sprite" type="Panel" parent="."]
 visible = false
 self_modulate = Color(1, 1, 1, 0)
@@ -48,3 +35,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.544974, 0.544974, 0.544974, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="ItemSprite" type="Sprite2D" parent="CenterContainer/Panel"]
+scale = Vector2(0.77, 0.77)

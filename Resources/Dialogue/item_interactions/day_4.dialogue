@@ -11,6 +11,7 @@ A square that only looks back.
 => END!
 
 ~ pick_up_cracked_mirror
+A cracked mirror
 A visor mirror with a hairline starburst; corner taped.
 Pick up?
 - Yes
@@ -38,6 +39,7 @@ It sighs like a drawer of sleep.
 => END!
 
 ~ pick_up_broken_bone
+A broken bone
 Brown paper parcel. Stamp - Specimen—Fracture.
 Pick up?
 - Yes
@@ -53,6 +55,7 @@ Pick up?
 	=> END!
 
 ~ pick_up_human_heart
+A human heart
 Sealed pouch with tubing. Tag - Organ—Handle Cold.
 Pick up?
 - Yes
