@@ -13,7 +13,7 @@ config_version=5
 config/name="LilGuyGJ"
 run/main_scene="uid://c7vriwvkjylte"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://cyq3ok3cgfoe3"
 
 [autoload]
 
