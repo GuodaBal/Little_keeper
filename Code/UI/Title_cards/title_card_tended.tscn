@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://daf22tfu7pa5"]
+[gd_scene load_steps=6 format=3 uid="uid://daf22tfu7pa5"]
 
 [ext_resource type="Script" uid="uid://cqhwlp68ue2l4" path="res://Code/UI/Title_cards/title_card_crowned.gd" id="1_pntl3"]
+[ext_resource type="Texture2D" uid="uid://0vuo5xc2cq6j" path="res://Assets/Sprites/Logo/Little_Offerings_Logo.png" id="2_jnoae"]
 
 [sub_resource type="Animation" id="Animation_3ki5b"]
 length = 0.001
@@ -84,21 +85,17 @@ offset_right = 1941.0
 offset_bottom = 1091.0
 color = Color(0, 0, 0, 1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 299.0
-offset_right = 1921.0
-offset_bottom = 518.0
-bbcode_enabled = true
-text = "[i][font_size=150][center]LITTLE OFFERINGS"
+[node name="LittleOfferingsLogo2" type="Sprite2D" parent="Control"]
+position = Vector2(947, 360)
+scale = Vector2(0.733333, 0.733333)
+texture = ExtResource("2_jnoae")
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Control"]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 519.0
-offset_right = 1924.0
-offset_bottom = 630.0
+[node name="RichTextLabel4" type="RichTextLabel" parent="Control"]
+offset_left = -5.0
+offset_top = 564.0
+offset_right = 1917.0
+offset_bottom = 675.0
+theme_override_colors/default_color = Color(0.662453, 0.662452, 0.662452, 1)
 bbcode_enabled = true
 text = "[i][font_size=50][center]“just a little guy, doing your part.”"
 
@@ -106,9 +103,9 @@ text = "[i][font_size=50][center]“just a little guy, doing your part.”"
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 2.0
-offset_top = 712.0
+offset_top = 755.0
 offset_right = 1922.0
-offset_bottom = 823.0
+offset_bottom = 866.0
 bbcode_enabled = true
 text = "[i][font_size=60][center]Tended ending"
 

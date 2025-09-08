@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://73ojrs783cdr"]
+
+[ext_resource type="Texture2D" uid="uid://bfebg5q206m6v" path="res://Assets/Sprites/Items/BG_items/Ribbon_tree_2.png" id="1_gd7om"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qhdhu"]
+radius = 22.0227
+
+[node name="Tree" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-13, -51)
+texture = ExtResource("1_gd7om")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 42)
+shape = SubResource("CircleShape2D_qhdhu")

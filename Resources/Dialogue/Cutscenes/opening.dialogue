@@ -3,11 +3,15 @@ do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: This is our little guy.
 NARRATOR: And he is lost.
 NARRATOR: Not the scream-and-run kind. The quiet kind, where the trees agree with you.
+#[SFX] amb_forest_night starts, very low.
+do AudioManager.current_speaker = null
 => END!
 
 ~ line_2
+do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Left goes somewhere. Right goes somewhere else. Back goes back.
 NARRATOR: Forward goes to a story I do not recommend.
+do AudioManager.current_speaker = null
 - Go left
 	=> go_left
 - Go right
@@ -21,8 +25,10 @@ NARRATOR: Forward goes to a story I do not recommend.
 => END!
 
 ~ line_3
+do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Left goes somewhere. Right goes somewhere else. Back goes back.
 NARRATOR: Forward goes to a story I do not recommend.
+do AudioManager.current_speaker = null
 - Go left
 	=> go_left
 - Go right
@@ -36,8 +42,10 @@ NARRATOR: Forward goes to a story I do not recommend.
 => END!
 
 ~ line_4
+do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Left goes somewhere. Right goes somewhere else. Back goes back.
 NARRATOR: Forward goes to a story I do not recommend.
+do AudioManager.current_speaker = null
 - Go left
 	=> go_left
 - Go right
@@ -51,36 +59,61 @@ NARRATOR: Forward goes to a story I do not recommend.
 => END!
 
 ~ go_left
+Path narrows. Ferns whisper across your knees.
+do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Left is the traditional direction for mistakes.
+do AudioManager.current_speaker = null
+A small lantern glow winks ahead, then dips out of sight.
 => gate_to_clearing
 
 ~ go_right
+Needles scuff. An old sign points at nothing in particular.
+do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Right feels right, until it doesn’t.
+do AudioManager.current_speaker = null
+You hear rope creak. (Or wind. You decide it’s wind.)
 => gate_to_clearing
 
 ~ go_back
+You turn around. The trail behind now looks slightly rearranged.
+do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Back is wonderful… when permitted.
+do AudioManager.current_speaker = null
+Your next step sets you down forward anyway. 
 => gate_to_clearing
 
 ~ stand_still_1
+Time puts a hand on your shoulder and doesn’t squeeze.
+do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: I love stillness. The forest does, too. It keeps you.
+do AudioManager.current_speaker = null
+A firefly floats ahead, patient. The path brightens a notch.
 => line_3
 
 ~ stand_still_2
+do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: I love stillness. The forest does, too. It keeps you.
+do AudioManager.current_speaker = null
 => line_4
 
 ~ follow_firefly
+It blinks like a metronome for your feet.
+do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Following tiny lights is how we decorate bad ideas.
+do AudioManager.current_speaker = null
 => gate_to_clearing
 
 ~ loop_thrice
+do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: You’re hoping the forest will invent a door. It will. I’ve seen the draft.
+do AudioManager.current_speaker = null
 => gate_to_clearing
 
 ~ gate_to_clearing
+The trees lean away at the same time, as if hushed by a teacher.
 do get_parent().transition_animations.play_fade_out()
 [next=2]
+do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Ah. Here we are. The part with the hole.
 do AudioManager.current_speaker = null
 => END!

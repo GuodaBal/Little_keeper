@@ -15,7 +15,7 @@ func update(item: InventoryItem):
 		is_empty = true
 	else:
 		item_sprite.visible = true
-		item_sprite.texture = item.sprite
+		item_sprite.texture = item.icon_sprite
 		is_empty = false
 
 func select():

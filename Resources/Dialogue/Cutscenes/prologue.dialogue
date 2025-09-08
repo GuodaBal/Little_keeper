@@ -1,4 +1,5 @@
 ~ intro
+#[SFX] hush wind • pencil scratch loop fades out.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: A clearing. A hole where the ground forgot itself.
 NARRATOR: They said you were perfect. Small hands. Small voice.
@@ -7,7 +8,7 @@ do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (low) Four offerings. No more.
 Cultists: (lower) Feed the Mouth.
 do AudioManager.current_speaker = AudioManager.eye
-Eye: Hello, little one.
+???: Hello, little one.
 do AudioManager.current_speaker = null
 - Take the robe => take_the_robe
 - Take the bucket => take_the_bucket
@@ -53,7 +54,7 @@ NARRATOR: It doesn’t fit. Good. Let it not fit.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (approving hum) Little robe. Little role.
 do AudioManager.current_speaker = AudioManager.eye
-Eye: You look like them. If you want.
+???: You look like them. If you want.
 do AudioManager.current_speaker = null
 => back_to_choices
 
@@ -70,7 +71,7 @@ do GlobalVariables.prologue_has_taken_bucket = true
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: A mouth needs a spoon. You just picked up the spoon.
 do AudioManager.current_speaker = AudioManager.eye
-Eye: (pleased) Shiny scooper. Lower me something.
+???: (pleased) Shiny scooper. Lower me something.
 do AudioManager.current_speaker = null
 => back_to_choices
 
@@ -90,7 +91,7 @@ do GlobalVariables.prologue_peeked_at_hole = true
 do AudioManager.current_speaker = null
 The chalk ring is warm. The dark moves like breath.
 do AudioManager.current_speaker = AudioManager.eye
-Eye: (delighted) Closer. I can see the moon in your eyes.
+???: (delighted) Closer. I can see the moon in your eyes.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Step back. It likes reflections.
 do AudioManager.current_speaker = null
@@ -98,7 +99,7 @@ do AudioManager.current_speaker = null
 
 ~ repeat_peeks
 do AudioManager.current_speaker = AudioManager.eye
-Eye: Play again.
+???: Play again.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: We are not playing.
 do AudioManager.current_speaker = null
@@ -107,11 +108,12 @@ do AudioManager.current_speaker = null
 ~ idle_linger
 Gravel slides. The rope twitches.
 do AudioManager.current_speaker = AudioManager.eye
-Eye: (soft) Careful. I need you whole.
+???: (soft) Careful. I need you whole.
 do AudioManager.current_speaker = null
 => back_to_choices
 
 ~ stand_with_cultists
+Their hoods turn, but faces don’t appear. One tilts a lantern.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (whisper) Keeper.
 do AudioManager.current_speaker = AudioManager.narrator
@@ -123,7 +125,7 @@ do AudioManager.current_speaker = null
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (synchronized) Sized just right.
 do AudioManager.current_speaker = AudioManager.narrator
-NARRATOR: Of course you match.
+NARRATOR: What could you possibly be ‘just right’ for?
 do AudioManager.current_speaker = null
 => gate_to_round_1
 
@@ -133,7 +135,7 @@ The trail behind is suddenly thicker. Branches knit like fingers.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: The path disagrees.
 do AudioManager.current_speaker = AudioManager.eye
-Eye: (cajoling) Stay. I get lonely when the trees talk.
+???: (cajoling) Stay. I get lonely when the trees talk.
 do AudioManager.current_speaker = null
 => back_to_choices
 
@@ -150,7 +152,7 @@ A cultist raises two fingers. The others hush.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (together) Begin.
 do AudioManager.current_speaker = AudioManager.eye
-Eye: (cheerful) Start easy. Bring me something sweet.
+???: (cheerful) Start easy. Bring me something sweet.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Say no. Or say ‘later’. You won’t. But I must try.
 do AudioManager.current_speaker = null
@@ -160,6 +162,6 @@ do AudioManager.current_speaker = null
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Stalling is wisdom wearing tiny shoes.
 do AudioManager.current_speaker = AudioManager.eye
-Eye: I can wait. I can learn.
+???: I can wait. I can learn.
 do AudioManager.current_speaker = null
 => back_to_choices

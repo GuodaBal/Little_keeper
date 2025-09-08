@@ -13,8 +13,8 @@ Count the years like little jumps.
 ~ pick_up_broken_pogostick
 A broken pogostick
 Spring’s there. Handle’s crooked. Still remembers bounce.
-Pick up?
-- Yes
+Do you want to take this as an offering? Or look some more?
+- Pick up
 	do pick_up()
 	You test it. The spring answers with a hopeful boing?
 	do AudioManager.current_speaker = AudioManager.narrator
@@ -23,7 +23,10 @@ Pick up?
 	???: (delighted) Hop that learned to wait.
 	do AudioManager.current_speaker = null
 	=> END!
-- No
+- Leave alone
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Not enough energy for you?
+	do AudioManager.current_speaker = null
 	=> END!
 
 ~ look_at_metal_tray
@@ -41,8 +44,8 @@ Numbers without stories.
 ~ pick_up_dissected_frog
 A dissected frog
 Limbs arranged like paper clips. Tag - Anura.
-Pick up?
-- Yes
+Do you want to take this as an offering? Or look some more?
+- Pick up
 	do pick_up()
 	Glass is cold. Something taps from the inside—just settling, you tell yourself.
 	do AudioManager.current_speaker = AudioManager.narrator
@@ -51,7 +54,10 @@ Pick up?
 	???: (curious) Hops that stopped, but kept the shape.
 	do AudioManager.current_speaker = null
 	=> END!
-- No
+- Leave alone
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Good. That thing was making me uncomfortable.
+	do AudioManager.current_speaker = null
 	=> END!
 
 ~ look_at_snare_flag
@@ -69,8 +75,8 @@ Yours goes up. Something else’s goes sideways.
 ~ pick_up_snared_rabbit
 A snared rabbit
 A small gray body, leg caught in a wire. ???s like marbles.
-Pick up?
-- Yes
+Do you want to take this as an offering? Or look some more?
+- Pick up
 	do pick_up()
 	It thumps once in the bucket. Then twice.
 	do AudioManager.current_speaker = AudioManager.narrator
@@ -79,6 +85,9 @@ Pick up?
 	???: (hushed) It hops for both of us.
 	do AudioManager.current_speaker = null
 	=> END!
-- No
+- Leave alone
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: I had a few different names to call you if you didn’t.
+	do AudioManager.current_speaker = null
 	=> END!
 

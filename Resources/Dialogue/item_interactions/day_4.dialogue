@@ -13,8 +13,8 @@ A square that only looks back.
 ~ pick_up_cracked_mirror
 A cracked mirror
 A visor mirror with a hairline starburst; corner taped.
-Pick up?
-- Yes
+Do you want to take this as an offering? Or look some more?
+- Pick up
 	do pick_up()
 	Tape peels with a whisper. Your face fractures politely.
 	do AudioManager.current_speaker = AudioManager.narrator
@@ -23,7 +23,10 @@ Pick up?
 	???: (pleased) I can be many at once.
 	do AudioManager.current_speaker = null
 	=> END!
-- No
+- Leave alone
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: I thought you might cut your finger.
+	do AudioManager.current_speaker = null
 	=> END!
 
 ~ look_at_gauze_roll
@@ -41,8 +44,8 @@ It sighs like a drawer of sleep.
 ~ pick_up_broken_bone
 A broken bone
 Brown paper parcel. Stamp - Specimen—Fracture.
-Pick up?
-- Yes
+Do you want to take this as an offering? Or look some more?
+- Pick up
 	do pick_up()
 	It has the weight of a word you don’t say.
 	do AudioManager.current_speaker = AudioManager.narrator
@@ -51,14 +54,17 @@ Pick up?
 	???: (curious) I like how it learned to fail.
 	do AudioManager.current_speaker = null
 	=> END!
-- No
+- Leave alone
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Some things are best left untouched.
+	do AudioManager.current_speaker = null
 	=> END!
 
 ~ pick_up_human_heart
 A human heart
 Sealed pouch with tubing. Tag - Organ—Handle Cold.
-Pick up?
-- Yes
+Do you want to take this as an offering? Or look some more?
+- Pick up
 	do pick_up()
 	Fluid slides. The pouch taps your wrist once. Reflex, you decide.
 	do AudioManager.current_speaker = AudioManager.narrator
@@ -67,7 +73,10 @@ Pick up?
 	???: (hushed) The drummer. For me?
 	do AudioManager.current_speaker = null
 	=> END!
-- No
+- Leave alone
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Do not scare me like that.
+	do AudioManager.current_speaker = null
 	=> END!
 
 #If you examine the rope before choosing:

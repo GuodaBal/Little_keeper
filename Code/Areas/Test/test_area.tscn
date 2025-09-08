@@ -1,8 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkxgp6f4m28gv"]
+[gd_scene load_steps=18 format=3 uid="uid://dkxgp6f4m28gv"]
 
 [ext_resource type="Script" uid="uid://d0p81lynkdbwt" path="res://Code/Areas/Test/test_area.gd" id="1_rnmmu"]
 [ext_resource type="PackedScene" uid="uid://d0rosgvt1h5lk" path="res://Code/Characters/Player/player.tscn" id="2_hlsr6"]
 [ext_resource type="PackedScene" uid="uid://bqmgujxwlgj3b" path="res://Code/Characters/Dog/dog.tscn" id="3_f5axn"]
+[ext_resource type="PackedScene" uid="uid://bcgxmtnnoyr34" path="res://Code/Items/Background_items/tree.tscn" id="4_md34n"]
+[ext_resource type="PackedScene" uid="uid://ch4mx0saqfgys" path="res://Code/Items/Pickupable_items/Prototype/pickupable_item_prototype.tscn" id="5_k2bo8"]
+[ext_resource type="Resource" uid="uid://dw274vx8mtb0j" path="res://Resources/Inventory_items/Day_2/broken_pogostick.tres" id="6_uippu"]
+[ext_resource type="Resource" uid="uid://6d1b5cohw36o" path="res://Resources/Inventory_items/Day_2/dissected_frog.tres" id="7_ikf8w"]
+[ext_resource type="Resource" uid="uid://boiodusftcspi" path="res://Resources/Inventory_items/Day_2/snared_rabbit.tres" id="8_eghnn"]
+[ext_resource type="Resource" uid="uid://cxabvwj5g2hga" path="res://Resources/Inventory_items/Day_3/brain_specimen_jar.tres" id="9_elq0o"]
+[ext_resource type="Resource" uid="uid://dlu0ske26ot3q" path="res://Resources/Inventory_items/Day_3/car_keys.tres" id="10_24wcu"]
+[ext_resource type="Resource" uid="uid://bsslvqatefidp" path="res://Resources/Inventory_items/Day_3/wedding_ring.tres" id="11_d8f5n"]
+[ext_resource type="Resource" uid="uid://s8w0xxxokd6p" path="res://Resources/Inventory_items/Day_4/cracked_mirror.tres" id="12_aah26"]
+[ext_resource type="Resource" uid="uid://cvrv5538brlws" path="res://Resources/Inventory_items/Day_4/broken_bone.tres" id="13_n6noi"]
+[ext_resource type="Resource" uid="uid://ddgshxcfdyr3r" path="res://Resources/Inventory_items/Day_4/human_heart.tres" id="14_gpuj8"]
+[ext_resource type="Resource" uid="uid://u55hau6gcwka" path="res://Resources/Inventory_items/Day_1/baby_tooth.tres" id="15_vqvct"]
+[ext_resource type="Resource" uid="uid://t1eouupg4xfd" path="res://Resources/Inventory_items/Day_1/jar_of_black_sap.tres" id="16_26qr6"]
+[ext_resource type="Resource" uid="uid://cp08hafn2k2q0" path="res://Resources/Inventory_items/Day_1/lollipop.tres" id="17_ppjn6"]
 
 [node name="Test_area" type="Node2D"]
 y_sort_enabled = true
@@ -13,3 +27,54 @@ position = Vector2(562, 388)
 
 [node name="Dog" parent="." instance=ExtResource("3_f5axn")]
 position = Vector2(1092, 409)
+
+[node name="Tree" parent="." instance=ExtResource("4_md34n")]
+position = Vector2(785, 266)
+
+[node name="pickupable_item_prototype" parent="." instance=ExtResource("5_k2bo8")]
+position = Vector2(251, 332)
+item = ExtResource("6_uippu")
+
+[node name="pickupable_item_prototype2" parent="." instance=ExtResource("5_k2bo8")]
+position = Vector2(518, 706)
+item = ExtResource("7_ikf8w")
+
+[node name="pickupable_item_prototype3" parent="." instance=ExtResource("5_k2bo8")]
+position = Vector2(165, 783)
+item = ExtResource("8_eghnn")
+
+[node name="pickupable_item_prototype4" parent="." instance=ExtResource("5_k2bo8")]
+position = Vector2(265, 533)
+item = ExtResource("9_elq0o")
+
+[node name="pickupable_item_prototype5" parent="." instance=ExtResource("5_k2bo8")]
+position = Vector2(102, 457)
+item = ExtResource("10_24wcu")
+
+[node name="pickupable_item_prototype6" parent="." instance=ExtResource("5_k2bo8")]
+position = Vector2(102, 230)
+item = ExtResource("11_d8f5n")
+
+[node name="pickupable_item_prototype7" parent="." instance=ExtResource("5_k2bo8")]
+position = Vector2(358, 109)
+item = ExtResource("12_aah26")
+
+[node name="pickupable_item_prototype8" parent="." instance=ExtResource("5_k2bo8")]
+position = Vector2(505, 207)
+item = ExtResource("13_n6noi")
+
+[node name="pickupable_item_prototype9" parent="." instance=ExtResource("5_k2bo8")]
+position = Vector2(726, 552)
+item = ExtResource("14_gpuj8")
+
+[node name="pickupable_item_prototype10" parent="." instance=ExtResource("5_k2bo8")]
+position = Vector2(758, 662)
+item = ExtResource("15_vqvct")
+
+[node name="pickupable_item_prototype11" parent="." instance=ExtResource("5_k2bo8")]
+position = Vector2(971, 683)
+item = ExtResource("16_26qr6")
+
+[node name="pickupable_item_prototype12" parent="." instance=ExtResource("5_k2bo8")]
+position = Vector2(1219, 631)
+item = ExtResource("17_ppjn6")

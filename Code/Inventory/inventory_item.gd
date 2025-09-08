@@ -4,6 +4,7 @@ class_name InventoryItem
 
 @export var item_name : String = ""
 @export var sprite : Texture2D
+@export var icon_sprite : Texture2D
 @export var category : int = 0
 
 #Category -> weirdness level. 1 = safe, 2 = strange, 3 = wild

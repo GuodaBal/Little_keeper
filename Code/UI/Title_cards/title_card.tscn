@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0x4ivud2qf5x"]
+[gd_scene load_steps=6 format=3 uid="uid://c0x4ivud2qf5x"]
 
 [ext_resource type="Script" uid="uid://d037w2l6itxbu" path="res://Code/UI/Title_cards/title_card.gd" id="1_nofx7"]
+[ext_resource type="Texture2D" uid="uid://0vuo5xc2cq6j" path="res://Assets/Sprites/Logo/Little_Offerings_Logo.png" id="2_d1yvp"]
 
 [sub_resource type="Animation" id="Animation_s014l"]
 length = 0.001
@@ -59,19 +60,17 @@ offset_right = 1941.0
 offset_bottom = 1091.0
 color = Color(0, 0, 0, 1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
-layout_mode = 0
-offset_top = 372.0
-offset_right = 1919.0
-offset_bottom = 591.0
-bbcode_enabled = true
-text = "[i][font_size=150][center]LITTLE OFFERINGS"
+[node name="LittleOfferingsLogo2" type="Sprite2D" parent="Control"]
+position = Vector2(947, 457)
+scale = Vector2(0.733333, 0.733333)
+texture = ExtResource("2_d1yvp")
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Control"]
 layout_mode = 0
-offset_top = 592.0
+offset_top = 729.0
 offset_right = 1922.0
-offset_bottom = 703.0
+offset_bottom = 840.0
+theme_override_colors/default_color = Color(0.662453, 0.662452, 0.662452, 1)
 bbcode_enabled = true
 text = "[i][font_size=50][center]“just a little guy, doing your part.”"
 

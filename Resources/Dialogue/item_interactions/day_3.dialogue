@@ -13,8 +13,8 @@ Sand keeps the ticket stubs company.
 ~ pick_up_wedding_ring
 A wedding ring
 A thin band wedged between seat and console, nicked but bright.
-Pick up?
-- Yes
+Do you want to take this as an offering? Or look some more?
+- Pick up
 	do pick_up()
 	It circles your finger without asking. You pocket it instead.
 	do AudioManager.current_speaker = AudioManager.narrator
@@ -23,14 +23,17 @@ Pick up?
 	???: (pleased) A loop! Loops taste like promises.
 	do AudioManager.current_speaker = null
 	=> END!
-- No
+- Leave alone
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Cold feet huh?
+	do AudioManager.current_speaker = null
 	=> END!
 
 ~ pick_up_car_keys
 Car keys
 A fob with a worn button. Tag - SPARE. It isn’t.
-Pick up?
-- Yes
+Do you want to take this as an offering? Or look some more?
+- Pick up
 	do pick_up()
 	Metal jingles like a small alarm that already failed.
 	do AudioManager.current_speaker = AudioManager.narrator
@@ -39,7 +42,10 @@ Pick up?
 	???: (curious) Keys make doors smaller. I like small.
 	do AudioManager.current_speaker = null
 	=> END!
-- No
+- Leave alone
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: I actually disagree with this one. Maybe we could have driven out of here.
+	do AudioManager.current_speaker = null
 	=> END!
 
 ~ look_at_clipboard
@@ -55,10 +61,10 @@ Water remembers the way out.
 => END!
 
 ~ pick_up_brain_specimen_jar
-A jar of brains
+A jar of brains.
 A jar in pink-gray gel. Label - Specimen—Anatomy, Retained.
-Pick up?
-- Yes
+Do you want to take this as an offering? Or look some more?
+- Pick up
 	do pick_up()
 	The gel wobbles. Your reflection does, too.
 	do AudioManager.current_speaker = AudioManager.narrator
@@ -67,7 +73,10 @@ Pick up?
 	???: (hushed) It remembers for me. Thank you.
 	do AudioManager.current_speaker = null
 	=> END!
-- No
+- Leave alone
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: I am sure I heard it breathe a sigh of relief.
+	do AudioManager.current_speaker = null
 	=> END!
 
 ~ look_at_low_brush

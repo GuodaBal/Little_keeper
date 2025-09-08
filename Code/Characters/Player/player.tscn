@@ -327,9 +327,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nlxgn"]
-radius = 38.0
-height = 142.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_8gok0"]
+radius = 29.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8gok0"]
 radius = 59.0
@@ -347,8 +346,8 @@ sprite_frames = SubResource("SpriteFrames_lo3cl")
 animation = &"ending_robe"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -4)
-shape = SubResource("CapsuleShape2D_nlxgn")
+position = Vector2(0, 47)
+shape = SubResource("CircleShape2D_8gok0")
 
 [node name="ItemDetector" type="Area2D" parent="."]
 collision_layer = 0

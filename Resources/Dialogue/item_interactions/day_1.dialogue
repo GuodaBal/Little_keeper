@@ -13,18 +13,27 @@ Ringed like a target. Or a yearbook.
 ~ pick_up_lollipop
 A broken lollipop
 A flat circle of sugar. Rainbow, mostly gray now.
-Pick up?
-- Yes
+Do you want to take this as an offering? Or look some more?
+- Pick up
 	do pick_up()
 	The wrapper sticks to your thumb.
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Yes. Candy. Predictable. I adore predictable.
 	do AudioManager.current_speaker = AudioManager.eye
-	???: (pleased) Sweet is small sunshine.
-	do AudioManager.current_speaker = null
+	???: (pleased telepathically) Sweet is small sunshine.
+	if player.inventory.items.size() == 0
+		do AudioManager.current_speaker = AudioManager.narrator
+		NARRATOR: I am sorry did… did that thing just speak inside your mind?
+		NARRATOR: I’m doing the same thing? That is besides the point.
+		do AudioManager.current_speaker = null
 	=> END!
-- No
+- Leave alone
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Do you think someone will be back to claim it?
+	NARRATOR: Or do you  just want it all to yourself?
 	=> END!
+do AudioManager.current_speaker = null
+=> END!
 ~ look_at_pegboard_of_tools
 Hooks shaped like questions.
 => END!
@@ -40,17 +49,26 @@ Bodies used to be here. You hope they’re elsewhere.
 ~ pick_up_baby_tooth
 A baby tooth
 A tiny white chip in a tin with a fairy sticker.
-Pick up?
-- Yes
+Do you want to take this as an offering? Or look some more?
+- Pick up
 	do pick_up()
 	It rattles in the tin like a trapped seed.
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: That’s a person crumb.
 	do AudioManager.current_speaker = AudioManager.eye
 	???: (delighted) A sweet that used to bite.
+	if player.inventory.items.size() == 0
+		do AudioManager.current_speaker = AudioManager.narrator
+		NARRATOR: I am sorry did… did that thing just speak inside your mind?
+		NARRATOR: I’m doing the same thing? That is besides the point.
+		do AudioManager.current_speaker = null
 	do AudioManager.current_speaker = null
 	=> END!
-- No
+- Leave alone
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Well that confirms it.
+	NARRATOR: You’re definitely not the tooth fairy.
+	do AudioManager.current_speaker = null
 	=> END!
 
 ~ look_at_signpost
@@ -67,17 +85,25 @@ Someone drank the sky and left the glass.
 
 ~ pick_up_jar_of_black_sap
 A thumb-size jar. Label - night syrup.
-Pick up?
-- Yes
+Do you want to take this as an offering? Or look some more?
+- Pick up
 	do pick_up()
 	The lid squeaks like a tiny bat.
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Tree blood. Technically sweet. Spiritually not.
 	do AudioManager.current_speaker = AudioManager.eye
 	???: (curious) Sweet that learned to slow.
+	if player.inventory.items.size() == 0
+		do AudioManager.current_speaker = AudioManager.narrator
+		NARRATOR: I am sorry did… did that thing just speak inside your mind?
+		NARRATOR: I’m doing the same thing? That is besides the point.
 	do AudioManager.current_speaker = null
 	=> END!
-- No
+- Leave alone
+	do AudioManager.current_speaker = AudioManager.narrator
+	NARRATOR: Yeah I’m not sure what that is but it doesn’t seem sweet.
+	NARRATOR: Now chocolate sauce, that’s more on the money. I, however, doubt this group likes sweet anything.
+	do AudioManager.current_speaker = null
 	=> END!
 
 ~ look_at_bucket_after_feeding

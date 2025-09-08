@@ -13,7 +13,8 @@ script = ExtResource("1_nmsmy")
 item = ExtResource("2_qs81v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -2)
+position = Vector2(-1, 22)
 shape = SubResource("CircleShape2D_mke3s")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3, 24)
