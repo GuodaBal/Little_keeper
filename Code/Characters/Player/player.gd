@@ -19,6 +19,7 @@ func _ready() -> void:
 	GlobalSignals.start_ending.connect(go_to_idle)
 	GlobalSignals.put_robe_up.connect(put_robe_up)
 	GlobalSignals.put_robe_on.connect(put_robe_on)
+	GlobalSignals.day_end.connect(end_day)
 	#DialogueManager.dialogue_started.connect(func(_arg):
 		#set_can_interact(false)
 	#)
@@ -32,8 +33,8 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	#print_debug(GlobalVariables.current_day)
-	print_debug(can_interact)
-	print_debug(get_tree().get_first_node_in_group("Dialogue"))
+	#print_debug(can_interact)
+	#print_debug(get_tree().get_first_node_in_group("Dialogue"))
 	if !can_interact || get_tree().get_first_node_in_group("Dialogue") != null:
 		return
 	var wanted_velocity = Vector2(0, 0)
@@ -132,3 +133,6 @@ func put_robe_on():
 	print_debug("robed")
 	robed_status = "robed"
 	animation.play("idle_forward_"+robed_status)
+
+func end_day():
+	inventory.clear()

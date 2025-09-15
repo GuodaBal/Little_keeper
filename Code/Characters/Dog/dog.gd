@@ -5,12 +5,11 @@ extends CharacterBody2D
 @export var in_orig_pos = true
 
 @onready var animation := $AnimatedSprite2D
+@onready var collision := $CollisionShape2D
 
 var facing_forward = true
 var sprite_scale
 var player = null
-
-
 
 func _ready() -> void:
 	animation.play("idle_front")
@@ -31,6 +30,8 @@ func _process(delta: float) -> void:
 		queue_free()
 		return
 	if GlobalVariables.dog_following:
+		if !collision.disabled:
+			collision.disabled = true
 		if !player:
 			player = get_tree().get_first_node_in_group("Player")
 			return

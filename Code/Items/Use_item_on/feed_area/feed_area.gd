@@ -36,6 +36,7 @@ func feeding():
 func end_day():
 	if GlobalVariables.current_day != 4:
 		GlobalVariables.current_day += 1
+		print_debug("day end emitted")
 		GlobalSignals.day_end.emit()
 		GlobalVariables.eye_is_fed = false
 		GlobalVariables.mission_given = false

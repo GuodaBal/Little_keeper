@@ -34,6 +34,7 @@ do GlobalSignals.start_ending.emit()
 => END!
 
 ~ refuse
+do AudioManager.bucket_drop.play()
 You put the bucket down and step back.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Good little guy.
@@ -49,10 +50,11 @@ do GlobalSignals.start_ending.emit()
 
 ~ lower_offering
 if lowering_gently
+	do AudioManager.rope_creak.play()
 	The bucket tilts, showing the item to the dark like a picture.
 else
+	do AudioManager.bucket_drop.play()
 	The rope hisses. The bucket drops true, vanishing mid-breath.
-do AudioManager.dog_bark_1.play()
 => END!
 
 ~ feed_safe
@@ -112,6 +114,7 @@ if GlobalVariables.dog_sacrificed
 	???: The follower made this lesson easy. It bent first.
 	do GlobalSignals.eye_talking.emit(false)
 	do AudioManager.current_speaker = null
+	do AudioManager.dog_bark_1.play()
 	The eye begins to bark like the dog you let go.
 
 do AudioManager.current_speaker = null
@@ -154,6 +157,7 @@ do GlobalSignals.eye_talking.emit(true)
 ???: I learned so well. Let me show you.
 do GlobalSignals.eye_talking.emit(false)
 do AudioManager.current_speaker = AudioManager.cultist
+do AudioManager.murmur.play()
 Cultists: Knees. Knees.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: You’ve done it now.

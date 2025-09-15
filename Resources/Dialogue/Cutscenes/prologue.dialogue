@@ -52,6 +52,7 @@ You lift it. Fabric whispers. It yawns over you like a tent.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: It doesn’t fit. Good. Let it not fit.
 do AudioManager.current_speaker = AudioManager.cultist
+do AudioManager.murmur.play()
 Cultists: (approving hum) Little robe. Little role.
 do AudioManager.current_speaker = AudioManager.eye
 ???: You look like them. If you want.
@@ -115,6 +116,7 @@ do AudioManager.current_speaker = null
 ~ stand_with_cultists
 Their hoods turn, but faces don’t appear. One tilts a lantern.
 do AudioManager.current_speaker = AudioManager.cultist
+do AudioManager.murmur.play()
 Cultists: (whisper) Keeper.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: They’ve rehearsed this night. You are the prop.
@@ -123,6 +125,7 @@ do AudioManager.current_speaker = null
 
 ~ stand_after_robe
 do AudioManager.current_speaker = AudioManager.cultist
+do AudioManager.murmur.play()
 Cultists: (synchronized) Sized just right.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: What could you possibly be ‘just right’ for?

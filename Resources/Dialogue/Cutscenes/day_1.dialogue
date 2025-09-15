@@ -11,9 +11,12 @@ do AudioManager.current_speaker = null
 => END!
 
 ~ lower_offering
+
 if lowering_gently
+	do AudioManager.rope_creak.play()
 	You feed the rope hand over hand. The bucket kisses the dark
 else
+	do AudioManager.bucket_drop.play()
 	You let the rope run. The bucket thumps once, then stills.
 do AudioManager.monster_bite.play()
 => END!

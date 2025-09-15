@@ -33,6 +33,7 @@ do GlobalSignals.put_robe_up.emit()
 
 if GlobalVariables.dog_sacrificed
 	do AudioManager.current_speaker = null
+	do AudioManager.dog_collar_tink.play()
 	A collar tag tinks up from the pit, then falls back in.
 	do AudioManager.current_speaker = AudioManager.eye
 	EYE: (fond) Your follower came first. You came best.
@@ -76,6 +77,7 @@ The rim tightens like a drawn mouth. Hairline light closes. Dust rises and settl
 
 if GlobalVariables.dog_sacrificed
 	do AudioManager.current_speaker = null
+	do AudioManager.dog_collar_tink.play()
 	The collar at the rim vibrates, then lies still.
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR, soft: Two loops kept. One lost. We keep what we can.
@@ -116,6 +118,7 @@ NARRATOR: No.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (cold) Four. No more. Then go.
 do AudioManager.current_speaker = null
+do AudioManager.murmur.play()
 Two tall hoods flank you, gentle hands that don’t ask.
 #Edge
 do AudioManager.current_speaker = AudioManager.narrator
@@ -124,6 +127,7 @@ NARRATOR: I’m proud of you. I wish that mattered more than gravity.
 
 if GlobalVariables.dog_sacrificed
 	do AudioManager.current_speaker = null
+	do AudioManager.dog_bark_1.play()
 	A thin bark echoes from too far down.
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: (strained) Look at me. Not the hole.
@@ -169,21 +173,31 @@ The rope smokes a line into the rim.
 
 ~ tended_ending
 The chalk ring holds. The rim settles as if tucking a blanket in.
+do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (soft) Four. No more.
+do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: You answered riddles with gentleness. Look what didn’t happen.
+do AudioManager.current_speaker = null
 The EYE brightens but does not swell; a thin, tidy glow traces the inner rim.
 #SFX: a calm breath of air; distant forest hush returns under the bed.
+do AudioManager.current_speaker = AudioManager.eye
 EYE: (warm) Little hands. Little answers. I can be little, too.
+do AudioManager.current_speaker = null
 A tall hood steps forward and pulls up your hood.
 do GlobalSignals.put_robe_up.emit()
+do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (gentle) Sized just right.
 Cultists: (approving) Small care. Small keeper.
+do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Caretakers. Not zealots. This is their favorite size.
+do AudioManager.current_speaker = null
 They pass a small chalk stone to you; you retrace the ring where it smudged.
+do AudioManager.current_speaker = AudioManager.eye
 EYE: (pleased) You draw the edge well. I like edges.
 #SFX: soft chalk scratch; subtle halo shimmer for two seconds.
 if GlobalVariables.dog_sacrificed
 	do AudioManager.current_speaker = null
+	do AudioManager.dog_collar_tink.play()
 	The collar at the rim slides a little, as if nudged from below, and rests by your foot.
 	do AudioManager.current_speaker = AudioManager.eye
 	EYE: (apologetic) I kept a piece. I’m returning a piece.
@@ -191,9 +205,13 @@ if GlobalVariables.dog_sacrificed
 	NARRATOR: (soft) Small reparations matter.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (calm) Helper.
+do AudioManager.current_speaker = AudioManager.eye
 EYE: (naming) Little TENDER.
+do AudioManager.current_speaker = null
 Dawn threads between trees. The lanterns stay lit but low. The Eye blinks once, content.
+do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: You kept a god small. That is a kind of crown.
+do AudioManager.current_speaker = null
 #SFX: the music thins into a warm cadence; heartbeat bed does not return.
 #ost-credit sting
 #EYE, off: Bring me something sweet… another night.

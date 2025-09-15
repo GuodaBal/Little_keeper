@@ -12,8 +12,10 @@ do AudioManager.current_speaker = null
 
 ~ lower_offering
 if lowering_gently
+	do AudioManager.rope_creak.play()
 	You test the knot twice. The bucket rocks like a yes.
 else
+	do AudioManager.bucket_drop.play()
 	Rope whispers through your hands. Gravel answers.
 do AudioManager.monster_bite.play()
 => END!
@@ -48,13 +50,16 @@ do AudioManager.current_speaker = AudioManager.eye
 do GlobalSignals.eye_talking.emit(true)
 ???: (coaxing) Circle fits two. Come see.
 do GlobalSignals.eye_talking.emit(false)
+do AudioManager.whining_dog.play()
 Dog: (soft whine… paws scrape once.)
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: No— heel. Back. Back!
 do AudioManager.current_speaker = null
+do AudioManager.whining_dog.play()
 Gravel sighs. The tail disappears below the rim like a rope slipping.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (hush) Loops are promises.
+do AudioManager.animal_dying.play()
 do AudioManager.current_speaker = null
 do AudioManager.change_to_crater()
 do GlobalVariables.dog_following = false
@@ -87,19 +92,21 @@ if GlobalVariables.dog_following
 => END!
 
 ~ dog_following_car_keys
+do AudioManager.keys.play()
 The keys in your pocket jingle once on their own. The dog’s head tilts, ears up.
 do AudioManager.current_speaker = AudioManager.eye
 do GlobalSignals.eye_talking.emit(true)
 ???: (sing-song) Small doors. Smaller halls. Follow the sound.
 do GlobalSignals.eye_talking.emit(false)
 do AudioManager.current_speaker = AudioManager.narrator
-
+do AudioManager.dog_collar_tink.play()
 Dog: (two quick steps; tag jingle; silence.)
 NARRATOR: Keep it— keep— (cuts off)
 do AudioManager.current_speaker = null
 The leash you never had tightens across your wrist— then isn’t there.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (whisper) Keys teach keeping.
+do AudioManager.animal_dying.play()
 do AudioManager.current_speaker = null
 do AudioManager.change_to_crater()
 do GlobalVariables.dog_following = false
@@ -137,11 +144,13 @@ do AudioManager.current_speaker = AudioManager.eye
 do GlobalSignals.eye_talking.emit(true)
 ???: (thrilled) Your follower remembers this smell. Bring it closer.
 do GlobalSignals.eye_talking.emit(false)
+do AudioManager.whining_dog.play()
 Dog: (a single sharp yip… then a collar scuff… then nothing.)
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Do not— do not— (swallows the last word)
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (approving) Keeper teaches hunger.
+do AudioManager.animal_dying.play()
 do AudioManager.current_speaker = null
 do AudioManager.change_to_crater()
 do GlobalVariables.dog_following = false

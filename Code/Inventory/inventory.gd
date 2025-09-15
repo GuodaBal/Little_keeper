@@ -6,9 +6,6 @@ class_name Inventory
 
 var current_index = 0
 
-func ready():
-	GlobalSignals.day_end.connect(clear)
-
 func add_item(item:InventoryItem):
 	for index in items.size():
 		if items[index] == null:
@@ -25,5 +22,7 @@ func select_item(index):
 	current_index = index
 
 func clear():
+	print_debug("clearing")
 	for index in items.size():
 		items[index] = null
+	GlobalSignals.update_inventory.emit()

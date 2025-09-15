@@ -212,18 +212,18 @@ position = Vector2(-208, -29)
 [node name="Tree2" parent="BackgroundSprites" instance=ExtResource("7_uk1ah")]
 position = Vector2(-90, 88)
 
-[node name="Bucket" type="Node2D" parent="BackgroundSprites"]
-position = Vector2(471, 362)
-
-[node name="Bucket" type="Sprite2D" parent="BackgroundSprites/Bucket"]
-position = Vector2(1, 20)
-texture = ExtResource("8_ktv0k")
-
 [node name="Lantern" type="Node2D" parent="BackgroundSprites"]
 position = Vector2(612, 308)
 
 [node name="Bucket" type="Sprite2D" parent="BackgroundSprites/Lantern"]
 position = Vector2(-1, 34)
 texture = ExtResource("9_yb7b2")
+
+[node name="Bucket" type="Node2D" parent="BackgroundSprites"]
+position = Vector2(471, 342)
+
+[node name="Bucket" type="Sprite2D" parent="BackgroundSprites/Bucket"]
+position = Vector2(1, 40)
+texture = ExtResource("8_ktv0k")
 
 [editable path="Eye"]
