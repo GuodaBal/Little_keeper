@@ -20,7 +20,9 @@ Do you want to take this as an offering? Or look some more?
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Broken doesn’t mean useless.
 	do AudioManager.current_speaker = AudioManager.eye
+	do GlobalSignals.eye_talking.emit(true)
 	???: (pleased) I can be many at once.
+	do GlobalSignals.eye_talking.emit(false)
 	do AudioManager.current_speaker = null
 	=> END!
 - Leave alone
@@ -51,7 +53,9 @@ Do you want to take this as an offering? Or look some more?
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Inside sticks.
 	do AudioManager.current_speaker = AudioManager.eye
+	do GlobalSignals.eye_talking.emit(true)
 	???: (curious) I like how it learned to fail.
+	do GlobalSignals.eye_talking.emit(false)
 	do AudioManager.current_speaker = null
 	=> END!
 - Leave alone
@@ -70,7 +74,9 @@ Do you want to take this as an offering? Or look some more?
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: If you drop that in, I’m leaving.
 	do AudioManager.current_speaker = AudioManager.eye
+	do GlobalSignals.eye_talking.emit(true)
 	???: (hushed) The drummer. For me?
+	do GlobalSignals.eye_talking.emit(false)
 	do AudioManager.current_speaker = null
 	=> END!
 - Leave alone
@@ -99,7 +105,9 @@ do AudioManager.current_speaker = null
 ~ rim_idle
 #If you idle at the rim >5s:
 do AudioManager.current_speaker = AudioManager.eye
+do GlobalSignals.eye_talking.emit(true)
 ???: (coaxing) One more small brave.
+do GlobalSignals.eye_talking.emit(false)
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Brave isn’t always down.
 do AudioManager.current_speaker = null

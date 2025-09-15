@@ -1,6 +1,8 @@
 ~ start_day
 do AudioManager.current_speaker = AudioManager.eye
+do GlobalSignals.eye_talking.emit(true)
 ???: (cheerful) Start easy. Bring me something sweet.
+do GlobalSignals.eye_talking.emit(false)
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Harmless would be nice. Be boring for me, just once.
 do AudioManager.current_speaker = AudioManager.cultist
@@ -13,6 +15,7 @@ if lowering_gently
 	You feed the rope hand over hand. The bucket kisses the dark
 else
 	You let the rope run. The bucket thumps once, then stills.
+do AudioManager.monster_bite.play()
 => END!
 
 ~ give_nothing
@@ -23,15 +26,19 @@ do AudioManager.current_speaker = null
 
 ~ feed_safe
 do AudioManager.current_speaker = AudioManager.eye
+do GlobalSignals.eye_talking.emit(true)
 ???: Bright sugar! It crackles on my tongue.
 ???: (softer) You are good at finding suns.
+do GlobalSignals.eye_talking.emit(false)
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Thank you. That was mercy with a stick.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (hum) Sweet for sweet.
-if lowered_gently
+if lowering_gently
 	do AudioManager.current_speaker = AudioManager.eye
+	do GlobalSignals.eye_talking.emit(true)
 	???: You lowered it kindly. I can taste the careful.
+	do GlobalSignals.eye_talking.emit(false)
 else
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Speed is how mistakes like to dress.
@@ -41,8 +48,10 @@ do AudioManager.current_speaker = null
 
 ~ feed_strange
 do AudioManager.current_speaker = AudioManager.eye
+do GlobalSignals.eye_talking.emit(true)
 ???: Thick night. It tugs my teeth.
 ???: (delighted) Sweet that remembers bark.
+do GlobalSignals.eye_talking.emit(false)
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: This is where ‘technically’ becomes a sin.
 do AudioManager.current_speaker = AudioManager.cultist
@@ -51,7 +60,9 @@ do AudioManager.current_speaker = null
 
 if lowering_gently
 	do AudioManager.current_speaker = AudioManager.eye
+	do GlobalSignals.eye_talking.emit(true)
 	???: You held it steady. It didn’t spill its moon.
+	do GlobalSignals.eye_talking.emit(false)
 else
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: We’re rushing dessert now? Fine. Fine.
@@ -61,8 +72,10 @@ do AudioManager.current_speaker = null
 
 ~ feed_wild
 do AudioManager.current_speaker = AudioManager.eye
+do GlobalSignals.eye_talking.emit(true)
 ???: Oh. A small scream.
 ???: (thrilled) Sweet with story.
+do GlobalSignals.eye_talking.emit(false)
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Put. It. Back.
 do AudioManager.current_speaker = AudioManager.cultist
@@ -71,7 +84,9 @@ do AudioManager.current_speaker = null
 #WORLD SHIFT: A soft chime like dental tools far away; the ???’s iris tightens briefly; one lantern near the rim tilts toward the pit.
 if lowering_gently
 	do AudioManager.current_speaker = AudioManager.eye
+	do GlobalSignals.eye_talking.emit(true)
 	???: You cradled it. The cradle is mine now.
+	do GlobalSignals.eye_talking.emit(false)
 else
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Tossing teeth into holes. Bold hobby.
@@ -81,7 +96,9 @@ do AudioManager.current_speaker = null
 ~ after_feeding
 A large eye comes into view from the edges of the crater peeking
 do AudioManager.current_speaker = AudioManager.eye
+do GlobalSignals.eye_talking.emit(true)
 ???: More soon?
+do GlobalSignals.eye_talking.emit(false)
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: You can still walk away. You won’t, but you can.
 do AudioManager.current_speaker = AudioManager.cultist

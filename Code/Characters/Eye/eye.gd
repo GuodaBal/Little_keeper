@@ -6,7 +6,10 @@ extends StaticBody2D
 
 var dm = DialogueManager
 
+var talking_animation
+
 func _ready() -> void:
+	GlobalSignals.eye_talking.connect(set_talking)
 	match GlobalVariables.current_day:
 		1:
 			giant_eye.visible = false
@@ -18,12 +21,14 @@ func _ready() -> void:
 			small_eye.visible = true
 			for child in small_eye.get_children():
 				child.play("idle")
+			talking_animation = $SmallEye/SmallFrontEye
 		3:
 			giant_eye.visible = false
 			small_eye.visible = false
 			large_eye.visible = true
 			for child in large_eye.get_children():
 				child.play("idle")
+			talking_animation = $LargeEye/LargeFrontEye
 		4:
 			giant_eye.visible = true
 			small_eye.visible = false
@@ -37,3 +42,9 @@ func interact():
 	else:
 		dm.show_dialogue_balloon(load("res://Resources/Dialogue/Cutscenes/day_"+str(GlobalVariables.current_day)+".dialogue"), "start_day")
 	#DialogueManager.show_dialogue_balloon(load("res://Resources/Dialogue/eye.dialogue"), "before_feed_day_"+str(GlobalVariables.current_day))
+
+func set_talking(tf):
+	if tf && talking_animation:
+		talking_animation.play("talking")
+	elif !tf && talking_animation:
+		talking_animation.play("idle")

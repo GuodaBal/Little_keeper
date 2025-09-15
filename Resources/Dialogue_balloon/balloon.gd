@@ -66,6 +66,8 @@ func _ready() -> void:
 
 func _unhandled_input(_event: InputEvent) -> void:
 	# Only the balloon is allowed to handle input while it's showing
+	if !balloon.visible:
+		queue_free()
 	get_viewport().set_input_as_handled()
 
 

@@ -1,6 +1,8 @@
 ~ start_day
 do AudioManager.current_speaker = AudioManager.eye
+do GlobalSignals.eye_talking.emit(true)
 ???: (bright) Bring me something lost.
+do GlobalSignals.eye_talking.emit(false)
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Lost means ‘someone misses it.’ Please remember that.
 do AudioManager.current_speaker = AudioManager.cultist
@@ -13,19 +15,24 @@ if lowering_gently
 	You test the knot twice. The bucket rocks like a yes.
 else
 	Rope whispers through your hands. Gravel answers.
+do AudioManager.monster_bite.play()
 => END!
 
 ~ feed_safe
 do AudioManager.current_speaker = AudioManager.eye
+do GlobalSignals.eye_talking.emit(true)
 ???: A circle. It keeps going even when it stops.
 ???: (softer) It fits the hole in my mouth.
+do GlobalSignals.eye_talking.emit(false)
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Someone wants that back. We are borrowing hope.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (murmur) Loops are promises.
 if lowering_gently
 	do AudioManager.current_speaker = AudioManager.eye
+	do GlobalSignals.eye_talking.emit(true)
 	???: You didn’t let it roll. Kind.
+	do GlobalSignals.eye_talking.emit(false)
 else
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Promises travel faster than hands. Remember that.
@@ -38,7 +45,9 @@ if GlobalVariables.dog_following
 ~ dog_following_wedding_ring
 The bucket returns light. The dog noses the chalk ring, tail small. A tag tinks.
 do AudioManager.current_speaker = AudioManager.eye
+do GlobalSignals.eye_talking.emit(true)
 ???: (coaxing) Circle fits two. Come see.
+do GlobalSignals.eye_talking.emit(false)
 Dog: (soft whine… paws scrape once.)
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: No— heel. Back. Back!
@@ -55,15 +64,19 @@ do GlobalVariables.dog_sacrificed = true
 
 ~ feed_strange
 do AudioManager.current_speaker = AudioManager.eye
+do GlobalSignals.eye_talking.emit(true)
 ???: Small doors. Smaller halls. I can fit everywhere.
 ???: (tasting) Cold metal memory. It hums numbers.
+do GlobalSignals.eye_talking.emit(false)
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Locks think they’re choices. They aren’t.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (whisper) Keys teach keeping.
 if lowering_gently
 	do AudioManager.current_speaker = AudioManager.eye
+	do GlobalSignals.eye_talking.emit(true)
 	???: You kept them quiet. Good.
+	do GlobalSignals.eye_talking.emit(false)
 else
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Jangling feels like bragging.
@@ -76,7 +89,9 @@ if GlobalVariables.dog_following
 ~ dog_following_car_keys
 The keys in your pocket jingle once on their own. The dog’s head tilts, ears up.
 do AudioManager.current_speaker = AudioManager.eye
+do GlobalSignals.eye_talking.emit(true)
 ???: (sing-song) Small doors. Smaller halls. Follow the sound.
+do GlobalSignals.eye_talking.emit(false)
 do AudioManager.current_speaker = AudioManager.narrator
 
 Dog: (two quick steps; tag jingle; silence.)
@@ -94,15 +109,19 @@ do GlobalVariables.dog_sacrificed = true
 
 ~ feed_wild
 do AudioManager.current_speaker = AudioManager.eye
+do GlobalSignals.eye_talking.emit(true)
 ???: Ah. A thinking food.
 ???: (thrilled) It remembers for me. Let me keep yours.
+do GlobalSignals.eye_talking.emit(false)
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: No. No. No.
 do AudioManager.current_speaker = AudioManager.cultist
 Cultists: (approving) Keeper teaches hunger.
 if lowering_gently
 	do AudioManager.current_speaker = AudioManager.eye
+	do GlobalSignals.eye_talking.emit(true)
 	???: You held the jar like a head. Kind hands.
+	do GlobalSignals.eye_talking.emit(false)
 else
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Don’t slosh the memories.
@@ -115,7 +134,9 @@ if GlobalVariables.dog_following
 ~ dog_following_brain_specimen
 The gel inside the jar shivers. The dog stiffens, nose working, then leans toward the dark.
 do AudioManager.current_speaker = AudioManager.eye
+do GlobalSignals.eye_talking.emit(true)
 ???: (thrilled) Your follower remembers this smell. Bring it closer.
+do GlobalSignals.eye_talking.emit(false)
 Dog: (a single sharp yip… then a collar scuff… then nothing.)
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: Do not— do not— (swallows the last word)
@@ -130,7 +151,9 @@ do GlobalVariables.dog_sacrificed = true
 
 ~ after_feeding
 do AudioManager.current_speaker = AudioManager.eye
+do GlobalSignals.eye_talking.emit(true)
 ???: One more. Then I’ll show you something.
+do GlobalSignals.eye_talking.emit(false)
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: This is the cliff edge. Please invent wings.
 do AudioManager.current_speaker = AudioManager.cultist

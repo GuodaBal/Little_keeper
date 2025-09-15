@@ -16,6 +16,22 @@ var fade_out = null
 
 signal fade_out_done
 
+#SFX
+@onready var rope_creak := $SFX/RopeCreak
+@onready var animal_dying := $SFX/AnimalDying
+@onready var click_buttons := $SFX/ClickButtons
+@onready var dog_bark_1 := $SFX/DogBark1
+@onready var dog_bark_2 := $SFX/DogBark2
+@onready var dog_collar_tink := $SFX/DogCollarTink
+@onready var gravel_slide := $SFX/GravelSlide
+@onready var keys := $SFX/Keys
+@onready var monster_bite := $SFX/MonsterBite
+@onready var murmur := $SFX/Murmur
+@onready var night_cricket := $SFX/NightCricket
+@onready var bucket_drop := $SFX/BucketDrop
+@onready var rabbit_sounds := $SFX/RabbitSounds
+@onready var whining_dog := $SFX/WhiningDog
+
 func _ready() -> void:
 	GlobalSignals.dialogue_spoken.connect(play_dialogue)
 	GlobalSignals.dialogue_stopped.connect(stop_dialogue)

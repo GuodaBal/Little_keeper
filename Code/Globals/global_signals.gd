@@ -13,6 +13,7 @@ signal inventory_visible
 
 signal player_can_move
 
-
 signal dialogue_spoken
 signal dialogue_stopped
+
+signal eye_talking

@@ -6,14 +6,18 @@ func _ready() -> void:
 	exit_confirmation.visible = false
 
 func _on_controls_pressed() -> void:
+	AudioManager.click_buttons.play()
 	var instance = load("res://Code/UI/Controls/controls.tscn").instantiate()
 	add_child(instance)
 
 func _on_main_menu_pressed() -> void:
+	AudioManager.click_buttons.play()
 	exit_confirmation.visible = true
 
 func _on_no_pressed() -> void:
+	AudioManager.click_buttons.play()
 	exit_confirmation.visible = false
 
 func _on_yes_pressed() -> void:
+	AudioManager.click_buttons.play()
 	get_tree().change_scene_to_file("res://Code/UI/Main_menu/main_menu.tscn")

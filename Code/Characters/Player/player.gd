@@ -27,11 +27,13 @@ func _ready() -> void:
 	#)
 	animation.play("idle_forward_plain")
 	sprite_scale = animation.scale.x
+	inventory.clear()
 	#set_can_interact(false)
 
 func _physics_process(delta: float) -> void:
 	#print_debug(GlobalVariables.current_day)
 	print_debug(can_interact)
+	print_debug(get_tree().get_first_node_in_group("Dialogue"))
 	if !can_interact || get_tree().get_first_node_in_group("Dialogue") != null:
 		return
 	var wanted_velocity = Vector2(0, 0)

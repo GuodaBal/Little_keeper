@@ -20,7 +20,9 @@ Do you want to take this as an offering? Or look some more?
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Someone will touch their hand and feel air.
 	do AudioManager.current_speaker = AudioManager.eye
+	do GlobalSignals.eye_talking.emit(true)
 	???: (pleased) A loop! Loops taste like promises.
+	do GlobalSignals.eye_talking.emit(false)
 	do AudioManager.current_speaker = null
 	=> END!
 - Leave alone
@@ -35,11 +37,14 @@ A fob with a worn button. Tag - SPARE. It isn’t.
 Do you want to take this as an offering? Or look some more?
 - Pick up
 	do pick_up()
+	do AudioManager.keys.play()
 	Metal jingles like a small alarm that already failed.
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: We are thieves now. Congratulations.
 	do AudioManager.current_speaker = AudioManager.eye
+	do GlobalSignals.eye_talking.emit(true)
 	???: (curious) Keys make doors smaller. I like small.
+	do GlobalSignals.eye_talking.emit(false)
 	do AudioManager.current_speaker = null
 	=> END!
 - Leave alone
@@ -70,7 +75,9 @@ Do you want to take this as an offering? Or look some more?
 	do AudioManager.current_speaker = AudioManager.narrator
 	NARRATOR: Absolutely not. Put it back in the story it left.
 	do AudioManager.current_speaker = AudioManager.eye
+	do GlobalSignals.eye_talking.emit(true)
 	???: (hushed) It remembers for me. Thank you.
+	do GlobalSignals.eye_talking.emit(false)
 	do AudioManager.current_speaker = null
 	=> END!
 - Leave alone
@@ -92,9 +99,11 @@ A little trail choosing you.
 => END!
 
 ~ interact_with_dog
+do AudioManager.dog_bark_1.play()
 A scruffy shape in the grass. Tail makes a question mark.
 - Pet
 - Don't pet => END!
+do AudioManager.dog_bark_1.play()
 It leans into your hand like you’re furniture it needed.
 do AudioManager.current_speaker = AudioManager.narrator
 NARRATOR: It chose you. It can still choose again.

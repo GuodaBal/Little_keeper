@@ -162,7 +162,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -185,7 +185,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"talking",
-"speed": 7.0
+"speed": 10.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yrsus"]
@@ -338,7 +338,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -361,7 +361,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"talking",
-"speed": 7.0
+"speed": 10.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nr0xi"]
@@ -436,7 +436,9 @@ animation = &"idle"
 
 [node name="SmallFrontEye" type="AnimatedSprite2D" parent="SmallEye"]
 sprite_frames = SubResource("SpriteFrames_i0pnf")
-animation = &"talking"
+animation = &"idle"
+frame = 1
+frame_progress = 0.619687
 
 [node name="LargeEye" type="Node2D" parent="."]
 visible = false

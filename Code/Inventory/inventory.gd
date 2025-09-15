@@ -6,6 +6,9 @@ class_name Inventory
 
 var current_index = 0
 
+func ready():
+	GlobalSignals.day_end.connect(clear)
+
 func add_item(item:InventoryItem):
 	for index in items.size():
 		if items[index] == null:
